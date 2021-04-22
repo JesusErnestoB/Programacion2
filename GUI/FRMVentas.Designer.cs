@@ -34,8 +34,8 @@ namespace GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NomProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +74,7 @@ namespace GUI
             // 
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 175);
+            this.panel4.Location = new System.Drawing.Point(0, 216);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(943, 293);
             this.panel4.TabIndex = 3;
@@ -97,8 +97,8 @@ namespace GUI
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NomProducto,
             this.Codigo,
+            this.NomProducto,
             this.Color,
             this.Marca,
             this.Cantidad,
@@ -114,22 +114,22 @@ namespace GUI
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(93, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(54, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 182);
             this.dataGridView1.TabIndex = 31;
-            // 
-            // NomProducto
-            // 
-            this.NomProducto.Frozen = true;
-            this.NomProducto.HeaderText = "Nombre del producto";
-            this.NomProducto.Name = "NomProducto";
             // 
             // Codigo
             // 
             this.Codigo.Frozen = true;
             this.Codigo.HeaderText = "Codigo del producto";
             this.Codigo.Name = "Codigo";
+            // 
+            // NomProducto
+            // 
+            this.NomProducto.Frozen = true;
+            this.NomProducto.HeaderText = "Nombre del producto";
+            this.NomProducto.Name = "NomProducto";
             // 
             // Color
             // 
@@ -172,7 +172,7 @@ namespace GUI
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 75);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(943, 100);
+            this.panel3.Size = new System.Drawing.Size(943, 141);
             this.panel3.TabIndex = 2;
             // 
             // dtpVenta
@@ -191,6 +191,8 @@ namespace GUI
             // 
             // ibVender
             // 
+            this.ibVender.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibVender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibVender.ForeColor = System.Drawing.Color.White;
             this.ibVender.IconChar = FontAwesome.Sharp.IconChar.Shopify;
@@ -198,16 +200,19 @@ namespace GUI
             this.ibVender.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibVender.IconSize = 30;
             this.ibVender.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibVender.Location = new System.Drawing.Point(571, 3);
+            this.ibVender.Location = new System.Drawing.Point(571, 23);
             this.ibVender.Name = "ibVender";
             this.ibVender.Size = new System.Drawing.Size(78, 45);
             this.ibVender.TabIndex = 44;
             this.ibVender.Text = "Vender";
             this.ibVender.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibVender.UseVisualStyleBackColor = true;
+            this.ibVender.Click += new System.EventHandler(this.ibVender_Click);
             // 
             // ibCancelar
             // 
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibCancelar.ForeColor = System.Drawing.Color.White;
             this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
@@ -215,7 +220,7 @@ namespace GUI
             this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibCancelar.IconSize = 30;
             this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibCancelar.Location = new System.Drawing.Point(675, 3);
+            this.ibCancelar.Location = new System.Drawing.Point(676, 23);
             this.ibCancelar.Name = "ibCancelar";
             this.ibCancelar.Size = new System.Drawing.Size(78, 45);
             this.ibCancelar.TabIndex = 43;
@@ -225,6 +230,8 @@ namespace GUI
             // 
             // ibBuscarProd
             // 
+            this.ibBuscarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibBuscarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibBuscarProd.ForeColor = System.Drawing.Color.Transparent;
@@ -232,11 +239,12 @@ namespace GUI
             this.ibBuscarProd.IconColor = System.Drawing.Color.White;
             this.ibBuscarProd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibBuscarProd.IconSize = 25;
-            this.ibBuscarProd.Location = new System.Drawing.Point(404, 38);
+            this.ibBuscarProd.Location = new System.Drawing.Point(422, 38);
             this.ibBuscarProd.Name = "ibBuscarProd";
             this.ibBuscarProd.Size = new System.Drawing.Size(30, 30);
             this.ibBuscarProd.TabIndex = 32;
             this.ibBuscarProd.UseVisualStyleBackColor = true;
+            this.ibBuscarProd.Click += new System.EventHandler(this.ibBuscarProd_Click);
             // 
             // textBox1
             // 
@@ -323,13 +331,6 @@ namespace GUI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DateTimePicker dtpVenta;
         private FontAwesome.Sharp.IconButton ibVender;
@@ -340,5 +341,12 @@ namespace GUI
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox ibtnInicio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
     }
 }

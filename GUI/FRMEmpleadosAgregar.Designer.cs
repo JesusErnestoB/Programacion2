@@ -31,36 +31,36 @@ namespace GUI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ibCancelar = new FontAwesome.Sharp.IconButton();
             this.ibGuardar = new FontAwesome.Sharp.IconButton();
-            this.txtColoniaC = new System.Windows.Forms.TextBox();
+            this.txtColoniaE = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreE = new System.Windows.Forms.TextBox();
-            this.txtEstadoC = new System.Windows.Forms.TextBox();
+            this.txtEstadoE = new System.Windows.Forms.TextBox();
             this.lblNomProduct = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtMuniciopioC = new System.Windows.Forms.TextBox();
+            this.txtApPaterno = new System.Windows.Forms.TextBox();
+            this.txtMuniciopioE = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtLocalidadC = new System.Windows.Forms.TextBox();
+            this.txtApMaterno = new System.Windows.Forms.TextBox();
+            this.txtLocalidadE = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtCalleC = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtCalleE = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,26 +73,26 @@ namespace GUI
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.txtColoniaC);
+            this.panel1.Controls.Add(this.txtColoniaE);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtNombreE);
-            this.panel1.Controls.Add(this.txtEstadoC);
+            this.panel1.Controls.Add(this.txtEstadoE);
             this.panel1.Controls.Add(this.lblNomProduct);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.txtMuniciopioC);
+            this.panel1.Controls.Add(this.txtApPaterno);
+            this.panel1.Controls.Add(this.txtMuniciopioE);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.txtLocalidadC);
+            this.panel1.Controls.Add(this.txtApMaterno);
+            this.panel1.Controls.Add(this.txtLocalidadE);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.txtCalleC);
+            this.panel1.Controls.Add(this.txtEdad);
+            this.panel1.Controls.Add(this.txtCalleE);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtSexo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -101,26 +101,26 @@ namespace GUI
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtContraseña);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(41, 349);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(635, 119);
+            this.groupBox1.Size = new System.Drawing.Size(671, 119);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo";
             // 
-            // textBox5
+            // txtContraseña
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(458, 47);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 20);
-            this.textBox5.TabIndex = 75;
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.Location = new System.Drawing.Point(458, 47);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(207, 20);
+            this.txtContraseña.TabIndex = 75;
             // 
             // label11
             // 
@@ -133,14 +133,14 @@ namespace GUI
             this.label11.TabIndex = 76;
             this.label11.Text = "Contraseña";
             // 
-            // textBox6
+            // txtUsuario
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(91, 43);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(206, 20);
-            this.textBox6.TabIndex = 73;
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.Location = new System.Drawing.Point(91, 43);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(206, 20);
+            this.txtUsuario.TabIndex = 73;
             // 
             // label12
             // 
@@ -176,6 +176,8 @@ namespace GUI
             // 
             // ibCancelar
             // 
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibCancelar.ForeColor = System.Drawing.Color.White;
             this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
@@ -190,9 +192,12 @@ namespace GUI
             this.ibCancelar.Text = "Cancelar";
             this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibCancelar.UseVisualStyleBackColor = true;
+            this.ibCancelar.Click += new System.EventHandler(this.ibCancelar_Click);
             // 
             // ibGuardar
             // 
+            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibGuardar.ForeColor = System.Drawing.Color.White;
             this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -207,15 +212,16 @@ namespace GUI
             this.ibGuardar.Text = "Guardar";
             this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibGuardar.UseVisualStyleBackColor = true;
+            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
             // 
-            // txtColoniaC
+            // txtColoniaE
             // 
-            this.txtColoniaC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtColoniaC.ForeColor = System.Drawing.Color.White;
-            this.txtColoniaC.Location = new System.Drawing.Point(554, 159);
-            this.txtColoniaC.Name = "txtColoniaC";
-            this.txtColoniaC.Size = new System.Drawing.Size(158, 20);
-            this.txtColoniaC.TabIndex = 96;
+            this.txtColoniaE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtColoniaE.ForeColor = System.Drawing.Color.White;
+            this.txtColoniaE.Location = new System.Drawing.Point(554, 159);
+            this.txtColoniaE.Name = "txtColoniaE";
+            this.txtColoniaE.Size = new System.Drawing.Size(158, 20);
+            this.txtColoniaE.TabIndex = 96;
             // 
             // panel2
             // 
@@ -270,14 +276,14 @@ namespace GUI
             this.txtNombreE.Size = new System.Drawing.Size(206, 20);
             this.txtNombreE.TabIndex = 78;
             // 
-            // txtEstadoC
+            // txtEstadoE
             // 
-            this.txtEstadoC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtEstadoC.ForeColor = System.Drawing.Color.White;
-            this.txtEstadoC.Location = new System.Drawing.Point(554, 294);
-            this.txtEstadoC.Name = "txtEstadoC";
-            this.txtEstadoC.Size = new System.Drawing.Size(158, 20);
-            this.txtEstadoC.TabIndex = 94;
+            this.txtEstadoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtEstadoE.ForeColor = System.Drawing.Color.White;
+            this.txtEstadoE.Location = new System.Drawing.Point(554, 294);
+            this.txtEstadoE.Name = "txtEstadoE";
+            this.txtEstadoE.Size = new System.Drawing.Size(158, 20);
+            this.txtEstadoE.TabIndex = 94;
             // 
             // lblNomProduct
             // 
@@ -301,23 +307,23 @@ namespace GUI
             this.label8.TabIndex = 93;
             this.label8.Text = "Municipio";
             // 
-            // textBox1
+            // txtApPaterno
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(187, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 80;
+            this.txtApPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtApPaterno.ForeColor = System.Drawing.Color.White;
+            this.txtApPaterno.Location = new System.Drawing.Point(187, 159);
+            this.txtApPaterno.Name = "txtApPaterno";
+            this.txtApPaterno.Size = new System.Drawing.Size(206, 20);
+            this.txtApPaterno.TabIndex = 80;
             // 
-            // txtMuniciopioC
+            // txtMuniciopioE
             // 
-            this.txtMuniciopioC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtMuniciopioC.ForeColor = System.Drawing.Color.White;
-            this.txtMuniciopioC.Location = new System.Drawing.Point(554, 243);
-            this.txtMuniciopioC.Name = "txtMuniciopioC";
-            this.txtMuniciopioC.Size = new System.Drawing.Size(158, 20);
-            this.txtMuniciopioC.TabIndex = 92;
+            this.txtMuniciopioE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtMuniciopioE.ForeColor = System.Drawing.Color.White;
+            this.txtMuniciopioE.Location = new System.Drawing.Point(554, 243);
+            this.txtMuniciopioE.Name = "txtMuniciopioE";
+            this.txtMuniciopioE.Size = new System.Drawing.Size(158, 20);
+            this.txtMuniciopioE.TabIndex = 92;
             // 
             // label2
             // 
@@ -341,23 +347,23 @@ namespace GUI
             this.label9.TabIndex = 91;
             this.label9.Text = "Localidad";
             // 
-            // textBox2
+            // txtApMaterno
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(187, 201);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 20);
-            this.textBox2.TabIndex = 82;
+            this.txtApMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtApMaterno.ForeColor = System.Drawing.Color.White;
+            this.txtApMaterno.Location = new System.Drawing.Point(187, 201);
+            this.txtApMaterno.Name = "txtApMaterno";
+            this.txtApMaterno.Size = new System.Drawing.Size(206, 20);
+            this.txtApMaterno.TabIndex = 82;
             // 
-            // txtLocalidadC
+            // txtLocalidadE
             // 
-            this.txtLocalidadC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtLocalidadC.ForeColor = System.Drawing.Color.White;
-            this.txtLocalidadC.Location = new System.Drawing.Point(554, 203);
-            this.txtLocalidadC.Name = "txtLocalidadC";
-            this.txtLocalidadC.Size = new System.Drawing.Size(158, 20);
-            this.txtLocalidadC.TabIndex = 90;
+            this.txtLocalidadE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtLocalidadE.ForeColor = System.Drawing.Color.White;
+            this.txtLocalidadE.Location = new System.Drawing.Point(554, 203);
+            this.txtLocalidadE.Name = "txtLocalidadE";
+            this.txtLocalidadE.Size = new System.Drawing.Size(158, 20);
+            this.txtLocalidadE.TabIndex = 90;
             // 
             // label3
             // 
@@ -381,23 +387,23 @@ namespace GUI
             this.label10.TabIndex = 89;
             this.label10.Text = "Calle";
             // 
-            // textBox3
+            // txtEdad
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(187, 243);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 20);
-            this.textBox3.TabIndex = 84;
+            this.txtEdad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtEdad.ForeColor = System.Drawing.Color.White;
+            this.txtEdad.Location = new System.Drawing.Point(187, 243);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(206, 20);
+            this.txtEdad.TabIndex = 84;
             // 
-            // txtCalleC
+            // txtCalleE
             // 
-            this.txtCalleC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtCalleC.ForeColor = System.Drawing.Color.White;
-            this.txtCalleC.Location = new System.Drawing.Point(554, 124);
-            this.txtCalleC.Name = "txtCalleC";
-            this.txtCalleC.Size = new System.Drawing.Size(158, 20);
-            this.txtCalleC.TabIndex = 88;
+            this.txtCalleE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtCalleE.ForeColor = System.Drawing.Color.White;
+            this.txtCalleE.Location = new System.Drawing.Point(554, 124);
+            this.txtCalleE.Name = "txtCalleE";
+            this.txtCalleE.Size = new System.Drawing.Size(158, 20);
+            this.txtCalleE.TabIndex = 88;
             // 
             // label4
             // 
@@ -421,14 +427,14 @@ namespace GUI
             this.label5.TabIndex = 87;
             this.label5.Text = "Sexo";
             // 
-            // textBox4
+            // txtSexo
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(187, 294);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 20);
-            this.textBox4.TabIndex = 86;
+            this.txtSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtSexo.ForeColor = System.Drawing.Color.White;
+            this.txtSexo.Location = new System.Drawing.Point(187, 294);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(206, 20);
+            this.txtSexo.TabIndex = 86;
             // 
             // FRMEmpleadosAgregar
             // 
@@ -456,35 +462,35 @@ namespace GUI
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton ibCancelar;
         private FontAwesome.Sharp.IconButton ibGuardar;
-        private System.Windows.Forms.TextBox txtColoniaC;
+        private System.Windows.Forms.TextBox txtColoniaE;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox ibtnInicio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombreE;
-        private System.Windows.Forms.TextBox txtEstadoC;
+        private System.Windows.Forms.TextBox txtEstadoE;
         private System.Windows.Forms.Label lblNomProduct;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtMuniciopioC;
+        private System.Windows.Forms.TextBox txtApPaterno;
+        private System.Windows.Forms.TextBox txtMuniciopioE;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txtLocalidadC;
+        private System.Windows.Forms.TextBox txtApMaterno;
+        private System.Windows.Forms.TextBox txtLocalidadE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox txtCalleC;
+        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.TextBox txtCalleE;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSexo;
     }
 }

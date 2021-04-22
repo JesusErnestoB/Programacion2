@@ -11,14 +11,14 @@ using System.Runtime.InteropServices;
 
 namespace GUI
 {
-    public partial class Login : Form
+    public partial class FRMLogin : Form
     {
-        public Login()
+        public FRMLogin()
         {
             InitializeComponent();
         }
 
-        PantallaInicio PI = new PantallaInicio();
+        FRMPantallaInicio PantallaInicio = new FRMPantallaInicio();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -69,12 +69,6 @@ namespace GUI
 
         private void txtPass_Enter(object sender, EventArgs e)
         {
-            if (txtPass.Text == "Contraseña")
-            {
-                txtPass.Text = "";
-                txtPass.ForeColor = Color.LightGray;
-                txtPass.UseSystemPasswordChar = true;
-            }
 
         }
 
@@ -90,8 +84,14 @@ namespace GUI
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            /*if (txtUsuario.Text == "admin" & txtPass.Text=="admin")
+            {
+                this.Hide();
+                PantallInicio.Show();
+            }*/
             this.Hide();
-            PI.Show();
+            PantallaInicio.Show();
+            
         }
     }
 }

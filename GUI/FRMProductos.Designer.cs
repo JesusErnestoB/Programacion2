@@ -33,8 +33,6 @@ namespace GUI
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.ibCancelar = new FontAwesome.Sharp.IconButton();
             this.ibGuardar = new FontAwesome.Sharp.IconButton();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.lblCategoriaP = new System.Windows.Forms.Label();
             this.lblPrecioVentP = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.lblPrecioCompP = new System.Windows.Forms.Label();
@@ -63,8 +61,6 @@ namespace GUI
             this.panel1.Controls.Add(this.ibtnInicio);
             this.panel1.Controls.Add(this.ibCancelar);
             this.panel1.Controls.Add(this.ibGuardar);
-            this.panel1.Controls.Add(this.cmbCategoria);
-            this.panel1.Controls.Add(this.lblCategoriaP);
             this.panel1.Controls.Add(this.lblPrecioVentP);
             this.panel1.Controls.Add(this.txtPrecioVenta);
             this.panel1.Controls.Add(this.lblPrecioCompP);
@@ -103,6 +99,8 @@ namespace GUI
             // 
             // ibCancelar
             // 
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibCancelar.ForeColor = System.Drawing.Color.White;
             this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
@@ -117,9 +115,12 @@ namespace GUI
             this.ibCancelar.Text = "Cancelar";
             this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibCancelar.UseVisualStyleBackColor = true;
+            this.ibCancelar.Click += new System.EventHandler(this.ibCancelar_Click);
             // 
             // ibGuardar
             // 
+            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibGuardar.ForeColor = System.Drawing.Color.White;
             this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -134,37 +135,7 @@ namespace GUI
             this.ibGuardar.Text = "Guardar";
             this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibGuardar.UseVisualStyleBackColor = true;
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Items.AddRange(new object[] {
-            "Cuadernos ",
-            "Lapices ",
-            "Plumas",
-            "Marcadores",
-            "Colores",
-            "Borrador",
-            "Sacapuntas ",
-            "Plastilinas ",
-            "Hojas de colores ",
-            "Hojas blancas "});
-            this.cmbCategoria.Location = new System.Drawing.Point(348, 319);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(158, 21);
-            this.cmbCategoria.TabIndex = 61;
-            // 
-            // lblCategoriaP
-            // 
-            this.lblCategoriaP.AutoSize = true;
-            this.lblCategoriaP.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriaP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCategoriaP.Location = new System.Drawing.Point(164, 320);
-            this.lblCategoriaP.Name = "lblCategoriaP";
-            this.lblCategoriaP.Size = new System.Drawing.Size(88, 20);
-            this.lblCategoriaP.TabIndex = 60;
-            this.lblCategoriaP.Text = "Categoria ";
+            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
             // 
             // lblPrecioVentP
             // 
@@ -180,6 +151,7 @@ namespace GUI
             // txtPrecioVenta
             // 
             this.txtPrecioVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtPrecioVenta.ForeColor = System.Drawing.Color.White;
             this.txtPrecioVenta.Location = new System.Drawing.Point(348, 293);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(158, 20);
@@ -199,6 +171,7 @@ namespace GUI
             // txtPrecioComp
             // 
             this.txtPrecioComp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtPrecioComp.ForeColor = System.Drawing.Color.White;
             this.txtPrecioComp.Location = new System.Drawing.Point(348, 264);
             this.txtPrecioComp.Name = "txtPrecioComp";
             this.txtPrecioComp.Size = new System.Drawing.Size(158, 20);
@@ -207,7 +180,7 @@ namespace GUI
             // nudCantidad
             // 
             this.nudCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.nudCantidad.ForeColor = System.Drawing.SystemColors.Info;
+            this.nudCantidad.ForeColor = System.Drawing.Color.White;
             this.nudCantidad.Location = new System.Drawing.Point(348, 204);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(158, 20);
@@ -227,6 +200,7 @@ namespace GUI
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtDescripcion.ForeColor = System.Drawing.Color.White;
             this.txtDescripcion.Location = new System.Drawing.Point(348, 238);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(158, 20);
@@ -257,6 +231,7 @@ namespace GUI
             // txtMarca
             // 
             this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtMarca.ForeColor = System.Drawing.Color.White;
             this.txtMarca.Location = new System.Drawing.Point(348, 177);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(158, 20);
@@ -296,6 +271,7 @@ namespace GUI
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtCodigo.ForeColor = System.Drawing.Color.White;
             this.txtCodigo.Location = new System.Drawing.Point(348, 125);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(158, 20);
@@ -355,8 +331,6 @@ namespace GUI
         private FontAwesome.Sharp.IconPictureBox ibtnInicio;
         private FontAwesome.Sharp.IconButton ibCancelar;
         private FontAwesome.Sharp.IconButton ibGuardar;
-        private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.Label lblCategoriaP;
         private System.Windows.Forms.Label lblPrecioVentP;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label lblPrecioCompP;

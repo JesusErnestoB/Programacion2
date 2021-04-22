@@ -232,6 +232,8 @@ namespace GUI
             // 
             // ibGuardarClientes
             // 
+            this.ibGuardarClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardarClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibGuardarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibGuardarClientes.ForeColor = System.Drawing.Color.White;
             this.ibGuardarClientes.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -246,9 +248,12 @@ namespace GUI
             this.ibGuardarClientes.Text = "Guardar";
             this.ibGuardarClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibGuardarClientes.UseVisualStyleBackColor = true;
+            this.ibGuardarClientes.Click += new System.EventHandler(this.ibGuardarClientes_Click);
             // 
             // ibCancelarClientes
             // 
+            this.ibCancelarClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelarClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibCancelarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibCancelarClientes.ForeColor = System.Drawing.Color.White;
             this.ibCancelarClientes.IconChar = FontAwesome.Sharp.IconChar.Reply;
@@ -263,6 +268,7 @@ namespace GUI
             this.ibCancelarClientes.Text = "Cancelar";
             this.ibCancelarClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibCancelarClientes.UseVisualStyleBackColor = true;
+            this.ibCancelarClientes.Click += new System.EventHandler(this.ibCancelarClientes_Click);
             // 
             // panel1
             // 

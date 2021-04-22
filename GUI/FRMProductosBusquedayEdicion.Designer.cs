@@ -47,6 +47,8 @@ namespace GUI
             this.ibBuscarProd = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,6 +56,8 @@ namespace GUI
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.ibtnInicio);
             this.panel1.Controls.Add(this.ibEditar);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -82,7 +86,7 @@ namespace GUI
             // ibEditar
             // 
             this.ibEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ibEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibEditar.ForeColor = System.Drawing.Color.Transparent;
@@ -91,7 +95,7 @@ namespace GUI
             this.ibEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibEditar.IconSize = 25;
             this.ibEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEditar.Location = new System.Drawing.Point(653, 100);
+            this.ibEditar.Location = new System.Drawing.Point(659, 88);
             this.ibEditar.Name = "ibEditar";
             this.ibEditar.Size = new System.Drawing.Size(88, 30);
             this.ibEditar.TabIndex = 36;
@@ -194,6 +198,7 @@ namespace GUI
             // ibBuscarProd
             // 
             this.ibBuscarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibBuscarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibBuscarProd.ForeColor = System.Drawing.Color.Transparent;
@@ -212,7 +217,7 @@ namespace GUI
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(319, 100);
+            this.textBox1.Location = new System.Drawing.Point(319, 65);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 26);
             this.textBox1.TabIndex = 33;
@@ -222,11 +227,32 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(157, 88);
+            this.label1.Location = new System.Drawing.Point(134, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 42);
+            this.label1.Size = new System.Drawing.Size(179, 21);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Nombre / Marca \r\n    del producto";
+            this.label1.Text = "Nombre del producto";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(319, 114);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(148, 26);
+            this.textBox2.TabIndex = 67;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(145, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 21);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Marca del producto";
             // 
             // FRMProductosBusquedayEdicion
             // 
@@ -264,5 +290,7 @@ namespace GUI
         private FontAwesome.Sharp.IconButton ibBuscarProd;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

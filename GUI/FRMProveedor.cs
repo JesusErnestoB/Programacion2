@@ -16,5 +16,25 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ibGuardar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
+
+        public void LimpiarControles()
+        {
+            txtNombreProv.Clear();
+            txtEmail.Clear();
+            txtTelefono.Clear();
+            txtCalleProv.Clear();
+            txtColoniaProv.Clear();
+            txtLocalidadProv.Clear();
+            txtMuniciopioProv.Clear();
+            txtEstadoProv.Clear();
+
+            txtNombreProv.Focus();
+        }
+
     }
 }

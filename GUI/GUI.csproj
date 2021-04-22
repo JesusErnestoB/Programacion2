@@ -36,6 +36,7 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FRMBuscarProveedore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMBuscarProveedore.Designer.cs">
+      <DependentUpon>FRMBuscarProveedore.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMClientesAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,26 +104,53 @@
     <Compile Include="FRMProveedor.Designer.cs">
       <DependentUpon>FRMProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMReportecompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReportecompra.Designer.cs">
+      <DependentUpon>FRMReportecompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReporteVentas.Designer.cs">
+      <DependentUpon>FRMReporteVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMReprteMasVendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReprteMasVendido.Designer.cs">
+      <DependentUpon>FRMReprteMasVendido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMVender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMVender.Designer.cs">
+      <DependentUpon>FRMVender.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRMVentas.Designer.cs">
       <DependentUpon>FRMVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="FRMLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FRMLogin.Designer.cs">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaInicio.cs">
+    <Compile Include="FRMPantallaInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaInicio.Designer.cs">
-      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    <Compile Include="FRMPantallaInicio.Designer.cs">
+      <DependentUpon>FRMPantallaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRMBuscarProveedore.resx">
+      <DependentUpon>FRMBuscarProveedore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRMClientesAgregar.resx">
       <DependentUpon>FRMClientesAgregar.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,14 +175,26 @@
     <EmbeddedResource Include="FRMProveedor.resx">
       <DependentUpon>FRMProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRMReportecompra.resx">
+      <DependentUpon>FRMReportecompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMReporteVentas.resx">
+      <DependentUpon>FRMReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMReprteMasVendido.resx">
+      <DependentUpon>FRMReprteMasVendido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMVender.resx">
+      <DependentUpon>FRMVender.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRMVentas.resx">
       <DependentUpon>FRMVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="FRMLogin.resx">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaInicio.resx">
-      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    <EmbeddedResource Include="FRMPantallaInicio.resx">
+      <DependentUpon>FRMPantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,9 +11,9 @@ using System.Runtime.InteropServices;
 
 namespace GUI
 {
-    public partial class PantallaInicio : Form
+    public partial class FRMPantallaInicio : Form
     {
-        public PantallaInicio()
+        public FRMPantallaInicio()
         {
             InitializeComponent();
             InicializarMenu();
@@ -46,6 +46,7 @@ namespace GUI
             pnlCompras.Visible = false;
             pnlEmpleados.Visible = false;
             pnlReporte.Visible = false;
+            pnlProveedor.Visible = false;
 
         }
 
@@ -73,6 +74,10 @@ namespace GUI
             if (pnlReporte.Visible == true)
             {
                 pnlReporte.Visible = false;
+            }
+            if (pnlProveedor.Visible == true)
+            {
+                pnlProveedor.Visible = false;
             }
         }
 
@@ -107,12 +112,16 @@ namespace GUI
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximizar.Visible = false;
+            btnRestaurar.Visible = true;
         }
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
         }
         #endregion
 
@@ -132,6 +141,7 @@ namespace GUI
         {
             AbrirFormHija(new FRMProductosBusquedayEdicion());
             ocultarMostrarSubmenu(pnlProductos);
+            
         }
 
         private void ibBuscarProd_Click(object sender, EventArgs e)
@@ -161,7 +171,7 @@ namespace GUI
 
         private void ibEditarC_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMClientesBusquedayEdicion());
+            AbrirFormHija(new FRMClientesAgregar());
             ocultarMostrarSubmenu(pnlClientes);
         }
 
@@ -184,15 +194,11 @@ namespace GUI
         }
         #endregion
 
+        #region Empleados 
         private void ibEmpleados_Click(object sender, EventArgs e)
         {
             ocultarMostrarSubmenu(pnlEmpleados);
         }
-
-
-
-
-
 
         private void ibAgregarEm_Click(object sender, EventArgs e)
         {
@@ -213,14 +219,59 @@ namespace GUI
             ocultarMostrarSubmenu(pnlEmpleados);
         }
 
+        #endregion
+
+        #region Proveedores
+
         private void ibProveedor_Click(object sender, EventArgs e)
         {
+            ocultarMostrarSubmenu(pnlProveedor);
+        }
+        private void ibtnBuscarProv_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FRMBuscarProveedore());
+            ocultarMostrarSubmenu(pnlProveedor);
+        }
+
+        private void ibtnAgregar_Click(object sender, EventArgs e)
+        {
             AbrirFormHija(new FRMProveedor());
+            ocultarMostrarSubmenu(pnlProveedor);
         }
         #endregion
 
-        #region Abrir Formulario Hijo
-        private void AbrirFormHija(object formHija)
+        #region Reportes
+        private void ibReporte_Click(object sender, EventArgs e)
+        {
+            ocultarMostrarSubmenu(pnlReporte);
+        }
+
+        private void ibtnReporteVenta_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FRMReporteVentas());
+            ocultarMostrarSubmenu(pnlReporte);
+        }
+        
+        private void ibtnReporteCompra_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FRMReporteVentas());
+            ocultarMostrarSubmenu(pnlReporte);
+        }
+        
+        private void ibtnReporteMasVendido_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FRMReprteMasVendido());
+            ocultarMostrarSubmenu(pnlReporte);
+        }
+
+
+        #endregion
+
+
+        #endregion
+
+         #region Abrir Formulario Hijo
+        public void AbrirFormHija(object formHija)
         {
             if (this.pnlInicio.Controls.Count > 0)
             {
@@ -235,20 +286,8 @@ namespace GUI
         }
 
 
-
-
-
-
-
-
-
-
         #endregion
 
-        private void ibReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
-    }
+        
+    } 
 }

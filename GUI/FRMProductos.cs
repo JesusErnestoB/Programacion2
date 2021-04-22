@@ -21,5 +21,31 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void ibGuardar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
+
+        public void LimpiarControles()
+        {
+            txtNombre.Clear();
+            txtCodigo.Clear();
+            txtColor.Clear();
+            txtMarca.Clear();
+            nudCantidad.Value = 1;
+            txtDescripcion.Clear();
+            txtPrecioComp.Clear();
+            txtPrecioVenta.Clear();
+
+            txtNombre.Focus();
+
+
+        }
+
+        private void ibCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
     }
 }

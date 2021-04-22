@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class PantallaInicio
+    partial class FRMPantallaInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,22 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMPantallaInicio));
             this.Barra_Titulo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlProveedor = new System.Windows.Forms.Panel();
+            this.ibtnBuscarProv = new FontAwesome.Sharp.IconButton();
+            this.ibtnAgregar = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.pnlReporte = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.ibtnReporteMasVendido = new FontAwesome.Sharp.IconButton();
+            this.ibtnReporteCompra = new FontAwesome.Sharp.IconButton();
+            this.ibtnReporteVenta = new FontAwesome.Sharp.IconButton();
             this.ibReporte = new FontAwesome.Sharp.IconButton();
             this.pnlEmpleados = new System.Windows.Forms.Panel();
             this.ibBusacarEm = new FontAwesome.Sharp.IconButton();
@@ -63,6 +66,7 @@ namespace GUI
             this.ibAgreagarProducto = new FontAwesome.Sharp.IconButton();
             this.ibProductos = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlInicio = new System.Windows.Forms.Panel();
             this.Barra_Titulo.SuspendLayout();
@@ -71,12 +75,14 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.pnlProveedor.SuspendLayout();
             this.pnlReporte.SuspendLayout();
             this.pnlEmpleados.SuspendLayout();
             this.pnlCompras.SuspendLayout();
             this.pnlClientes.SuspendLayout();
             this.pnlProductos.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Barra_Titulo
@@ -94,17 +100,6 @@ namespace GUI
             this.Barra_Titulo.TabIndex = 3;
             this.Barra_Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_Titulo_MouseDown);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(222, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 22);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Papeleria \"Memo\"";
-            // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,6 +112,17 @@ namespace GUI
             this.btnMaximizar.TabIndex = 4;
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(222, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 22);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Papeleria \"Memo\"";
             // 
             // btnRestaurar
             // 
@@ -161,6 +167,7 @@ namespace GUI
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.pnlMenu.Controls.Add(this.pnlProveedor);
             this.pnlMenu.Controls.Add(this.iconButton4);
             this.pnlMenu.Controls.Add(this.pnlReporte);
             this.pnlMenu.Controls.Add(this.ibReporte);
@@ -177,12 +184,67 @@ namespace GUI
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 37);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 751);
+            this.pnlMenu.Size = new System.Drawing.Size(220, 433);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // pnlProveedor
+            // 
+            this.pnlProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.pnlProveedor.Controls.Add(this.ibtnBuscarProv);
+            this.pnlProveedor.Controls.Add(this.ibtnAgregar);
+            this.pnlProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlProveedor.Location = new System.Drawing.Point(0, 719);
+            this.pnlProveedor.Name = "pnlProveedor";
+            this.pnlProveedor.Size = new System.Drawing.Size(220, 80);
+            this.pnlProveedor.TabIndex = 7;
+            // 
+            // ibtnBuscarProv
+            // 
+            this.ibtnBuscarProv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnBuscarProv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibtnBuscarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnBuscarProv.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnBuscarProv.ForeColor = System.Drawing.Color.Transparent;
+            this.ibtnBuscarProv.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.ibtnBuscarProv.IconColor = System.Drawing.Color.White;
+            this.ibtnBuscarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnBuscarProv.IconSize = 25;
+            this.ibtnBuscarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnBuscarProv.Location = new System.Drawing.Point(0, 32);
+            this.ibtnBuscarProv.Name = "ibtnBuscarProv";
+            this.ibtnBuscarProv.Size = new System.Drawing.Size(220, 37);
+            this.ibtnBuscarProv.TabIndex = 29;
+            this.ibtnBuscarProv.Text = "Buscar";
+            this.ibtnBuscarProv.UseVisualStyleBackColor = true;
+            this.ibtnBuscarProv.Click += new System.EventHandler(this.ibtnBuscarProv_Click);
+            // 
+            // ibtnAgregar
+            // 
+            this.ibtnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnAgregar.ForeColor = System.Drawing.Color.Transparent;
+            this.ibtnAgregar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.ibtnAgregar.IconColor = System.Drawing.Color.White;
+            this.ibtnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnAgregar.IconSize = 25;
+            this.ibtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnAgregar.Location = new System.Drawing.Point(0, 0);
+            this.ibtnAgregar.Name = "ibtnAgregar";
+            this.ibtnAgregar.Size = new System.Drawing.Size(220, 32);
+            this.ibtnAgregar.TabIndex = 27;
+            this.ibtnAgregar.Text = "Agregar";
+            this.ibtnAgregar.UseVisualStyleBackColor = true;
+            this.ibtnAgregar.Click += new System.EventHandler(this.ibtnAgregar_Click);
             // 
             // iconButton4
             // 
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.Color.Transparent;
@@ -191,7 +253,7 @@ namespace GUI
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 695);
+            this.iconButton4.Location = new System.Drawing.Point(0, 689);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(220, 30);
             this.iconButton4.TabIndex = 36;
@@ -202,73 +264,84 @@ namespace GUI
             // pnlReporte
             // 
             this.pnlReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnlReporte.Controls.Add(this.iconButton1);
-            this.pnlReporte.Controls.Add(this.iconButton2);
-            this.pnlReporte.Controls.Add(this.iconButton3);
+            this.pnlReporte.Controls.Add(this.ibtnReporteMasVendido);
+            this.pnlReporte.Controls.Add(this.ibtnReporteCompra);
+            this.pnlReporte.Controls.Add(this.ibtnReporteVenta);
             this.pnlReporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReporte.Location = new System.Drawing.Point(0, 594);
             this.pnlReporte.Name = "pnlReporte";
-            this.pnlReporte.Size = new System.Drawing.Size(220, 101);
+            this.pnlReporte.Size = new System.Drawing.Size(220, 95);
             this.pnlReporte.TabIndex = 35;
             // 
-            // iconButton1
+            // ibtnReporteMasVendido
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 60);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(220, 30);
-            this.iconButton1.TabIndex = 28;
-            this.iconButton1.Text = "Producto mas vendido";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.ibtnReporteMasVendido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnReporteMasVendido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnReporteMasVendido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnReporteMasVendido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibtnReporteMasVendido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnReporteMasVendido.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnReporteMasVendido.ForeColor = System.Drawing.Color.Transparent;
+            this.ibtnReporteMasVendido.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ibtnReporteMasVendido.IconColor = System.Drawing.Color.White;
+            this.ibtnReporteMasVendido.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnReporteMasVendido.IconSize = 25;
+            this.ibtnReporteMasVendido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnReporteMasVendido.Location = new System.Drawing.Point(0, 60);
+            this.ibtnReporteMasVendido.Name = "ibtnReporteMasVendido";
+            this.ibtnReporteMasVendido.Size = new System.Drawing.Size(220, 30);
+            this.ibtnReporteMasVendido.TabIndex = 28;
+            this.ibtnReporteMasVendido.Text = "Producto mas vendido";
+            this.ibtnReporteMasVendido.UseVisualStyleBackColor = false;
+            this.ibtnReporteMasVendido.Click += new System.EventHandler(this.ibtnReporteMasVendido_Click);
             // 
-            // iconButton2
+            // ibtnReporteCompra
             // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 30);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(220, 30);
-            this.iconButton2.TabIndex = 27;
-            this.iconButton2.Text = "Reporte de compra ";
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.ibtnReporteCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnReporteCompra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnReporteCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibtnReporteCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnReporteCompra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnReporteCompra.ForeColor = System.Drawing.Color.Transparent;
+            this.ibtnReporteCompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ibtnReporteCompra.IconColor = System.Drawing.Color.White;
+            this.ibtnReporteCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnReporteCompra.IconSize = 25;
+            this.ibtnReporteCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnReporteCompra.Location = new System.Drawing.Point(0, 30);
+            this.ibtnReporteCompra.Name = "ibtnReporteCompra";
+            this.ibtnReporteCompra.Size = new System.Drawing.Size(220, 30);
+            this.ibtnReporteCompra.TabIndex = 27;
+            this.ibtnReporteCompra.Text = "Reporte de compra ";
+            this.ibtnReporteCompra.UseVisualStyleBackColor = true;
+            this.ibtnReporteCompra.Click += new System.EventHandler(this.ibtnReporteCompra_Click);
             // 
-            // iconButton3
+            // ibtnReporteVenta
             // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 25;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(220, 30);
-            this.iconButton3.TabIndex = 26;
-            this.iconButton3.Text = "Reporte de venta ";
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.ibtnReporteVenta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnReporteVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibtnReporteVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibtnReporteVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnReporteVenta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnReporteVenta.ForeColor = System.Drawing.Color.Transparent;
+            this.ibtnReporteVenta.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ibtnReporteVenta.IconColor = System.Drawing.Color.White;
+            this.ibtnReporteVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnReporteVenta.IconSize = 25;
+            this.ibtnReporteVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnReporteVenta.Location = new System.Drawing.Point(0, 0);
+            this.ibtnReporteVenta.Name = "ibtnReporteVenta";
+            this.ibtnReporteVenta.Size = new System.Drawing.Size(220, 30);
+            this.ibtnReporteVenta.TabIndex = 26;
+            this.ibtnReporteVenta.Text = "Reporte de venta ";
+            this.ibtnReporteVenta.UseVisualStyleBackColor = true;
+            this.ibtnReporteVenta.Click += new System.EventHandler(this.ibtnReporteVenta_Click);
             // 
             // ibReporte
             // 
             this.ibReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibReporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibReporte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibReporte.ForeColor = System.Drawing.Color.Transparent;
@@ -300,6 +373,8 @@ namespace GUI
             // ibBusacarEm
             // 
             this.ibBusacarEm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibBusacarEm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibBusacarEm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibBusacarEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibBusacarEm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibBusacarEm.ForeColor = System.Drawing.Color.Transparent;
@@ -319,6 +394,8 @@ namespace GUI
             // ibEditarEm
             // 
             this.ibEditarEm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibEditarEm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibEditarEm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibEditarEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibEditarEm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibEditarEm.ForeColor = System.Drawing.Color.Transparent;
@@ -338,6 +415,8 @@ namespace GUI
             // ibAgregarEm
             // 
             this.ibAgregarEm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibAgregarEm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibAgregarEm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibAgregarEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibAgregarEm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibAgregarEm.ForeColor = System.Drawing.Color.Transparent;
@@ -357,6 +436,8 @@ namespace GUI
             // ibEmpleados
             // 
             this.ibEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibEmpleados.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibEmpleados.ForeColor = System.Drawing.Color.Transparent;
@@ -386,6 +467,8 @@ namespace GUI
             // ibRegistrar
             // 
             this.ibRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibRegistrar.ForeColor = System.Drawing.Color.Transparent;
@@ -405,6 +488,8 @@ namespace GUI
             // ibCompras
             // 
             this.ibCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibCompras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibCompras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibCompras.ForeColor = System.Drawing.Color.Transparent;
@@ -436,6 +521,8 @@ namespace GUI
             // ibBuscarC
             // 
             this.ibBuscarC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibBuscarC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibBuscarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibBuscarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibBuscarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibBuscarC.ForeColor = System.Drawing.Color.Transparent;
@@ -455,6 +542,8 @@ namespace GUI
             // ibEditarC
             // 
             this.ibEditarC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibEditarC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibEditarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibEditarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibEditarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibEditarC.ForeColor = System.Drawing.Color.Transparent;
@@ -474,6 +563,8 @@ namespace GUI
             // ibAgrarC
             // 
             this.ibAgrarC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibAgrarC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibAgrarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibAgrarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibAgrarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibAgrarC.ForeColor = System.Drawing.Color.Transparent;
@@ -488,11 +579,13 @@ namespace GUI
             this.ibAgrarC.TabIndex = 26;
             this.ibAgrarC.Text = "Agregar";
             this.ibAgrarC.UseVisualStyleBackColor = true;
-            this.ibAgrarC.Click += new System.EventHandler(this.ibEditarC_Click);
+            this.ibAgrarC.Click += new System.EventHandler(this.ibAgrarC_Click);
             // 
             // ibClientes
             // 
             this.ibClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibClientes.ForeColor = System.Drawing.Color.Transparent;
@@ -512,6 +605,8 @@ namespace GUI
             // ibVentas
             // 
             this.ibVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibVentas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibVentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibVentas.ForeColor = System.Drawing.Color.Transparent;
@@ -543,6 +638,8 @@ namespace GUI
             // ibBuscarProd
             // 
             this.ibBuscarProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibBuscarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibBuscarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibBuscarProd.ForeColor = System.Drawing.Color.Transparent;
@@ -562,6 +659,8 @@ namespace GUI
             // ibEditarProd
             // 
             this.ibEditarProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibEditarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibEditarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibEditarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibEditarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibEditarProd.ForeColor = System.Drawing.Color.Transparent;
@@ -581,6 +680,8 @@ namespace GUI
             // ibAgreagarProducto
             // 
             this.ibAgreagarProducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibAgreagarProducto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibAgreagarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ibAgreagarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibAgreagarProducto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibAgreagarProducto.ForeColor = System.Drawing.Color.Transparent;
@@ -600,6 +701,8 @@ namespace GUI
             // ibProductos
             // 
             this.ibProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibProductos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibProductos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibProductos.ForeColor = System.Drawing.Color.Transparent;
@@ -618,12 +721,23 @@ namespace GUI
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(220, 78);
             this.panel3.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(66, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -637,26 +751,24 @@ namespace GUI
             // 
             // pnlInicio
             // 
-            this.pnlInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlInicio.Location = new System.Drawing.Point(226, 46);
+            this.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInicio.Location = new System.Drawing.Point(220, 37);
             this.pnlInicio.Name = "pnlInicio";
-            this.pnlInicio.Size = new System.Drawing.Size(943, 424);
+            this.pnlInicio.Size = new System.Drawing.Size(915, 433);
             this.pnlInicio.TabIndex = 6;
             this.pnlInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
-            // PantallaInicio
+            // FRMPantallaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
-            this.ClientSize = new System.Drawing.Size(1135, 788);
+            this.ClientSize = new System.Drawing.Size(1135, 470);
             this.Controls.Add(this.pnlInicio);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.Barra_Titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PantallaInicio";
+            this.Name = "FRMPantallaInicio";
             this.Text = "PantallaInicio";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_Titulo_MouseDown);
             this.Barra_Titulo.ResumeLayout(false);
@@ -666,12 +778,14 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.pnlProveedor.ResumeLayout(false);
             this.pnlReporte.ResumeLayout(false);
             this.pnlEmpleados.ResumeLayout(false);
             this.pnlCompras.ResumeLayout(false);
             this.pnlClientes.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -687,9 +801,9 @@ namespace GUI
         private System.Windows.Forms.Panel pnlMenu;
         private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.Panel pnlReporte;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton ibtnReporteMasVendido;
+        private FontAwesome.Sharp.IconButton ibtnReporteCompra;
+        private FontAwesome.Sharp.IconButton ibtnReporteVenta;
         private FontAwesome.Sharp.IconButton ibReporte;
         private System.Windows.Forms.Panel pnlEmpleados;
         private FontAwesome.Sharp.IconButton ibBusacarEm;
@@ -713,5 +827,9 @@ namespace GUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlInicio;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlProveedor;
+        private FontAwesome.Sharp.IconButton ibtnBuscarProv;
+        private FontAwesome.Sharp.IconButton ibtnAgregar;
     }
 }

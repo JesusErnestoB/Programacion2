@@ -16,5 +16,12 @@ namespace GUI
         {
             InitializeComponent();
         }
+        FRMPantallaInicio pdto = new FRMPantallaInicio();
+
+        private void ibEditar_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

@@ -73,6 +73,8 @@ namespace GUI
             // 
             // ibEditar
             // 
+            this.ibEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibEditar.ForeColor = System.Drawing.Color.Transparent;
@@ -81,13 +83,14 @@ namespace GUI
             this.ibEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibEditar.IconSize = 25;
             this.ibEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEditar.Location = new System.Drawing.Point(652, 98);
+            this.ibEditar.Location = new System.Drawing.Point(652, 107);
             this.ibEditar.Name = "ibEditar";
             this.ibEditar.Size = new System.Drawing.Size(88, 30);
             this.ibEditar.TabIndex = 58;
             this.ibEditar.Text = "Editar";
             this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ibEditar.UseVisualStyleBackColor = true;
+            this.ibEditar.Click += new System.EventHandler(this.ibEditar_Click);
             // 
             // dataGridView1
             // 
@@ -200,6 +203,8 @@ namespace GUI
             // 
             // ibBuscarProd
             // 
+            this.ibBuscarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibBuscarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibBuscarProd.ForeColor = System.Drawing.Color.Transparent;
@@ -289,7 +294,6 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton ibEditar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreC;
         private System.Windows.Forms.DataGridViewTextBoxColumn calle;
@@ -308,5 +312,6 @@ namespace GUI
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox ibtnInicio;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton ibEditar;
     }
 }

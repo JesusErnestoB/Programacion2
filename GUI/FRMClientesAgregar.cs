@@ -21,5 +21,27 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void ibGuardarClientes_Click(object sender, EventArgs e)
+        {
+            Vaciar();
+        }
+
+        public void Vaciar()
+        {
+            txtNombreC.Clear();
+            txtTelefonoC.Clear();
+            txtCalleC.Clear();
+            txtColoniaC.Clear();
+            txtLocalidadC.Clear();
+            txtMuniciopioC.Clear();
+            txtEstadoC.Clear();
+            txtNombreC.Focus();
+        }
+
+        private void ibCancelarClientes_Click(object sender, EventArgs e)
+        {
+            Vaciar();
+        }
     }
 }

@@ -71,7 +71,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1069, 456);
+            this.panel1.Size = new System.Drawing.Size(802, 456);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -105,9 +105,9 @@ namespace GUI
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(200, 293);
+            this.dataGridView1.Location = new System.Drawing.Point(207, 334);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(445, 356);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 97);
             this.dataGridView1.TabIndex = 55;
             // 
             // Fecha
@@ -136,6 +136,8 @@ namespace GUI
             // 
             // ibCancelar
             // 
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibCancelar.ForeColor = System.Drawing.Color.White;
             this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
@@ -153,6 +155,8 @@ namespace GUI
             // 
             // ibGuardar
             // 
+            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibGuardar.ForeColor = System.Drawing.Color.White;
             this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -167,6 +171,7 @@ namespace GUI
             this.ibGuardar.Text = "Guardar";
             this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ibGuardar.UseVisualStyleBackColor = true;
+            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
             // 
             // label3
             // 
@@ -221,7 +226,7 @@ namespace GUI
             this.dtpCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCompra.Location = new System.Drawing.Point(107, 103);
             this.dtpCompra.Name = "dtpCompra";
-            this.dtpCompra.Size = new System.Drawing.Size(125, 26);
+            this.dtpCompra.Size = new System.Drawing.Size(0, 26);
             this.dtpCompra.TabIndex = 48;
             this.dtpCompra.Value = new System.DateTime(2021, 4, 13, 16, 34, 46, 0);
             // 
@@ -252,7 +257,7 @@ namespace GUI
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1069, 97);
+            this.panel2.Size = new System.Drawing.Size(802, 97);
             this.panel2.TabIndex = 1;
             // 
             // ibtnInicio
@@ -272,7 +277,7 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(419, 49);
+            this.label1.Location = new System.Drawing.Point(396, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 22);
             this.label1.TabIndex = 41;
@@ -283,7 +288,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1069, 456);
+            this.ClientSize = new System.Drawing.Size(802, 456);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMComprasRegistrar";
