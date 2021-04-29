@@ -24,7 +24,9 @@ namespace GUI
 
         private void ibGuardar_Click(object sender, EventArgs e)
         {
+            Validacion();
             LimpiarControles();
+
         }
 
         public void LimpiarControles()
@@ -47,5 +49,48 @@ namespace GUI
         {
             LimpiarControles();
         }
+
+        private void Validacion()
+        {
+            if (txtNombre.Text == "")
+            {
+                errorProvider1.SetError(txtNombre, "ingresa el nombre del producto");
+                return;
+            }
+            errorProvider1.SetError(txtNombre, "");
+
+            if (txtCodigo.Text == "")
+            {
+                errorProvider1.SetError(txtCodigo, "Ingresa el codigo");
+            }
+            errorProvider1.SetError(txtCodigo, "");
+
+            if (txtColor.Text == "")
+            {
+                errorProvider1.SetError(txtColor, "Ingresa el color");
+            }
+            errorProvider1.SetError(txtColor, "");
+
+            if (txtMarca.Text == "")
+            {
+                errorProvider1.SetError(txtMarca, "Ingresa la marca");
+            }
+            errorProvider1.SetError(txtMarca, "");
+
+
+            if (txtPrecioComp.Text == "")
+            {
+                errorProvider1.SetError(txtPrecioComp, "Ingresa el precio de compra");
+            }
+            errorProvider1.SetError(txtPrecioComp, "");
+
+
+            if (txtPrecioVenta.Text == "")
+            {
+                errorProvider1.SetError(txtPrecioVenta, "Ingresa el codigo");
+            }
+            errorProvider1.SetError(txtPrecioVenta, "");
+
+
     }
 }

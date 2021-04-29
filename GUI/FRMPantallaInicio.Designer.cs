@@ -184,7 +184,7 @@ namespace GUI
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 37);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 433);
+            this.pnlMenu.Size = new System.Drawing.Size(220, 436);
             this.pnlMenu.TabIndex = 4;
             // 
             // pnlProveedor
@@ -751,7 +751,6 @@ namespace GUI
             // 
             // pnlInicio
             // 
-            this.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInicio.Location = new System.Drawing.Point(220, 37);
             this.pnlInicio.Name = "pnlInicio";
             this.pnlInicio.Size = new System.Drawing.Size(915, 433);
@@ -763,7 +762,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
-            this.ClientSize = new System.Drawing.Size(1135, 470);
+            this.ClientSize = new System.Drawing.Size(1135, 473);
             this.Controls.Add(this.pnlInicio);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.Barra_Titulo);

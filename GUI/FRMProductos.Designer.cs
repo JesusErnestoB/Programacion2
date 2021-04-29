@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.ibCancelar = new FontAwesome.Sharp.IconButton();
@@ -50,9 +51,11 @@ namespace GUI
             this.lblNomProduct = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,7 +145,7 @@ namespace GUI
             this.lblPrecioVentP.AutoSize = true;
             this.lblPrecioVentP.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioVentP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPrecioVentP.Location = new System.Drawing.Point(164, 293);
+            this.lblPrecioVentP.Location = new System.Drawing.Point(164, 259);
             this.lblPrecioVentP.Name = "lblPrecioVentP";
             this.lblPrecioVentP.Size = new System.Drawing.Size(132, 20);
             this.lblPrecioVentP.TabIndex = 59;
@@ -152,7 +155,7 @@ namespace GUI
             // 
             this.txtPrecioVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtPrecioVenta.ForeColor = System.Drawing.Color.White;
-            this.txtPrecioVenta.Location = new System.Drawing.Point(348, 293);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(348, 259);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(158, 20);
             this.txtPrecioVenta.TabIndex = 58;
@@ -162,7 +165,7 @@ namespace GUI
             this.lblPrecioCompP.AutoSize = true;
             this.lblPrecioCompP.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioCompP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPrecioCompP.Location = new System.Drawing.Point(164, 262);
+            this.lblPrecioCompP.Location = new System.Drawing.Point(164, 228);
             this.lblPrecioCompP.Name = "lblPrecioCompP";
             this.lblPrecioCompP.Size = new System.Drawing.Size(146, 20);
             this.lblPrecioCompP.TabIndex = 57;
@@ -172,7 +175,7 @@ namespace GUI
             // 
             this.txtPrecioComp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtPrecioComp.ForeColor = System.Drawing.Color.White;
-            this.txtPrecioComp.Location = new System.Drawing.Point(348, 264);
+            this.txtPrecioComp.Location = new System.Drawing.Point(348, 230);
             this.txtPrecioComp.Name = "txtPrecioComp";
             this.txtPrecioComp.Size = new System.Drawing.Size(158, 20);
             this.txtPrecioComp.TabIndex = 56;
@@ -191,7 +194,7 @@ namespace GUI
             this.lblDescripccionP.AutoSize = true;
             this.lblDescripccionP.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripccionP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblDescripccionP.Location = new System.Drawing.Point(164, 236);
+            this.lblDescripccionP.Location = new System.Drawing.Point(164, 296);
             this.lblDescripccionP.Name = "lblDescripccionP";
             this.lblDescripccionP.Size = new System.Drawing.Size(169, 20);
             this.lblDescripccionP.TabIndex = 54;
@@ -201,7 +204,7 @@ namespace GUI
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(348, 238);
+            this.txtDescripcion.Location = new System.Drawing.Point(348, 298);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(158, 20);
             this.txtDescripcion.TabIndex = 53;
@@ -308,6 +311,10 @@ namespace GUI
             this.label1.TabIndex = 43;
             this.label1.Text = "Productos ";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FRMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +328,7 @@ namespace GUI
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,5 +356,6 @@ namespace GUI
         private System.Windows.Forms.Label lblNomProduct;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -26,5 +26,12 @@ namespace GUI
         {
             
         }
+
+        private void ibtnInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -254,7 +254,7 @@ namespace GUI
         
         private void ibtnReporteCompra_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMReporteVentas());
+            AbrirFormHija(new FRMReportecompra());
             ocultarMostrarSubmenu(pnlReporte);
         }
         
