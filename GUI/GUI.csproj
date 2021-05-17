@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.cs" />
     <Compile Include="FRMBuscarProveedore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +123,6 @@
     <Compile Include="FRMReprteMasVendido.Designer.cs">
       <DependentUpon>FRMReprteMasVendido.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRMVender.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMVender.Designer.cs">
-      <DependentUpon>FRMVender.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRMVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMReprteMasVendido.resx">
       <DependentUpon>FRMReprteMasVendido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRMVender.resx">
-      <DependentUpon>FRMVender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMVentas.resx">
       <DependentUpon>FRMVentas.cs</DependentUpon>

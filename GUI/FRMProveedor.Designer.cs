@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColoniaProv = new System.Windows.Forms.TextBox();
@@ -52,30 +53,23 @@ namespace GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtColoniaProv);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtEstadoProv);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtMuniciopioProv);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtLocalidadProv);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtCalleProv);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtTelefono);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.lblNomProduct);
-            this.panel1.Controls.Add(this.txtNombreProv);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -86,10 +80,13 @@ namespace GUI
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(430, 151);
+            this.label7.Location = new System.Drawing.Point(27, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 118;
@@ -97,19 +94,25 @@ namespace GUI
             // 
             // txtColoniaProv
             // 
+            this.txtColoniaProv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColoniaProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtColoniaProv.ForeColor = System.Drawing.Color.White;
-            this.txtColoniaProv.Location = new System.Drawing.Point(522, 151);
+            this.txtColoniaProv.Location = new System.Drawing.Point(119, 15);
             this.txtColoniaProv.Name = "txtColoniaProv";
-            this.txtColoniaProv.Size = new System.Drawing.Size(158, 20);
+            this.txtColoniaProv.Size = new System.Drawing.Size(580, 20);
             this.txtColoniaProv.TabIndex = 117;
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(438, 270);
+            this.label6.Location = new System.Drawing.Point(35, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 20);
             this.label6.TabIndex = 116;
@@ -117,19 +120,25 @@ namespace GUI
             // 
             // txtEstadoProv
             // 
+            this.txtEstadoProv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEstadoProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtEstadoProv.ForeColor = System.Drawing.Color.White;
-            this.txtEstadoProv.Location = new System.Drawing.Point(522, 272);
+            this.txtEstadoProv.Location = new System.Drawing.Point(119, 136);
             this.txtEstadoProv.Name = "txtEstadoProv";
-            this.txtEstadoProv.Size = new System.Drawing.Size(158, 20);
+            this.txtEstadoProv.Size = new System.Drawing.Size(580, 20);
             this.txtEstadoProv.TabIndex = 115;
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(415, 237);
+            this.label8.Location = new System.Drawing.Point(12, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 20);
             this.label8.TabIndex = 114;
@@ -137,19 +146,25 @@ namespace GUI
             // 
             // txtMuniciopioProv
             // 
+            this.txtMuniciopioProv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMuniciopioProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtMuniciopioProv.ForeColor = System.Drawing.Color.White;
-            this.txtMuniciopioProv.Location = new System.Drawing.Point(522, 235);
+            this.txtMuniciopioProv.Location = new System.Drawing.Point(119, 99);
             this.txtMuniciopioProv.Name = "txtMuniciopioProv";
-            this.txtMuniciopioProv.Size = new System.Drawing.Size(158, 20);
+            this.txtMuniciopioProv.Size = new System.Drawing.Size(580, 20);
             this.txtMuniciopioProv.TabIndex = 113;
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(414, 195);
+            this.label9.Location = new System.Drawing.Point(11, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 20);
             this.label9.TabIndex = 112;
@@ -157,19 +172,25 @@ namespace GUI
             // 
             // txtLocalidadProv
             // 
+            this.txtLocalidadProv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLocalidadProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtLocalidadProv.ForeColor = System.Drawing.Color.White;
-            this.txtLocalidadProv.Location = new System.Drawing.Point(522, 195);
+            this.txtLocalidadProv.Location = new System.Drawing.Point(119, 59);
             this.txtLocalidadProv.Name = "txtLocalidadProv";
-            this.txtLocalidadProv.Size = new System.Drawing.Size(158, 20);
+            this.txtLocalidadProv.Size = new System.Drawing.Size(580, 20);
             this.txtLocalidadProv.TabIndex = 111;
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(72, 272);
+            this.label10.Location = new System.Drawing.Point(45, 145);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 20);
             this.label10.TabIndex = 110;
@@ -177,19 +198,25 @@ namespace GUI
             // 
             // txtCalleProv
             // 
+            this.txtCalleProv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCalleProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtCalleProv.ForeColor = System.Drawing.Color.White;
-            this.txtCalleProv.Location = new System.Drawing.Point(146, 272);
+            this.txtCalleProv.Location = new System.Drawing.Point(119, 145);
             this.txtCalleProv.Name = "txtCalleProv";
-            this.txtCalleProv.Size = new System.Drawing.Size(206, 20);
+            this.txtCalleProv.Size = new System.Drawing.Size(580, 20);
             this.txtCalleProv.TabIndex = 109;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(48, 235);
+            this.label3.Location = new System.Drawing.Point(21, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 108;
@@ -197,19 +224,25 @@ namespace GUI
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(146, 230);
+            this.txtTelefono.Location = new System.Drawing.Point(119, 103);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(206, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(580, 20);
             this.txtTelefono.TabIndex = 107;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(73, 195);
+            this.label2.Location = new System.Drawing.Point(46, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 20);
             this.label2.TabIndex = 106;
@@ -217,19 +250,25 @@ namespace GUI
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(146, 188);
+            this.txtEmail.Location = new System.Drawing.Point(119, 61);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(206, 20);
+            this.txtEmail.Size = new System.Drawing.Size(580, 20);
             this.txtEmail.TabIndex = 105;
             // 
             // lblNomProduct
             // 
+            this.lblNomProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomProduct.AutoSize = true;
             this.lblNomProduct.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNomProduct.Location = new System.Drawing.Point(47, 151);
+            this.lblNomProduct.Location = new System.Drawing.Point(20, 24);
             this.lblNomProduct.Name = "lblNomProduct";
             this.lblNomProduct.Size = new System.Drawing.Size(68, 20);
             this.lblNomProduct.TabIndex = 104;
@@ -237,11 +276,14 @@ namespace GUI
             // 
             // txtNombreProv
             // 
+            this.txtNombreProv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtNombreProv.ForeColor = System.Drawing.Color.White;
-            this.txtNombreProv.Location = new System.Drawing.Point(146, 149);
+            this.txtNombreProv.Location = new System.Drawing.Point(119, 22);
             this.txtNombreProv.Name = "txtNombreProv";
-            this.txtNombreProv.Size = new System.Drawing.Size(206, 20);
+            this.txtNombreProv.Size = new System.Drawing.Size(580, 20);
             this.txtNombreProv.TabIndex = 103;
             // 
             // panel3
@@ -324,6 +366,56 @@ namespace GUI
             this.label1.TabIndex = 41;
             this.label1.Text = "Registro de Proveedores";
             // 
+            // panel4
+            // 
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(743, 380);
+            this.panel4.TabIndex = 119;
+            // 
+            // panel5
+            // 
+            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.txtCalleProv);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.txtTelefono);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.txtEmail);
+            this.panel5.Controls.Add(this.lblNomProduct);
+            this.panel5.Controls.Add(this.txtNombreProv);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(743, 183);
+            this.panel5.TabIndex = 119;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.txtColoniaProv);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.txtEstadoProv);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.txtMuniciopioProv);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.txtLocalidadProv);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 183);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(743, 278);
+            this.panel6.TabIndex = 120;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FRMProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,11 +427,16 @@ namespace GUI
             this.Name = "FRMProveedor";
             this.Text = "FRMProveedor";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +466,9 @@ namespace GUI
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconPictureBox ibtnInicio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -18,7 +18,6 @@ C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.csproj.CoreCompileInputs
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.exe
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.pdb
-C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMVender.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMBuscarProveedore.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMReporteVentas.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMLogin.resources

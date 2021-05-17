@@ -25,14 +25,25 @@ namespace GUI
 
         private void ibVender_Click(object sender, EventArgs e)
         {
-            FRMVender Ventas = new FRMVender();
-            Ventas.Show();
+            
         }
 
         private void ibBuscarProd_Click(object sender, EventArgs e)
         {
             int cantidad;
             cantidad =Convert.ToInt32( Microsoft.VisualBasic.Interaction.InputBox("cantidad a vender ","Cantidad a vender", "1" ,100, 10));
+        }
+
+        private void ibCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Limpiar()
+        {
+            txtPago.Clear();
+            txtTotal.Clear();
+            lblCambio.Text = " $ ";
         }
     }
 }

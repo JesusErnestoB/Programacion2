@@ -85,7 +85,7 @@ namespace GUI
                 errorProvider1.SetError(txtMuniciopioC, "Ingrese el municipio");
                 return;
             }
-            errorProvider1.SetError(txtMuniciopioC, "");
+            errorProvider1.SetError(txtMuniciopioC, "");        
         }
     }
 }

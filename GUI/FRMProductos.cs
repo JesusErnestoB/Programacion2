@@ -92,5 +92,11 @@ namespace GUI
             errorProvider1.SetError(txtPrecioVenta, "");
 
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

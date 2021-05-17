@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
@@ -61,38 +62,23 @@ namespace GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSexo = new System.Windows.Forms.TextBox();
+            this.pnldatos = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
+            this.pnldatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.pnldatos);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.txtColoniaE);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtNombreE);
-            this.panel1.Controls.Add(this.txtEstadoE);
-            this.panel1.Controls.Add(this.lblNomProduct);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtApPaterno);
-            this.panel1.Controls.Add(this.txtMuniciopioE);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtApMaterno);
-            this.panel1.Controls.Add(this.txtLocalidadE);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtEdad);
-            this.panel1.Controls.Add(this.txtCalleE);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtSexo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -101,29 +87,36 @@ namespace GUI
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.txtContraseña);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(41, 349);
+            this.groupBox1.Location = new System.Drawing.Point(0, 325);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(671, 119);
+            this.groupBox1.Size = new System.Drawing.Size(743, 119);
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtContraseña.ForeColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(458, 47);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(207, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(279, 20);
             this.txtContraseña.TabIndex = 75;
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -135,15 +128,19 @@ namespace GUI
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(91, 43);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(206, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(229, 20);
             this.txtUsuario.TabIndex = 73;
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -155,10 +152,12 @@ namespace GUI
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(462, 159);
+            this.label7.Location = new System.Drawing.Point(459, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 97;
@@ -216,9 +215,11 @@ namespace GUI
             // 
             // txtColoniaE
             // 
+            this.txtColoniaE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtColoniaE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtColoniaE.ForeColor = System.Drawing.Color.White;
-            this.txtColoniaE.Location = new System.Drawing.Point(554, 159);
+            this.txtColoniaE.Location = new System.Drawing.Point(551, 55);
             this.txtColoniaE.Name = "txtColoniaE";
             this.txtColoniaE.Size = new System.Drawing.Size(158, 20);
             this.txtColoniaE.TabIndex = 96;
@@ -258,10 +259,12 @@ namespace GUI
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(470, 292);
+            this.label6.Location = new System.Drawing.Point(467, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 20);
             this.label6.TabIndex = 95;
@@ -269,28 +272,34 @@ namespace GUI
             // 
             // txtNombreE
             // 
+            this.txtNombreE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNombreE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtNombreE.ForeColor = System.Drawing.Color.White;
-            this.txtNombreE.Location = new System.Drawing.Point(187, 120);
+            this.txtNombreE.Location = new System.Drawing.Point(184, 16);
             this.txtNombreE.Name = "txtNombreE";
             this.txtNombreE.Size = new System.Drawing.Size(206, 20);
             this.txtNombreE.TabIndex = 78;
             // 
             // txtEstadoE
             // 
+            this.txtEstadoE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtEstadoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtEstadoE.ForeColor = System.Drawing.Color.White;
-            this.txtEstadoE.Location = new System.Drawing.Point(554, 294);
+            this.txtEstadoE.Location = new System.Drawing.Point(551, 190);
             this.txtEstadoE.Name = "txtEstadoE";
             this.txtEstadoE.Size = new System.Drawing.Size(158, 20);
             this.txtEstadoE.TabIndex = 94;
             // 
             // lblNomProduct
             // 
+            this.lblNomProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNomProduct.AutoSize = true;
             this.lblNomProduct.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNomProduct.Location = new System.Drawing.Point(107, 122);
+            this.lblNomProduct.Location = new System.Drawing.Point(104, 18);
             this.lblNomProduct.Name = "lblNomProduct";
             this.lblNomProduct.Size = new System.Drawing.Size(72, 20);
             this.lblNomProduct.TabIndex = 79;
@@ -298,10 +307,12 @@ namespace GUI
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(447, 245);
+            this.label8.Location = new System.Drawing.Point(444, 141);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 20);
             this.label8.TabIndex = 93;
@@ -309,28 +320,34 @@ namespace GUI
             // 
             // txtApPaterno
             // 
+            this.txtApPaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtApPaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtApPaterno.ForeColor = System.Drawing.Color.White;
-            this.txtApPaterno.Location = new System.Drawing.Point(187, 159);
+            this.txtApPaterno.Location = new System.Drawing.Point(184, 55);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(206, 20);
             this.txtApPaterno.TabIndex = 80;
             // 
             // txtMuniciopioE
             // 
+            this.txtMuniciopioE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMuniciopioE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtMuniciopioE.ForeColor = System.Drawing.Color.White;
-            this.txtMuniciopioE.Location = new System.Drawing.Point(554, 243);
+            this.txtMuniciopioE.Location = new System.Drawing.Point(551, 139);
             this.txtMuniciopioE.Name = "txtMuniciopioE";
             this.txtMuniciopioE.Size = new System.Drawing.Size(158, 20);
             this.txtMuniciopioE.TabIndex = 92;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(44, 161);
+            this.label2.Location = new System.Drawing.Point(41, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 81;
@@ -338,10 +355,12 @@ namespace GUI
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(446, 203);
+            this.label9.Location = new System.Drawing.Point(443, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 20);
             this.label9.TabIndex = 91;
@@ -349,28 +368,34 @@ namespace GUI
             // 
             // txtApMaterno
             // 
+            this.txtApMaterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtApMaterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtApMaterno.ForeColor = System.Drawing.Color.White;
-            this.txtApMaterno.Location = new System.Drawing.Point(187, 201);
+            this.txtApMaterno.Location = new System.Drawing.Point(184, 97);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(206, 20);
             this.txtApMaterno.TabIndex = 82;
             // 
             // txtLocalidadE
             // 
+            this.txtLocalidadE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLocalidadE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtLocalidadE.ForeColor = System.Drawing.Color.White;
-            this.txtLocalidadE.Location = new System.Drawing.Point(554, 203);
+            this.txtLocalidadE.Location = new System.Drawing.Point(551, 99);
             this.txtLocalidadE.Name = "txtLocalidadE";
             this.txtLocalidadE.Size = new System.Drawing.Size(158, 20);
             this.txtLocalidadE.TabIndex = 90;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(42, 201);
+            this.label3.Location = new System.Drawing.Point(39, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 20);
             this.label3.TabIndex = 83;
@@ -378,10 +403,12 @@ namespace GUI
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(480, 122);
+            this.label10.Location = new System.Drawing.Point(477, 18);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 20);
             this.label10.TabIndex = 89;
@@ -389,28 +416,34 @@ namespace GUI
             // 
             // txtEdad
             // 
+            this.txtEdad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtEdad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtEdad.ForeColor = System.Drawing.Color.White;
-            this.txtEdad.Location = new System.Drawing.Point(187, 243);
+            this.txtEdad.Location = new System.Drawing.Point(184, 139);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(206, 20);
             this.txtEdad.TabIndex = 84;
             // 
             // txtCalleE
             // 
+            this.txtCalleE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtCalleE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtCalleE.ForeColor = System.Drawing.Color.White;
-            this.txtCalleE.Location = new System.Drawing.Point(554, 124);
+            this.txtCalleE.Location = new System.Drawing.Point(551, 20);
             this.txtCalleE.Name = "txtCalleE";
             this.txtCalleE.Size = new System.Drawing.Size(158, 20);
             this.txtCalleE.TabIndex = 88;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(132, 245);
+            this.label4.Location = new System.Drawing.Point(129, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 85;
@@ -418,10 +451,12 @@ namespace GUI
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(136, 294);
+            this.label5.Location = new System.Drawing.Point(133, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 20);
             this.label5.TabIndex = 87;
@@ -429,12 +464,46 @@ namespace GUI
             // 
             // txtSexo
             // 
+            this.txtSexo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.txtSexo.ForeColor = System.Drawing.Color.White;
-            this.txtSexo.Location = new System.Drawing.Point(187, 294);
+            this.txtSexo.Location = new System.Drawing.Point(184, 190);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(206, 20);
             this.txtSexo.TabIndex = 86;
+            // 
+            // pnldatos
+            // 
+            this.pnldatos.Controls.Add(this.label7);
+            this.pnldatos.Controls.Add(this.txtColoniaE);
+            this.pnldatos.Controls.Add(this.label6);
+            this.pnldatos.Controls.Add(this.txtNombreE);
+            this.pnldatos.Controls.Add(this.txtEstadoE);
+            this.pnldatos.Controls.Add(this.lblNomProduct);
+            this.pnldatos.Controls.Add(this.label8);
+            this.pnldatos.Controls.Add(this.txtApPaterno);
+            this.pnldatos.Controls.Add(this.txtMuniciopioE);
+            this.pnldatos.Controls.Add(this.label2);
+            this.pnldatos.Controls.Add(this.label9);
+            this.pnldatos.Controls.Add(this.txtApMaterno);
+            this.pnldatos.Controls.Add(this.txtLocalidadE);
+            this.pnldatos.Controls.Add(this.label3);
+            this.pnldatos.Controls.Add(this.label10);
+            this.pnldatos.Controls.Add(this.txtEdad);
+            this.pnldatos.Controls.Add(this.txtCalleE);
+            this.pnldatos.Controls.Add(this.label4);
+            this.pnldatos.Controls.Add(this.label5);
+            this.pnldatos.Controls.Add(this.txtSexo);
+            this.pnldatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnldatos.Location = new System.Drawing.Point(0, 100);
+            this.pnldatos.Name = "pnldatos";
+            this.pnldatos.Size = new System.Drawing.Size(743, 225);
+            this.pnldatos.TabIndex = 99;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // FRMEmpleadosAgregar
             // 
@@ -447,13 +516,15 @@ namespace GUI
             this.Name = "FRMEmpleadosAgregar";
             this.Text = "FRMEmpleadosAgregar";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
+            this.pnldatos.ResumeLayout(false);
+            this.pnldatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +563,7 @@ namespace GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.Panel pnldatos;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

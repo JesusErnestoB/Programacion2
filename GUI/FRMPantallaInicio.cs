@@ -16,6 +16,8 @@ namespace GUI
         public FRMPantallaInicio()
         {
             InitializeComponent();
+            Conexion.Conectar();
+            MessageBox.Show("Conectada con exito");
             InicializarMenu();
         }
 

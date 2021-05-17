@@ -751,9 +751,10 @@ namespace GUI
             // 
             // pnlInicio
             // 
+            this.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInicio.Location = new System.Drawing.Point(220, 37);
             this.pnlInicio.Name = "pnlInicio";
-            this.pnlInicio.Size = new System.Drawing.Size(915, 433);
+            this.pnlInicio.Size = new System.Drawing.Size(915, 436);
             this.pnlInicio.TabIndex = 6;
             this.pnlInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
