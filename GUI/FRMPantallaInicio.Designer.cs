@@ -98,6 +98,7 @@ namespace GUI
             this.Barra_Titulo.Name = "Barra_Titulo";
             this.Barra_Titulo.Size = new System.Drawing.Size(1135, 37);
             this.Barra_Titulo.TabIndex = 3;
+            this.Barra_Titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.Barra_Titulo_Paint);
             this.Barra_Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_Titulo_MouseDown);
             // 
             // btnMaximizar

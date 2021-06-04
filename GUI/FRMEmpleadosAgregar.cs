@@ -7,11 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
 
 namespace GUI
 {
     public partial class FRMEmpleadosAgregar : Form
     {
+        private B_OperacionEmpleadosAgregar objEmpleado = new B_OperacionEmpleadosAgregar();
+        private B_OperacionDomicilio objDomicilio = new B_OperacionDomicilio();
+
+        string NombreE, ApellidoP, ApellidoM, Sexo, calle, colonia, localidad, municipio, estado;
+
+        int Edad ,Direccion;
+
+
+
         public FRMEmpleadosAgregar()
         {
             InitializeComponent();
@@ -19,6 +29,10 @@ namespace GUI
 
         private void ibGuardar_Click(object sender, EventArgs e)
         {
+            Validar();
+            Conversiones();
+            objDomicilio.InsertarDomicilio(calle, colonia, localidad, municipio, estado);
+            MessageBox.Show(objEmpleado.InsertarEmpleados(NombreE,ApellidoP,ApellidoM,Sexo,Edad,Direccion));
             LimpiarControles();
         }
 
@@ -34,9 +48,7 @@ namespace GUI
             txtLocalidadE.Clear();
             txtMuniciopioE.Clear();
             txtEstadoE.Clear();
-            txtUsuario.Clear();
-            txtContraseña.Clear();
-
+            
             txtNombreE.Focus();
         }
 
@@ -104,6 +116,20 @@ namespace GUI
             }
             errorProvider1.SetError(txtMuniciopioE, "");
 
+        }
+
+        public void Conversiones()
+        {
+            NombreE = txtNombreE.Text.ToUpper();
+            ApellidoM = txtApMaterno.Text.ToUpper();
+            ApellidoP = txtApPaterno.Text.ToUpper();
+            Sexo = txtSexo.Text.ToUpper();
+            Edad = Convert.ToInt32(txtEdad);
+            calle = txtCalleE.Text.ToUpper();
+            colonia = txtColoniaE.Text.ToUpper();
+            localidad = txtLocalidadE.Text.ToUpper();
+            municipio = txtMuniciopioE.Text.ToUpper();
+            estado = txtEstadoE.Text.ToUpper();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

@@ -16,8 +16,6 @@ namespace GUI
         public FRMPantallaInicio()
         {
             InitializeComponent();
-            Conexion.Conectar();
-            MessageBox.Show("Conectada con exito");
             InicializarMenu();
         }
 
@@ -288,8 +286,12 @@ namespace GUI
         }
 
 
+
         #endregion
 
-        
+        private void Barra_Titulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     } 
 }

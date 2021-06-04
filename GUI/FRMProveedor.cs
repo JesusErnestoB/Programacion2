@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Business;
 
 namespace GUI
 {
     public partial class FRMProveedor : Form
     {
+        B_OperacionesProveedores objOperacionProveedores = new B_OperacionesProveedores();
+        B_OperacionDomicilio objOperacionDomicilio = new B_OperacionDomicilio();
+
+        string nombre, correo, telefono, calle, colonia, localidad, municipio, estado;
+        int domicilio,id;
         public FRMProveedor()
         {
             InitializeComponent();
@@ -20,6 +26,11 @@ namespace GUI
 
         private void ibGuardar_Click(object sender, EventArgs e)
         {
+            Validar();
+            Conversiones();
+            objOperacionDomicilio.InsertarDomicilio(id,calle, colonia, localidad, municipio, estado);
+            MessageBox.Show(objOperacionProveedores.InsertarProveedores(nombre, correo, telefono, domicilio));
+
             LimpiarControles();
         }
 
@@ -85,6 +96,19 @@ namespace GUI
         }
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        public void Conversiones()
+        {
+            nombre = txtNombreProv.Text.ToUpper();
+            correo = txtEmail.Text.ToUpper();
+            telefono = txtTelefono.Text.ToUpper();
+            calle = txtCalleProv.Text.ToUpper();
+            colonia = txtColoniaProv.Text.ToUpper();
+            localidad = txtLocalidadProv.Text.ToUpper();
+            municipio = txtMuniciopioProv.Text.ToUpper();
+            estado = txtEstadoProv.Text.ToUpper();
 
         }
     }

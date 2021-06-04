@@ -31,19 +31,9 @@ namespace GUI
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.pnldatos = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ibCancelar = new FontAwesome.Sharp.IconButton();
-            this.ibGuardar = new FontAwesome.Sharp.IconButton();
             this.txtColoniaE = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreE = new System.Windows.Forms.TextBox();
             this.txtEstadoE = new System.Windows.Forms.TextBox();
@@ -62,20 +52,23 @@ namespace GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSexo = new System.Windows.Forms.TextBox();
-            this.pnldatos = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ibCancelar = new FontAwesome.Sharp.IconButton();
+            this.ibGuardar = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.pnldatos.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
-            this.pnldatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.pnldatos);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -85,70 +78,33 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(943, 480);
             this.panel1.TabIndex = 1;
             // 
-            // groupBox1
+            // pnldatos
             // 
-            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.Controls.Add(this.txtContraseña);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(0, 325);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(743, 119);
-            this.groupBox1.TabIndex = 98;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nuevo";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(458, 47);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(279, 20);
-            this.txtContraseña.TabIndex = 75;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(337, 45);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 20);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "Contraseña";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(91, 43);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(229, 20);
-            this.txtUsuario.TabIndex = 73;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(11, 45);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 20);
-            this.label12.TabIndex = 74;
-            this.label12.Text = "Usuario";
+            this.pnldatos.Controls.Add(this.label7);
+            this.pnldatos.Controls.Add(this.txtColoniaE);
+            this.pnldatos.Controls.Add(this.label6);
+            this.pnldatos.Controls.Add(this.txtNombreE);
+            this.pnldatos.Controls.Add(this.txtEstadoE);
+            this.pnldatos.Controls.Add(this.lblNomProduct);
+            this.pnldatos.Controls.Add(this.label8);
+            this.pnldatos.Controls.Add(this.txtApPaterno);
+            this.pnldatos.Controls.Add(this.txtMuniciopioE);
+            this.pnldatos.Controls.Add(this.label2);
+            this.pnldatos.Controls.Add(this.label9);
+            this.pnldatos.Controls.Add(this.txtApMaterno);
+            this.pnldatos.Controls.Add(this.txtLocalidadE);
+            this.pnldatos.Controls.Add(this.label3);
+            this.pnldatos.Controls.Add(this.label10);
+            this.pnldatos.Controls.Add(this.txtEdad);
+            this.pnldatos.Controls.Add(this.txtCalleE);
+            this.pnldatos.Controls.Add(this.label4);
+            this.pnldatos.Controls.Add(this.label5);
+            this.pnldatos.Controls.Add(this.txtSexo);
+            this.pnldatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnldatos.Location = new System.Drawing.Point(0, 100);
+            this.pnldatos.Name = "pnldatos";
+            this.pnldatos.Size = new System.Drawing.Size(743, 225);
+            this.pnldatos.TabIndex = 99;
             // 
             // label7
             // 
@@ -163,56 +119,6 @@ namespace GUI
             this.label7.TabIndex = 97;
             this.label7.Text = "Colonia";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ibCancelar);
-            this.panel3.Controls.Add(this.ibGuardar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(743, 100);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 380);
-            this.panel3.TabIndex = 73;
-            // 
-            // ibCancelar
-            // 
-            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibCancelar.ForeColor = System.Drawing.Color.White;
-            this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            this.ibCancelar.IconColor = System.Drawing.Color.White;
-            this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibCancelar.IconSize = 30;
-            this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibCancelar.Location = new System.Drawing.Point(73, 103);
-            this.ibCancelar.Name = "ibCancelar";
-            this.ibCancelar.Size = new System.Drawing.Size(78, 45);
-            this.ibCancelar.TabIndex = 44;
-            this.ibCancelar.Text = "Cancelar";
-            this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibCancelar.UseVisualStyleBackColor = true;
-            this.ibCancelar.Click += new System.EventHandler(this.ibCancelar_Click);
-            // 
-            // ibGuardar
-            // 
-            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibGuardar.ForeColor = System.Drawing.Color.White;
-            this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.ibGuardar.IconColor = System.Drawing.Color.White;
-            this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibGuardar.IconSize = 30;
-            this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibGuardar.Location = new System.Drawing.Point(73, 32);
-            this.ibGuardar.Name = "ibGuardar";
-            this.ibGuardar.Size = new System.Drawing.Size(78, 47);
-            this.ibGuardar.TabIndex = 43;
-            this.ibGuardar.Text = "Guardar";
-            this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibGuardar.UseVisualStyleBackColor = true;
-            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
-            // 
             // txtColoniaE
             // 
             this.txtColoniaE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -223,39 +129,6 @@ namespace GUI
             this.txtColoniaE.Name = "txtColoniaE";
             this.txtColoniaE.Size = new System.Drawing.Size(158, 20);
             this.txtColoniaE.TabIndex = 96;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ibtnInicio);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(943, 100);
-            this.panel2.TabIndex = 47;
-            // 
-            // ibtnInicio
-            // 
-            this.ibtnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.ibtnInicio.IconColor = System.Drawing.Color.White;
-            this.ibtnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnInicio.Location = new System.Drawing.Point(41, 32);
-            this.ibtnInicio.Name = "ibtnInicio";
-            this.ibtnInicio.Size = new System.Drawing.Size(32, 32);
-            this.ibtnInicio.TabIndex = 69;
-            this.ibtnInicio.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(363, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 22);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Registro de empleados";
             // 
             // label6
             // 
@@ -473,33 +346,88 @@ namespace GUI
             this.txtSexo.Size = new System.Drawing.Size(206, 20);
             this.txtSexo.TabIndex = 86;
             // 
-            // pnldatos
+            // panel3
             // 
-            this.pnldatos.Controls.Add(this.label7);
-            this.pnldatos.Controls.Add(this.txtColoniaE);
-            this.pnldatos.Controls.Add(this.label6);
-            this.pnldatos.Controls.Add(this.txtNombreE);
-            this.pnldatos.Controls.Add(this.txtEstadoE);
-            this.pnldatos.Controls.Add(this.lblNomProduct);
-            this.pnldatos.Controls.Add(this.label8);
-            this.pnldatos.Controls.Add(this.txtApPaterno);
-            this.pnldatos.Controls.Add(this.txtMuniciopioE);
-            this.pnldatos.Controls.Add(this.label2);
-            this.pnldatos.Controls.Add(this.label9);
-            this.pnldatos.Controls.Add(this.txtApMaterno);
-            this.pnldatos.Controls.Add(this.txtLocalidadE);
-            this.pnldatos.Controls.Add(this.label3);
-            this.pnldatos.Controls.Add(this.label10);
-            this.pnldatos.Controls.Add(this.txtEdad);
-            this.pnldatos.Controls.Add(this.txtCalleE);
-            this.pnldatos.Controls.Add(this.label4);
-            this.pnldatos.Controls.Add(this.label5);
-            this.pnldatos.Controls.Add(this.txtSexo);
-            this.pnldatos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnldatos.Location = new System.Drawing.Point(0, 100);
-            this.pnldatos.Name = "pnldatos";
-            this.pnldatos.Size = new System.Drawing.Size(743, 225);
-            this.pnldatos.TabIndex = 99;
+            this.panel3.Controls.Add(this.ibCancelar);
+            this.panel3.Controls.Add(this.ibGuardar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(743, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 380);
+            this.panel3.TabIndex = 73;
+            // 
+            // ibCancelar
+            // 
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibCancelar.ForeColor = System.Drawing.Color.White;
+            this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
+            this.ibCancelar.IconColor = System.Drawing.Color.White;
+            this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibCancelar.IconSize = 30;
+            this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibCancelar.Location = new System.Drawing.Point(73, 103);
+            this.ibCancelar.Name = "ibCancelar";
+            this.ibCancelar.Size = new System.Drawing.Size(78, 45);
+            this.ibCancelar.TabIndex = 44;
+            this.ibCancelar.Text = "Cancelar";
+            this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibCancelar.UseVisualStyleBackColor = true;
+            this.ibCancelar.Click += new System.EventHandler(this.ibCancelar_Click);
+            // 
+            // ibGuardar
+            // 
+            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibGuardar.ForeColor = System.Drawing.Color.White;
+            this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.ibGuardar.IconColor = System.Drawing.Color.White;
+            this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibGuardar.IconSize = 30;
+            this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibGuardar.Location = new System.Drawing.Point(73, 32);
+            this.ibGuardar.Name = "ibGuardar";
+            this.ibGuardar.Size = new System.Drawing.Size(78, 47);
+            this.ibGuardar.TabIndex = 43;
+            this.ibGuardar.Text = "Guardar";
+            this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibGuardar.UseVisualStyleBackColor = true;
+            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ibtnInicio);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(943, 100);
+            this.panel2.TabIndex = 47;
+            // 
+            // ibtnInicio
+            // 
+            this.ibtnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.ibtnInicio.IconColor = System.Drawing.Color.White;
+            this.ibtnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnInicio.Location = new System.Drawing.Point(41, 32);
+            this.ibtnInicio.Name = "ibtnInicio";
+            this.ibtnInicio.Size = new System.Drawing.Size(32, 32);
+            this.ibtnInicio.TabIndex = 69;
+            this.ibtnInicio.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(363, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 22);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Registro de empleados";
             // 
             // errorProvider1
             // 
@@ -516,14 +444,12 @@ namespace GUI
             this.Name = "FRMEmpleadosAgregar";
             this.Text = "FRMEmpleadosAgregar";
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.pnldatos.ResumeLayout(false);
+            this.pnldatos.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
-            this.pnldatos.ResumeLayout(false);
-            this.pnldatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -532,11 +458,6 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton ibCancelar;

@@ -8,11 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Business;
 
 namespace GUI
 {
     public partial class FRMClientesAgregar : Form
     {
+        B_OperacionesClientes objOPeracionesClientes = new B_OperacionesClientes();
+        B_OperacionDomicilio objDomiclio = new B_OperacionDomicilio();
+
+        string nombreC, Telefono, Calle, colonia, localodad, municipio, estado;
+        int direccion;
+
         public FRMClientesAgregar()
         {
             InitializeComponent();
@@ -26,6 +33,11 @@ namespace GUI
         private void ibGuardarClientes_Click(object sender, EventArgs e)
         {
             Validar();
+            Conversiones();
+
+            objDomiclio.InsertarDomicilio(Calle, colonia, localodad, municipio, estado);
+            MessageBox.Show(objOPeracionesClientes.InsertarClientes(nombreC, Telefono, direccion));
+
             Vaciar();
         }
 
@@ -45,6 +57,7 @@ namespace GUI
         {
             Vaciar();
         }
+     
         private void Validar()
         {
             if (txtNombreC.Text == "")
@@ -86,6 +99,17 @@ namespace GUI
                 return;
             }
             errorProvider1.SetError(txtMuniciopioC, "");        
+        }
+
+        public void Conversiones()
+        {
+            nombreC = txtCalleC.Text.ToUpper();
+            Telefono = txtTelefonoC.Text.ToUpper();
+            Calle = txtCalleC.Text.ToUpper();
+            colonia = txtColoniaC.Text.ToUpper();
+            localodad = txtLocalidadC.Text.ToUpper();
+            municipio = txtMuniciopioC.Text.ToUpper();
+            estado = txtEstadoC.Text.ToUpper();
         }
     }
 }

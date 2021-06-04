@@ -1,0 +1,2 @@
+C:\Users\jesus\Documents\PuntoDeVenta\DALL\obj\Debug\DALL.csprojAssemblyReference.cache
+C:\Users\jesus\Documents\PuntoDeVenta\DALL\obj\Debug\DALL.csproj.CoreCompileInputs.cache

@@ -31,6 +31,8 @@ namespace GUI
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColoniaProv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -39,6 +41,7 @@ namespace GUI
             this.txtMuniciopioProv = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtLocalidadProv = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCalleProv = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,17 +56,14 @@ namespace GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +77,34 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(943, 480);
             this.panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(743, 380);
+            this.panel4.TabIndex = 119;
+            // 
+            // panel6
+            // 
+            this.panel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.txtColoniaProv);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.txtEstadoProv);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.txtMuniciopioProv);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.txtLocalidadProv);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 183);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(743, 278);
+            this.panel6.TabIndex = 120;
             // 
             // label7
             // 
@@ -181,6 +209,24 @@ namespace GUI
             this.txtLocalidadProv.Name = "txtLocalidadProv";
             this.txtLocalidadProv.Size = new System.Drawing.Size(580, 20);
             this.txtLocalidadProv.TabIndex = 111;
+            // 
+            // panel5
+            // 
+            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.txtCalleProv);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.txtTelefono);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.txtEmail);
+            this.panel5.Controls.Add(this.lblNomProduct);
+            this.panel5.Controls.Add(this.txtNombreProv);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(743, 183);
+            this.panel5.TabIndex = 119;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label10
             // 
@@ -366,52 +412,6 @@ namespace GUI
             this.label1.TabIndex = 41;
             this.label1.Text = "Registro de Proveedores";
             // 
-            // panel4
-            // 
-            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(743, 380);
-            this.panel4.TabIndex = 119;
-            // 
-            // panel5
-            // 
-            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.txtCalleProv);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.txtTelefono);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.txtEmail);
-            this.panel5.Controls.Add(this.lblNomProduct);
-            this.panel5.Controls.Add(this.txtNombreProv);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(743, 183);
-            this.panel5.TabIndex = 119;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // panel6
-            // 
-            this.panel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.txtColoniaProv);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.txtEstadoProv);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.txtMuniciopioProv);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.txtLocalidadProv);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 183);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(743, 278);
-            this.panel6.TabIndex = 120;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -427,15 +427,15 @@ namespace GUI
             this.Name = "FRMProveedor";
             this.Text = "FRMProveedor";
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 

@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
 
 namespace GUI
 {
     public partial class FRMProductos : Form
     {
+        private B_OperacionProductos objOperacionesProductos = new B_OperacionProductos();
+
+        string Nombre, codigo, marca, color, descripcion;
+        int cantidad;
+        float precioComp, PrecioVen;
         public FRMProductos()
         {
             InitializeComponent();
@@ -24,9 +30,25 @@ namespace GUI
 
         private void ibGuardar_Click(object sender, EventArgs e)
         {
+            convrsiones();
             Validacion();
+
+            MessageBox.Show(objOperacionesProductos.InsertarProductos(Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion));
+
             LimpiarControles();
 
+        }
+
+        public void convrsiones()
+        {
+            Nombre = txtNombre.Text.ToUpper();
+            codigo = txtCodigo.Text.ToUpper();
+            marca = txtMarca.Text.ToUpper();
+            cantidad = Convert.ToInt32(nudCantidad);
+            color = txtColor.Text.ToUpper();
+            precioComp = float.Parse(txtPrecioComp.Text);
+            PrecioVen = float.Parse(txtPrecioVenta.Text);
+            descripcion = txtDescripcion.Text.ToUpper();
         }
 
         public void LimpiarControles()
@@ -95,6 +117,11 @@ namespace GUI
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

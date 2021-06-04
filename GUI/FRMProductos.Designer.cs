@@ -31,9 +31,7 @@ namespace GUI
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
-            this.ibCancelar = new FontAwesome.Sharp.IconButton();
-            this.ibGuardar = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPrecioVentP = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.lblPrecioCompP = new System.Windows.Forms.Label();
@@ -50,18 +48,20 @@ namespace GUI
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNomProduct = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ibCancelar = new FontAwesome.Sharp.IconButton();
+            this.ibGuardar = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,58 +77,31 @@ namespace GUI
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // ibtnInicio
+            // groupBox1
             // 
-            this.ibtnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.ibtnInicio.IconColor = System.Drawing.Color.White;
-            this.ibtnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnInicio.Location = new System.Drawing.Point(20, 19);
-            this.ibtnInicio.Name = "ibtnInicio";
-            this.ibtnInicio.Size = new System.Drawing.Size(32, 32);
-            this.ibtnInicio.TabIndex = 65;
-            this.ibtnInicio.TabStop = false;
-            this.ibtnInicio.Click += new System.EventHandler(this.ibtnInicio_Click);
-            // 
-            // ibCancelar
-            // 
-            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibCancelar.ForeColor = System.Drawing.Color.White;
-            this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            this.ibCancelar.IconColor = System.Drawing.Color.White;
-            this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibCancelar.IconSize = 30;
-            this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibCancelar.Location = new System.Drawing.Point(33, 168);
-            this.ibCancelar.Name = "ibCancelar";
-            this.ibCancelar.Size = new System.Drawing.Size(78, 45);
-            this.ibCancelar.TabIndex = 64;
-            this.ibCancelar.Text = "Cancelar";
-            this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibCancelar.UseVisualStyleBackColor = true;
-            this.ibCancelar.Click += new System.EventHandler(this.ibCancelar_Click);
-            // 
-            // ibGuardar
-            // 
-            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibGuardar.ForeColor = System.Drawing.Color.White;
-            this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.ibGuardar.IconColor = System.Drawing.Color.White;
-            this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibGuardar.IconSize = 30;
-            this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibGuardar.Location = new System.Drawing.Point(33, 29);
-            this.ibGuardar.Name = "ibGuardar";
-            this.ibGuardar.Size = new System.Drawing.Size(78, 47);
-            this.ibGuardar.TabIndex = 63;
-            this.ibGuardar.Text = "Guardar";
-            this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibGuardar.UseVisualStyleBackColor = true;
-            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
+            this.groupBox1.Controls.Add(this.lblPrecioVentP);
+            this.groupBox1.Controls.Add(this.txtPrecioVenta);
+            this.groupBox1.Controls.Add(this.lblPrecioCompP);
+            this.groupBox1.Controls.Add(this.txtPrecioComp);
+            this.groupBox1.Controls.Add(this.nudCantidad);
+            this.groupBox1.Controls.Add(this.lblDescripccionP);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
+            this.groupBox1.Controls.Add(this.lblCantidadP);
+            this.groupBox1.Controls.Add(this.lblMarcaP);
+            this.groupBox1.Controls.Add(this.txtMarca);
+            this.groupBox1.Controls.Add(this.lblColorP);
+            this.groupBox1.Controls.Add(this.txtColor);
+            this.groupBox1.Controls.Add(this.lblCodigoproducto);
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.lblNomProduct);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 69);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(665, 381);
+            this.groupBox1.TabIndex = 68;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblPrecioVentP
             // 
@@ -322,6 +295,79 @@ namespace GUI
             this.txtNombre.Size = new System.Drawing.Size(334, 20);
             this.txtNombre.TabIndex = 44;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ibCancelar);
+            this.panel3.Controls.Add(this.ibGuardar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(665, 69);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(135, 381);
+            this.panel3.TabIndex = 67;
+            // 
+            // ibCancelar
+            // 
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibCancelar.ForeColor = System.Drawing.Color.White;
+            this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
+            this.ibCancelar.IconColor = System.Drawing.Color.White;
+            this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibCancelar.IconSize = 30;
+            this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibCancelar.Location = new System.Drawing.Point(33, 168);
+            this.ibCancelar.Name = "ibCancelar";
+            this.ibCancelar.Size = new System.Drawing.Size(78, 45);
+            this.ibCancelar.TabIndex = 64;
+            this.ibCancelar.Text = "Cancelar";
+            this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibCancelar.UseVisualStyleBackColor = true;
+            this.ibCancelar.Click += new System.EventHandler(this.ibCancelar_Click);
+            // 
+            // ibGuardar
+            // 
+            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibGuardar.ForeColor = System.Drawing.Color.White;
+            this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.ibGuardar.IconColor = System.Drawing.Color.White;
+            this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibGuardar.IconSize = 30;
+            this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibGuardar.Location = new System.Drawing.Point(33, 29);
+            this.ibGuardar.Name = "ibGuardar";
+            this.ibGuardar.Size = new System.Drawing.Size(78, 47);
+            this.ibGuardar.TabIndex = 63;
+            this.ibGuardar.Text = "Guardar";
+            this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibGuardar.UseVisualStyleBackColor = true;
+            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ibtnInicio);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 69);
+            this.panel2.TabIndex = 66;
+            // 
+            // ibtnInicio
+            // 
+            this.ibtnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibtnInicio.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.ibtnInicio.IconColor = System.Drawing.Color.White;
+            this.ibtnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnInicio.Location = new System.Drawing.Point(20, 19);
+            this.ibtnInicio.Name = "ibtnInicio";
+            this.ibtnInicio.Size = new System.Drawing.Size(32, 32);
+            this.ibtnInicio.TabIndex = 65;
+            this.ibtnInicio.TabStop = false;
+            this.ibtnInicio.Click += new System.EventHandler(this.ibtnInicio_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -337,51 +383,6 @@ namespace GUI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ibtnInicio);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 69);
-            this.panel2.TabIndex = 66;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ibCancelar);
-            this.panel3.Controls.Add(this.ibGuardar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(665, 69);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 381);
-            this.panel3.TabIndex = 67;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblPrecioVentP);
-            this.groupBox1.Controls.Add(this.txtPrecioVenta);
-            this.groupBox1.Controls.Add(this.lblPrecioCompP);
-            this.groupBox1.Controls.Add(this.txtPrecioComp);
-            this.groupBox1.Controls.Add(this.nudCantidad);
-            this.groupBox1.Controls.Add(this.lblDescripccionP);
-            this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.lblCantidadP);
-            this.groupBox1.Controls.Add(this.lblMarcaP);
-            this.groupBox1.Controls.Add(this.txtMarca);
-            this.groupBox1.Controls.Add(this.lblColorP);
-            this.groupBox1.Controls.Add(this.txtColor);
-            this.groupBox1.Controls.Add(this.lblCodigoproducto);
-            this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Controls.Add(this.lblNomProduct);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 69);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(665, 381);
-            this.groupBox1.TabIndex = 68;
-            this.groupBox1.TabStop = false;
-            // 
             // FRMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,14 +393,14 @@ namespace GUI
             this.Name = "FRMProductos";
             this.Text = "FRMProductos";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
