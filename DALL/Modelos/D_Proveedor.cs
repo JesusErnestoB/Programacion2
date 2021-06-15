@@ -69,5 +69,40 @@ namespace DALL.Modelos
             }
             return Success;
         }
+
+        public DataTable BuscarProveedor()
+        {
+            DataTable TablaProveedores = new DataTable();
+            try
+            {
+                conexion.abrir();
+
+                string sql = "SELECT Proveedor.nombre,correoE,telefono,Domicilio.calle,Colonia,Localidad,Municipio,Estado" ;
+                       sql += " from Proveedor inner join Domicilio on Proveedor.id_Direccion =Domicilio.id ";
+                       
+                var cmd = new SqlCommand(sql, conexion.Conectar);
+                var reader = cmd.ExecuteReader();
+
+                if (reader.HasRows == false)
+                {
+                    return null;
+                }
+
+                TablaProveedores.Load(reader);
+
+                conexion.cerrar();
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return TablaProveedores;
+
+        }
     }
+    
 }

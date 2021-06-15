@@ -14,11 +14,38 @@ namespace GUI
 {
     public partial class FRMProveedor : Form
     {
-        B_OperacionesProveedores objOperacionProveedores = new B_OperacionesProveedores();
-        B_OperacionDomicilio objOperacionDomicilio = new B_OperacionDomicilio();
+        B_OperacionesProveedores b_OperacionProveedores = new B_OperacionesProveedores();
+        B_OperacionDomicilio b_OperacionDomicilio = new B_OperacionDomicilio();
 
         string nombre, correo, telefono, calle, colonia, localidad, municipio, estado;
-        int domicilio,id;
+        int domicilio, id;
+
+        private void ibCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
+
+        private void ibMostrar_Click_1(object sender, EventArgs e)
+        {
+            var lista = b_OperacionProveedores.Buscar_Proveedores();
+            dgvProveedores.DataSource = lista;
+        }
+
+        private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNombreProv.Text = dgvProveedores.CurrentRow.Cells[0].ToString();
+            txtEmail.Text = dgvProveedores.CurrentRow.Cells[1].ToString();
+            txtTelefono.Text = dgvProveedores.CurrentRow.Cells[2].ToString();
+            txtCalleProv.Text = dgvProveedores.CurrentRow.Cells[3].ToString();
+            txtColoniaProv.Text = dgvProveedores.CurrentRow.Cells[4].ToString();
+            txtLocalidadProv.Text = dgvProveedores.CurrentRow.Cells[5].ToString();
+            txtMuniciopioProv.Text = dgvProveedores.CurrentRow.Cells[6].ToString();
+            txtEstadoProv.Text = dgvProveedores.CurrentRow.Cells[7].ToString();
+        }
+
+       
+
+       
         public FRMProveedor()
         {
             InitializeComponent();
@@ -28,8 +55,8 @@ namespace GUI
         {
             Validar();
             Conversiones();
-            objOperacionDomicilio.InsertarDomicilio(id,calle, colonia, localidad, municipio, estado);
-            MessageBox.Show(objOperacionProveedores.InsertarProveedores(nombre, correo, telefono, domicilio));
+            MessageBox.Show( b_OperacionDomicilio.InsertarDomicilio(calle, colonia, localidad, municipio, estado));
+            MessageBox.Show(b_OperacionProveedores.InsertarProveedores(nombre, correo, telefono, domicilio));
 
             LimpiarControles();
         }
@@ -94,10 +121,7 @@ namespace GUI
             }
             errorProvider1.SetError(txtMuniciopioProv, "");
         }
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+     
 
         public void Conversiones()
         {
@@ -111,5 +135,7 @@ namespace GUI
             estado = txtEstadoProv.Text.ToUpper();
 
         }
+
+       
     }
 }

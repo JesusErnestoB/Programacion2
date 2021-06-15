@@ -13,26 +13,28 @@ namespace GUI
 {
     public partial class FRMEmpleadosAgregar : Form
     {
-        private B_OperacionEmpleadosAgregar objEmpleado = new B_OperacionEmpleadosAgregar();
+        private B_OperacionEmpleadosAgregar b_Empleado = new B_OperacionEmpleadosAgregar();
         private B_OperacionDomicilio objDomicilio = new B_OperacionDomicilio();
 
         string NombreE, ApellidoP, ApellidoM, Sexo, calle, colonia, localidad, municipio, estado;
-
-        int Edad ,Direccion;
-
-
-
+           int Edad ,Direccion,idDom;
         public FRMEmpleadosAgregar()
         {
             InitializeComponent();
         }
 
+        private void ibMostrar_Click(object sender, EventArgs e)
+        {
+            var lista = b_Empleado.Buscar_Empleados();
+            dgvEmpleados.DataSource = lista;
+        }
+        
         private void ibGuardar_Click(object sender, EventArgs e)
         {
             Validar();
             Conversiones();
             objDomicilio.InsertarDomicilio(calle, colonia, localidad, municipio, estado);
-            MessageBox.Show(objEmpleado.InsertarEmpleados(NombreE,ApellidoP,ApellidoM,Sexo,Edad,Direccion));
+            MessageBox.Show(b_Empleado.InsertarEmpleados(NombreE,ApellidoP,ApellidoM,Sexo,Edad,Direccion));
             LimpiarControles();
         }
 

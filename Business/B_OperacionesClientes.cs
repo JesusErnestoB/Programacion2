@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DALL.Modelos ;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Business
 {
@@ -37,9 +39,9 @@ namespace Business
             }
         }
 
-        public string InsertarClientes(int id, string nombreC, string telefono, int  direccion)
+        public string InsertarClientes(int id, string nombreC, string telefono, int direccion)
         {
-            dCiente.IdCliente= id;
+            dCiente.IdCliente = id;
             try
             {
                 dCiente.IdCliente = id;
@@ -64,6 +66,20 @@ namespace Business
                 throw;
             }
         }
-    }
+
+        public DataTable Buscar_Clientes()
+        {
+            try
+            {
+                return dCiente.BuscarCliente();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
     }
 }

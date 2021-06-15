@@ -1,0 +1,9 @@
+C:\Users\jesus\Documents\PuntoDeVenta\Business\bin\Debug\Business.dll
+C:\Users\jesus\Documents\PuntoDeVenta\Business\bin\Debug\Business.pdb
+C:\Users\jesus\Documents\PuntoDeVenta\Business\bin\Debug\DALL.dll
+C:\Users\jesus\Documents\PuntoDeVenta\Business\bin\Debug\DALL.pdb
+C:\Users\jesus\Documents\PuntoDeVenta\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\jesus\Documents\PuntoDeVenta\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\jesus\Documents\PuntoDeVenta\Business\obj\Debug\Business.csproj.CopyComplete
+C:\Users\jesus\Documents\PuntoDeVenta\Business\obj\Debug\Business.dll
+C:\Users\jesus\Documents\PuntoDeVenta\Business\obj\Debug\Business.pdb

@@ -139,14 +139,14 @@ namespace GUI
 
         private void ibEditarProd_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMProductosBusquedayEdicion());
+            AbrirFormHija(new FRMProductos());
             ocultarMostrarSubmenu(pnlProductos);
             
         }
 
         private void ibBuscarProd_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMProductosBusquedayEdicion());
+            AbrirFormHija(new FRMProductos());
             ocultarMostrarSubmenu(pnlProductos);
 
         }
@@ -177,7 +177,7 @@ namespace GUI
 
         private void ibBuscarC_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMClientesBusquedayEdicion());
+            AbrirFormHija(new FRMClientesAgregar());
             ocultarMostrarSubmenu(pnlClientes);
         }
         #endregion
@@ -229,7 +229,7 @@ namespace GUI
         }
         private void ibtnBuscarProv_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMBuscarProveedore());
+            AbrirFormHija(new FRMProveedor());
             ocultarMostrarSubmenu(pnlProveedor);
         }
 
@@ -290,6 +290,11 @@ namespace GUI
         #endregion
 
         private void Barra_Titulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

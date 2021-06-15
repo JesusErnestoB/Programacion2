@@ -40,7 +40,7 @@ namespace GUI
             this.pnlProveedor = new System.Windows.Forms.Panel();
             this.ibtnBuscarProv = new FontAwesome.Sharp.IconButton();
             this.ibtnAgregar = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.ibProveedores = new FontAwesome.Sharp.IconButton();
             this.pnlReporte = new System.Windows.Forms.Panel();
             this.ibtnReporteMasVendido = new FontAwesome.Sharp.IconButton();
             this.ibtnReporteCompra = new FontAwesome.Sharp.IconButton();
@@ -124,6 +124,7 @@ namespace GUI
             this.label1.Size = new System.Drawing.Size(171, 22);
             this.label1.TabIndex = 22;
             this.label1.Text = "Papeleria \"Memo\"";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnRestaurar
             // 
@@ -169,7 +170,7 @@ namespace GUI
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.pnlMenu.Controls.Add(this.pnlProveedor);
-            this.pnlMenu.Controls.Add(this.iconButton4);
+            this.pnlMenu.Controls.Add(this.ibProveedores);
             this.pnlMenu.Controls.Add(this.pnlReporte);
             this.pnlMenu.Controls.Add(this.ibReporte);
             this.pnlMenu.Controls.Add(this.pnlEmpleados);
@@ -185,7 +186,7 @@ namespace GUI
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 37);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 436);
+            this.pnlMenu.Size = new System.Drawing.Size(220, 470);
             this.pnlMenu.TabIndex = 4;
             // 
             // pnlProveedor
@@ -241,26 +242,26 @@ namespace GUI
             this.ibtnAgregar.UseVisualStyleBackColor = true;
             this.ibtnAgregar.Click += new System.EventHandler(this.ibtnAgregar_Click);
             // 
-            // iconButton4
+            // ibProveedores
             // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Handshake;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 689);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(220, 30);
-            this.iconButton4.TabIndex = 36;
-            this.iconButton4.Text = "Proveedor ";
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.ibProveedor_Click);
+            this.ibProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibProveedores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.ibProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibProveedores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibProveedores.ForeColor = System.Drawing.Color.Transparent;
+            this.ibProveedores.IconChar = FontAwesome.Sharp.IconChar.Handshake;
+            this.ibProveedores.IconColor = System.Drawing.Color.White;
+            this.ibProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibProveedores.IconSize = 30;
+            this.ibProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibProveedores.Location = new System.Drawing.Point(0, 689);
+            this.ibProveedores.Name = "ibProveedores";
+            this.ibProveedores.Size = new System.Drawing.Size(220, 30);
+            this.ibProveedores.TabIndex = 36;
+            this.ibProveedores.Text = "Proveedor ";
+            this.ibProveedores.UseVisualStyleBackColor = true;
+            this.ibProveedores.Click += new System.EventHandler(this.ibProveedor_Click);
             // 
             // pnlReporte
             // 
@@ -755,7 +756,7 @@ namespace GUI
             this.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInicio.Location = new System.Drawing.Point(220, 37);
             this.pnlInicio.Name = "pnlInicio";
-            this.pnlInicio.Size = new System.Drawing.Size(915, 436);
+            this.pnlInicio.Size = new System.Drawing.Size(915, 470);
             this.pnlInicio.TabIndex = 6;
             this.pnlInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
@@ -764,7 +765,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
-            this.ClientSize = new System.Drawing.Size(1135, 473);
+            this.ClientSize = new System.Drawing.Size(1135, 507);
             this.Controls.Add(this.pnlInicio);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.Barra_Titulo);
@@ -800,7 +801,7 @@ namespace GUI
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Panel pnlMenu;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton ibProveedores;
         private System.Windows.Forms.Panel pnlReporte;
         private FontAwesome.Sharp.IconButton ibtnReporteMasVendido;
         private FontAwesome.Sharp.IconButton ibtnReporteCompra;

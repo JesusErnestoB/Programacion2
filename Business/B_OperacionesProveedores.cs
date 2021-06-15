@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DALL.Modelos;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Business
 {
@@ -36,6 +38,7 @@ namespace Business
                 throw;
             }
         }
+
         public String ActualizarProveedores(int Id, string Nombre, string correoE, string telefono, int fk_direccion)
         {
             try
@@ -62,5 +65,18 @@ namespace Business
             }
            
         }
+
+        public DataTable Buscar_Proveedores()
+        {
+            try
+            {
+                return dProveedor.BuscarProveedor();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }  
     }
 }

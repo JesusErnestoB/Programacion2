@@ -30,6 +30,8 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlClientes = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColoniaC = new System.Windows.Forms.TextBox();
@@ -46,17 +48,25 @@ namespace GUI
             this.lblNomProduct = new System.Windows.Forms.Label();
             this.txtNombreC = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ibEditar = new FontAwesome.Sharp.IconButton();
             this.ibGuardarClientes = new FontAwesome.Sharp.IconButton();
             this.ibCancelarClientes = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ibMostrar = new FontAwesome.Sharp.IconButton();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlClientes.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlClientes
@@ -77,10 +87,10 @@ namespace GUI
             this.pnlClientes.Controls.Add(this.txtNombreC);
             this.pnlClientes.Controls.Add(this.panel2);
             this.pnlClientes.Controls.Add(this.panel1);
-            this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlClientes.Location = new System.Drawing.Point(0, 0);
             this.pnlClientes.Name = "pnlClientes";
-            this.pnlClientes.Size = new System.Drawing.Size(943, 480);
+            this.pnlClientes.Size = new System.Drawing.Size(920, 357);
             this.pnlClientes.TabIndex = 1;
             // 
             // label7
@@ -225,13 +235,34 @@ namespace GUI
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ibEditar);
             this.panel2.Controls.Add(this.ibGuardarClientes);
             this.panel2.Controls.Add(this.ibCancelarClientes);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(750, 100);
+            this.panel2.Location = new System.Drawing.Point(727, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 380);
+            this.panel2.Size = new System.Drawing.Size(193, 257);
             this.panel2.TabIndex = 61;
+            // 
+            // ibEditar
+            // 
+            this.ibEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibEditar.ForeColor = System.Drawing.Color.Transparent;
+            this.ibEditar.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.ibEditar.IconColor = System.Drawing.Color.White;
+            this.ibEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibEditar.IconSize = 25;
+            this.ibEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibEditar.Location = new System.Drawing.Point(52, 184);
+            this.ibEditar.Name = "ibEditar";
+            this.ibEditar.Size = new System.Drawing.Size(88, 30);
+            this.ibEditar.TabIndex = 49;
+            this.ibEditar.Text = "Editar";
+            this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibEditar.UseVisualStyleBackColor = true;
             // 
             // ibGuardarClientes
             // 
@@ -280,7 +311,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 100);
+            this.panel1.Size = new System.Drawing.Size(920, 100);
             this.panel1.TabIndex = 46;
             // 
             // ibtnInicio
@@ -311,12 +342,94 @@ namespace GUI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ibMostrar);
+            this.panel3.Controls.Add(this.dgvClientes);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 357);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(920, 231);
+            this.panel3.TabIndex = 2;
+            // 
+            // ibMostrar
+            // 
+            this.ibMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ibMostrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ibMostrar.IconColor = System.Drawing.Color.Black;
+            this.ibMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibMostrar.Location = new System.Drawing.Point(360, 25);
+            this.ibMostrar.Name = "ibMostrar";
+            this.ibMostrar.Size = new System.Drawing.Size(133, 23);
+            this.ibMostrar.TabIndex = 66;
+            this.ibMostrar.Text = "Mostrar Todo";
+            this.ibMostrar.UseVisualStyleBackColor = false;
+            this.ibMostrar.Click += new System.EventHandler(this.ibMostrar_Click);
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvClientes.EnableHeadersVisualStyles = false;
+            this.dgvClientes.GridColor = System.Drawing.Color.White;
+            this.dgvClientes.Location = new System.Drawing.Point(22, 84);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.Size = new System.Drawing.Size(886, 177);
+            this.dgvClientes.TabIndex = 49;
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(171, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 26);
+            this.textBox1.TabIndex = 47;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(65, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 21);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "Nombre";
+            // 
             // FRMClientesAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(943, 480);
+            this.ClientSize = new System.Drawing.Size(920, 585);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMClientesAgregar";
@@ -328,6 +441,9 @@ namespace GUI
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +472,11 @@ namespace GUI
         private FontAwesome.Sharp.IconPictureBox ibtnInicio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconButton ibEditar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private FontAwesome.Sharp.IconButton ibMostrar;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }

@@ -1,2 +1,6 @@
 C:\Users\jesus\Documents\PuntoDeVenta\DALL\obj\Debug\DALL.csprojAssemblyReference.cache
 C:\Users\jesus\Documents\PuntoDeVenta\DALL\obj\Debug\DALL.csproj.CoreCompileInputs.cache
+C:\Users\jesus\Documents\PuntoDeVenta\DALL\bin\Debug\DALL.dll
+C:\Users\jesus\Documents\PuntoDeVenta\DALL\bin\Debug\DALL.pdb
+C:\Users\jesus\Documents\PuntoDeVenta\DALL\obj\Debug\DALL.dll
+C:\Users\jesus\Documents\PuntoDeVenta\DALL\obj\Debug\DALL.pdb

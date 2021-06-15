@@ -50,24 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="FRMBuscarProveedore.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMBuscarProveedore.Designer.cs">
-      <DependentUpon>FRMBuscarProveedore.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRMClientesAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRMClientesAgregar.Designer.cs">
       <DependentUpon>FRMClientesAgregar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FRMClientesBusquedayEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMClientesBusquedayEdicion.Designer.cs">
-      <DependentUpon>FRMClientesBusquedayEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="FRMComprasRegistrar.cs">
       <SubType>Form</SubType>
@@ -92,12 +79,6 @@
     </Compile>
     <Compile Include="FRMProductos.Designer.cs">
       <DependentUpon>FRMProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FRMProductosBusquedayEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMProductosBusquedayEdicion.Designer.cs">
-      <DependentUpon>FRMProductosBusquedayEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="FRMProveedor.cs">
       <SubType>Form</SubType>
@@ -143,14 +124,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FRMBuscarProveedore.resx">
-      <DependentUpon>FRMBuscarProveedore.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRMClientesAgregar.resx">
       <DependentUpon>FRMClientesAgregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRMClientesBusquedayEdicion.resx">
-      <DependentUpon>FRMClientesBusquedayEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMComprasRegistrar.resx">
       <DependentUpon>FRMComprasRegistrar.cs</DependentUpon>
@@ -163,9 +138,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMProductos.resx">
       <DependentUpon>FRMProductos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRMProductosBusquedayEdicion.resx">
-      <DependentUpon>FRMProductosBusquedayEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMProveedor.resx">
       <DependentUpon>FRMProveedor.cs</DependentUpon>

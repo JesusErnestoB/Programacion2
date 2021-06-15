@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DALL.Modelos;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Business
 {
@@ -52,7 +54,7 @@ namespace Business
             dProductos.PrecioVent = precioVent;
             dProductos.Descripcion = Descripccion;
 
-            dProductos.Actualizar();
+            dProductos.Actualizar(ID);
             if (dProductos.Actualizar(ID))
             {
                 return "El producto ha sido actualizado correctamente";
@@ -60,6 +62,20 @@ namespace Business
             else
             {
                 return "El producto no ha sido actualizado";
+            }
+
+        }
+
+        public DataTable Buscar_Productos()
+        {
+            try
+            {
+                return dProductos.BuscarProductos();
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
 
         }

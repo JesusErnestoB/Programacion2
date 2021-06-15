@@ -14,16 +14,35 @@ namespace GUI
 {
     public partial class FRMClientesAgregar : Form
     {
-        B_OperacionesClientes objOPeracionesClientes = new B_OperacionesClientes();
+        B_OperacionesClientes b_OperacionesClientes = new B_OperacionesClientes();
         B_OperacionDomicilio objDomiclio = new B_OperacionDomicilio();
 
         string nombreC, Telefono, Calle, colonia, localodad, municipio, estado;
-        int direccion;
+        int direccion,idDom;
 
         public FRMClientesAgregar()
         {
             InitializeComponent();
         }
+
+        private void ibMostrar_Click(object sender, EventArgs e)
+        {
+            var lista = b_OperacionesClientes.Buscar_Clientes();
+            dgvClientes.DataSource = lista;
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNombreC.Text = dgvClientes.CurrentRow.Cells[0].ToString();
+            txtTelefonoC.Text = dgvClientes.CurrentRow.Cells[1].ToString();
+            txtCalleC.Text = dgvClientes.CurrentRow.Cells[2].ToString();
+            txtColoniaC.Text = dgvClientes.CurrentRow.Cells[3].ToString();
+            txtLocalidadC.Text = dgvClientes.CurrentRow.Cells[4].ToString();
+            txtMuniciopioC.Text = dgvClientes.CurrentRow.Cells[5].ToString();
+            txtEstadoC.Text = dgvClientes.CurrentRow.Cells[6].ToString();
+        }
+
+       
 
         private void ibtnInicio_Click(object sender, EventArgs e)
         {
@@ -36,7 +55,7 @@ namespace GUI
             Conversiones();
 
             objDomiclio.InsertarDomicilio(Calle, colonia, localodad, municipio, estado);
-            MessageBox.Show(objOPeracionesClientes.InsertarClientes(nombreC, Telefono, direccion));
+            MessageBox.Show(b_OperacionesClientes.InsertarClientes(nombreC, Telefono, direccion));
 
             Vaciar();
         }

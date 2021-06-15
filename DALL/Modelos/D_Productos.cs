@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-    using System.Data;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace DALL.Modelos
@@ -78,11 +78,6 @@ namespace DALL.Modelos
 
         }
 
-        public void Actualizar()
-        {
-            throw new NotImplementedException();
-        }
-
         public DataTable BuscarProductos()
         {
             DataTable TablaProductos = new DataTable();
@@ -90,7 +85,7 @@ namespace DALL.Modelos
             {
                 conexion.abrir();
 
-                string sql = "SELECT Codigo,nombre, Marca,cantidad,PrecioVen,Descripcion"+ "From Producto where nombre = " + NombreP;
+                string sql = "SELECT Codigo,nombre, Marca,cantidad,PrecioVen,Descripcion From Producto ";
 
                 var cmd = new SqlCommand(sql, conexion.Conectar);
                 var reader = cmd.ExecuteReader();

@@ -30,7 +30,14 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ibMostrar = new FontAwesome.Sharp.IconButton();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnldatos = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColoniaE = new System.Windows.Forms.TextBox();
@@ -53,6 +60,7 @@ namespace GUI
             this.label5 = new System.Windows.Forms.Label();
             this.txtSexo = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ibEditar = new FontAwesome.Sharp.IconButton();
             this.ibCancelar = new FontAwesome.Sharp.IconButton();
             this.ibGuardar = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,6 +68,8 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.pnldatos.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,14 +79,94 @@ namespace GUI
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pnldatos);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 480);
+            this.panel1.Size = new System.Drawing.Size(943, 614);
             this.panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.ibMostrar);
+            this.panel4.Controls.Add(this.dgvEmpleados);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 325);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(820, 277);
+            this.panel4.TabIndex = 100;
+            // 
+            // ibMostrar
+            // 
+            this.ibMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ibMostrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ibMostrar.IconColor = System.Drawing.Color.Black;
+            this.ibMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibMostrar.Location = new System.Drawing.Point(447, 23);
+            this.ibMostrar.Name = "ibMostrar";
+            this.ibMostrar.Size = new System.Drawing.Size(133, 23);
+            this.ibMostrar.TabIndex = 67;
+            this.ibMostrar.Text = "Mostrar Todo";
+            this.ibMostrar.UseVisualStyleBackColor = false;
+            this.ibMostrar.Click += new System.EventHandler(this.ibMostrar_Click);
+            // 
+            // dgvEmpleados
+            // 
+            this.dgvEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
+            this.dgvEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmpleados.EnableHeadersVisualStyles = false;
+            this.dgvEmpleados.GridColor = System.Drawing.Color.White;
+            this.dgvEmpleados.Location = new System.Drawing.Point(43, 73);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.Size = new System.Drawing.Size(946, 233);
+            this.dgvEmpleados.TabIndex = 62;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(94, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 20);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Nombre ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(174, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 20);
+            this.textBox1.TabIndex = 59;
             // 
             // pnldatos
             // 
@@ -103,7 +193,7 @@ namespace GUI
             this.pnldatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnldatos.Location = new System.Drawing.Point(0, 100);
             this.pnldatos.Name = "pnldatos";
-            this.pnldatos.Size = new System.Drawing.Size(743, 225);
+            this.pnldatos.Size = new System.Drawing.Size(820, 225);
             this.pnldatos.TabIndex = 99;
             // 
             // label7
@@ -348,13 +438,34 @@ namespace GUI
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.ibEditar);
             this.panel3.Controls.Add(this.ibCancelar);
             this.panel3.Controls.Add(this.ibGuardar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(743, 100);
+            this.panel3.Location = new System.Drawing.Point(820, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 380);
+            this.panel3.Size = new System.Drawing.Size(123, 514);
             this.panel3.TabIndex = 73;
+            // 
+            // ibEditar
+            // 
+            this.ibEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibEditar.ForeColor = System.Drawing.Color.Transparent;
+            this.ibEditar.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.ibEditar.IconColor = System.Drawing.Color.White;
+            this.ibEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibEditar.IconSize = 25;
+            this.ibEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibEditar.Location = new System.Drawing.Point(23, 178);
+            this.ibEditar.Name = "ibEditar";
+            this.ibEditar.Size = new System.Drawing.Size(88, 30);
+            this.ibEditar.TabIndex = 63;
+            this.ibEditar.Text = "Editar";
+            this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibEditar.UseVisualStyleBackColor = true;
             // 
             // ibCancelar
             // 
@@ -367,9 +478,9 @@ namespace GUI
             this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibCancelar.IconSize = 30;
             this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibCancelar.Location = new System.Drawing.Point(73, 103);
+            this.ibCancelar.Location = new System.Drawing.Point(30, 103);
             this.ibCancelar.Name = "ibCancelar";
-            this.ibCancelar.Size = new System.Drawing.Size(78, 45);
+            this.ibCancelar.Size = new System.Drawing.Size(76, 45);
             this.ibCancelar.TabIndex = 44;
             this.ibCancelar.Text = "Cancelar";
             this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -387,9 +498,9 @@ namespace GUI
             this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibGuardar.IconSize = 30;
             this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibGuardar.Location = new System.Drawing.Point(73, 32);
+            this.ibGuardar.Location = new System.Drawing.Point(30, 32);
             this.ibGuardar.Name = "ibGuardar";
-            this.ibGuardar.Size = new System.Drawing.Size(78, 47);
+            this.ibGuardar.Size = new System.Drawing.Size(76, 47);
             this.ibGuardar.TabIndex = 43;
             this.ibGuardar.Text = "Guardar";
             this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -438,12 +549,15 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(943, 480);
+            this.ClientSize = new System.Drawing.Size(943, 614);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMEmpleadosAgregar";
             this.Text = "FRMEmpleadosAgregar";
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.pnldatos.ResumeLayout(false);
             this.pnldatos.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -486,5 +600,11 @@ namespace GUI
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Panel pnldatos;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton ibEditar;
+        private FontAwesome.Sharp.IconButton ibMostrar;
     }
 }

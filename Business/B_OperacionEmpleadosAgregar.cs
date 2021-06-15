@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DALL.Modelos;
+using System.Data;
 
 namespace Business
 {
@@ -11,7 +12,7 @@ namespace Business
     {
         public D_Empleados dEmpleados = new D_Empleados();
 
-        public string InsertarEmpleados(string NombreE, string ApellidoPE, string ApellidoME, string Sexo, int edad, int Domicilio)
+        public String InsertarEmpleados(string NombreE, string ApellidoPE, string ApellidoME, string Sexo, int edad, int Domicilio)
         {
             try
             {
@@ -59,6 +60,19 @@ namespace Business
                 {
                     return "El empleado no se ha actualizado";
                 }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public DataTable Buscar_Empleados()
+        {
+            try
+            {
+                return dEmpleados.BuscarEmpleados();
             }
             catch (Exception)
             {

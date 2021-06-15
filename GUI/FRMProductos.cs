@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class FRMProductos : Form
     {
-        private B_OperacionProductos objOperacionesProductos = new B_OperacionProductos();
+        private B_OperacionProductos b_OperacionesProductos = new B_OperacionProductos();
 
         string Nombre, codigo, marca, color, descripcion;
         int cantidad;
@@ -33,7 +33,7 @@ namespace GUI
             convrsiones();
             Validacion();
 
-            MessageBox.Show(objOperacionesProductos.InsertarProductos(Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion));
+            MessageBox.Show(b_OperacionesProductos.InsertarProductos(Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion));
 
             LimpiarControles();
 
@@ -49,6 +49,12 @@ namespace GUI
             precioComp = float.Parse(txtPrecioComp.Text);
             PrecioVen = float.Parse(txtPrecioVenta.Text);
             descripcion = txtDescripcion.Text.ToUpper();
+        }
+
+        private void ibMostrar_Click(object sender, EventArgs e)
+        {
+            var lista = b_OperacionesProductos.Buscar_Productos();
+            dgvProductos.DataSource = lista;
         }
 
         public void LimpiarControles()
