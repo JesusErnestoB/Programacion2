@@ -4,7 +4,6 @@ C:\Users\jesus\Documents\PuntoDeVenta\GUI\bin\Debug\GUI.pdb
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMClientesAgregar.resources
-C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMComprasRegistrar.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMEmpleadosAgregar.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMProductos.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMProveedor.resources
@@ -18,7 +17,6 @@ C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.pdb
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMReporteVentas.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMLogin.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMPantallaInicio.resources
-C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMReportecompra.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\obj\Debug\GUI.FRMReprteMasVendido.resources
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\bin\Debug\Business.dll
 C:\Users\jesus\Documents\PuntoDeVenta\GUI\bin\Debug\DALL.dll

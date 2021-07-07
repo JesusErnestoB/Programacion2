@@ -63,12 +63,6 @@
     <Compile Include="FRMClientesAgregar.Designer.cs">
       <DependentUpon>FRMClientesAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRMComprasRegistrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMComprasRegistrar.Designer.cs">
-      <DependentUpon>FRMComprasRegistrar.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRMEmpleadosAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,9 +133,6 @@
     </Compile>
     <EmbeddedResource Include="FRMClientesAgregar.resx">
       <DependentUpon>FRMClientesAgregar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRMComprasRegistrar.resx">
-      <DependentUpon>FRMComprasRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMEmpleadosAgregar.resx">
       <DependentUpon>FRMEmpleadosAgregar.cs</DependentUpon>

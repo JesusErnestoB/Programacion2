@@ -43,7 +43,7 @@ namespace GUI
         {
             pnlProductos.Visible = false;
             pnlClientes.Visible = false;
-            pnlCompras.Visible = false;
+            
             pnlEmpleados.Visible = false;
             pnlReporte.Visible = false;
             pnlProveedor.Visible = false;
@@ -63,10 +63,7 @@ namespace GUI
             {
                 pnlClientes.Visible = false;
             }
-            if (pnlCompras.Visible == true)
-            {
-                pnlCompras.Visible = false;
-            }
+            
             if (pnlEmpleados.Visible == true)
             {
                 pnlEmpleados.Visible = false;
@@ -185,12 +182,10 @@ namespace GUI
         #region Compras
         private void ibCompras_Click(object sender, EventArgs e)
         {
-            ocultarMostrarSubmenu(pnlCompras);
-        }
+                   }
         private void ibRegistrar_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMComprasRegistrar());
-            ocultarMostrarSubmenu(pnlCompras);
+; 
         }
         #endregion
 
@@ -252,11 +247,7 @@ namespace GUI
             ocultarMostrarSubmenu(pnlReporte);
         }
         
-        private void ibtnReporteCompra_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new FRMReportecompra());
-            ocultarMostrarSubmenu(pnlReporte);
-        }
+       
         
         private void ibtnReporteMasVendido_Click(object sender, EventArgs e)
         {

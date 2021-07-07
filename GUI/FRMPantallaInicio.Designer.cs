@@ -47,9 +47,6 @@ namespace GUI
             this.pnlEmpleados = new System.Windows.Forms.Panel();
             this.ibAgregarEm = new FontAwesome.Sharp.IconButton();
             this.ibEmpleados = new FontAwesome.Sharp.IconButton();
-            this.pnlCompras = new System.Windows.Forms.Panel();
-            this.ibRegistrar = new FontAwesome.Sharp.IconButton();
-            this.ibCompras = new FontAwesome.Sharp.IconButton();
             this.pnlClientes = new System.Windows.Forms.Panel();
             this.ibAgrarC = new FontAwesome.Sharp.IconButton();
             this.ibClientes = new FontAwesome.Sharp.IconButton();
@@ -70,7 +67,6 @@ namespace GUI
             this.pnlProveedor.SuspendLayout();
             this.pnlReporte.SuspendLayout();
             this.pnlEmpleados.SuspendLayout();
-            this.pnlCompras.SuspendLayout();
             this.pnlClientes.SuspendLayout();
             this.pnlProductos.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -167,8 +163,6 @@ namespace GUI
             this.pnlMenu.Controls.Add(this.ibReporte);
             this.pnlMenu.Controls.Add(this.pnlEmpleados);
             this.pnlMenu.Controls.Add(this.ibEmpleados);
-            this.pnlMenu.Controls.Add(this.pnlCompras);
-            this.pnlMenu.Controls.Add(this.ibCompras);
             this.pnlMenu.Controls.Add(this.pnlClientes);
             this.pnlMenu.Controls.Add(this.ibClientes);
             this.pnlMenu.Controls.Add(this.ibVentas);
@@ -186,7 +180,7 @@ namespace GUI
             this.pnlProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.pnlProveedor.Controls.Add(this.ibtnAgregar);
             this.pnlProveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProveedor.Location = new System.Drawing.Point(0, 571);
+            this.pnlProveedor.Location = new System.Drawing.Point(0, 502);
             this.pnlProveedor.Name = "pnlProveedor";
             this.pnlProveedor.Size = new System.Drawing.Size(220, 51);
             this.pnlProveedor.TabIndex = 7;
@@ -226,7 +220,7 @@ namespace GUI
             this.ibProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibProveedores.IconSize = 30;
             this.ibProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibProveedores.Location = new System.Drawing.Point(0, 541);
+            this.ibProveedores.Location = new System.Drawing.Point(0, 472);
             this.ibProveedores.Name = "ibProveedores";
             this.ibProveedores.Size = new System.Drawing.Size(220, 30);
             this.ibProveedores.TabIndex = 36;
@@ -240,7 +234,7 @@ namespace GUI
             this.pnlReporte.Controls.Add(this.ibtnReporteMasVendido);
             this.pnlReporte.Controls.Add(this.ibtnReporteVenta);
             this.pnlReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlReporte.Location = new System.Drawing.Point(0, 446);
+            this.pnlReporte.Location = new System.Drawing.Point(0, 377);
             this.pnlReporte.Name = "pnlReporte";
             this.pnlReporte.Size = new System.Drawing.Size(220, 95);
             this.pnlReporte.TabIndex = 35;
@@ -301,7 +295,7 @@ namespace GUI
             this.ibReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibReporte.IconSize = 30;
             this.ibReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibReporte.Location = new System.Drawing.Point(0, 416);
+            this.ibReporte.Location = new System.Drawing.Point(0, 347);
             this.ibReporte.Name = "ibReporte";
             this.ibReporte.Size = new System.Drawing.Size(220, 30);
             this.ibReporte.TabIndex = 34;
@@ -314,7 +308,7 @@ namespace GUI
             this.pnlEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.pnlEmpleados.Controls.Add(this.ibAgregarEm);
             this.pnlEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpleados.Location = new System.Drawing.Point(0, 365);
+            this.pnlEmpleados.Location = new System.Drawing.Point(0, 296);
             this.pnlEmpleados.Name = "pnlEmpleados";
             this.pnlEmpleados.Size = new System.Drawing.Size(220, 51);
             this.pnlEmpleados.TabIndex = 33;
@@ -353,66 +347,13 @@ namespace GUI
             this.ibEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibEmpleados.IconSize = 30;
             this.ibEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEmpleados.Location = new System.Drawing.Point(0, 335);
+            this.ibEmpleados.Location = new System.Drawing.Point(0, 266);
             this.ibEmpleados.Name = "ibEmpleados";
             this.ibEmpleados.Size = new System.Drawing.Size(220, 30);
             this.ibEmpleados.TabIndex = 32;
             this.ibEmpleados.Text = "Empleados";
             this.ibEmpleados.UseVisualStyleBackColor = true;
             this.ibEmpleados.Click += new System.EventHandler(this.ibEmpleados_Click);
-            // 
-            // pnlCompras
-            // 
-            this.pnlCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnlCompras.Controls.Add(this.ibRegistrar);
-            this.pnlCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCompras.Location = new System.Drawing.Point(0, 296);
-            this.pnlCompras.Name = "pnlCompras";
-            this.pnlCompras.Size = new System.Drawing.Size(220, 39);
-            this.pnlCompras.TabIndex = 31;
-            this.pnlCompras.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCompras_Paint);
-            // 
-            // ibRegistrar
-            // 
-            this.ibRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibRegistrar.ForeColor = System.Drawing.Color.Transparent;
-            this.ibRegistrar.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
-            this.ibRegistrar.IconColor = System.Drawing.Color.White;
-            this.ibRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibRegistrar.IconSize = 25;
-            this.ibRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibRegistrar.Location = new System.Drawing.Point(0, 0);
-            this.ibRegistrar.Name = "ibRegistrar";
-            this.ibRegistrar.Size = new System.Drawing.Size(220, 30);
-            this.ibRegistrar.TabIndex = 26;
-            this.ibRegistrar.Text = "Registrar";
-            this.ibRegistrar.UseVisualStyleBackColor = true;
-            this.ibRegistrar.Click += new System.EventHandler(this.ibRegistrar_Click);
-            // 
-            // ibCompras
-            // 
-            this.ibCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibCompras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibCompras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibCompras.ForeColor = System.Drawing.Color.Transparent;
-            this.ibCompras.IconChar = FontAwesome.Sharp.IconChar.Truck;
-            this.ibCompras.IconColor = System.Drawing.Color.White;
-            this.ibCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibCompras.IconSize = 30;
-            this.ibCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibCompras.Location = new System.Drawing.Point(0, 266);
-            this.ibCompras.Name = "ibCompras";
-            this.ibCompras.Size = new System.Drawing.Size(220, 30);
-            this.ibCompras.TabIndex = 30;
-            this.ibCompras.Text = "Compras";
-            this.ibCompras.UseVisualStyleBackColor = true;
-            this.ibCompras.Click += new System.EventHandler(this.ibCompras_Click);
             // 
             // pnlClientes
             // 
@@ -601,7 +542,6 @@ namespace GUI
             this.pnlProveedor.ResumeLayout(false);
             this.pnlReporte.ResumeLayout(false);
             this.pnlEmpleados.ResumeLayout(false);
-            this.pnlCompras.ResumeLayout(false);
             this.pnlClientes.ResumeLayout(false);
             this.pnlProductos.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -627,9 +567,6 @@ namespace GUI
         private System.Windows.Forms.Panel pnlEmpleados;
         private FontAwesome.Sharp.IconButton ibAgregarEm;
         private FontAwesome.Sharp.IconButton ibEmpleados;
-        private System.Windows.Forms.Panel pnlCompras;
-        private FontAwesome.Sharp.IconButton ibRegistrar;
-        private FontAwesome.Sharp.IconButton ibCompras;
         private System.Windows.Forms.Panel pnlClientes;
         private FontAwesome.Sharp.IconButton ibAgrarC;
         private FontAwesome.Sharp.IconButton ibClientes;
