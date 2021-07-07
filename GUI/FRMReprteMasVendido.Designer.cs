@@ -30,7 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.MasVendido1 = new GUI.MasVendido();
+            this.ReporteMasVendido1 = new GUI.ReporteMasVendido();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -41,7 +41,7 @@ namespace GUI
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.MasVendido1;
+            this.crystalReportViewer1.ReportSource = this.ReporteMasVendido1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
@@ -63,6 +63,6 @@ namespace GUI
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private MasVendido MasVendido1;
+        private ReporteMasVendido ReporteMasVendido1;
     }
 }

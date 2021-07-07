@@ -16,14 +16,14 @@ namespace GUI {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class MasVendido : ReportClass {
+    public class ReporteMasVendido : ReportClass {
         
-        public MasVendido() {
+        public ReporteMasVendido() {
         }
         
         public override string ResourceName {
             get {
-                return "MasVendido.rpt";
+                return "ReporteMasVendido.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GUI {
         
         public override string FullResourceName {
             get {
-                return "GUI.MasVendido.rpt";
+                return "GUI.ReporteMasVendido.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace GUI {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedMasVendido : Component, ICachedReport {
+    public class CachedReporteMasVendido : Component, ICachedReport {
         
-        public CachedMasVendido() {
+        public CachedReporteMasVendido() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace GUI {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            MasVendido rpt = new MasVendido();
+            ReporteMasVendido rpt = new ReporteMasVendido();
             rpt.Site = this.Site;
             return rpt;
         }

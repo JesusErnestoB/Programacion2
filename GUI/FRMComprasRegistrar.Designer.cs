@@ -30,35 +30,35 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gbx1 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ibGuardar = new FontAwesome.Sharp.IconButton();
+            this.ibCancelar = new FontAwesome.Sharp.IconButton();
+            this.lblNomProduct = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ibCancelar = new FontAwesome.Sharp.IconButton();
-            this.ibGuardar = new FontAwesome.Sharp.IconButton();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtProveedor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtProveedor = new System.Windows.Forms.TextBox();
             this.dtpCompra = new System.Windows.Forms.DateTimePicker();
-            this.lblNomProduct = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ibtnInicio = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gbx1 = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            this.gbx1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).BeginInit();
-            this.gbx1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,92 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(802, 456);
             this.panel1.TabIndex = 1;
             // 
+            // gbx1
+            // 
+            this.gbx1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbx1.Controls.Add(this.panel3);
+            this.gbx1.Controls.Add(this.lblNomProduct);
+            this.gbx1.Controls.Add(this.dataGridView1);
+            this.gbx1.Controls.Add(this.txtNombre);
+            this.gbx1.Controls.Add(this.txtProveedor);
+            this.gbx1.Controls.Add(this.label2);
+            this.gbx1.Controls.Add(this.label3);
+            this.gbx1.Controls.Add(this.txtTotal);
+            this.gbx1.Location = new System.Drawing.Point(21, 125);
+            this.gbx1.Name = "gbx1";
+            this.gbx1.Size = new System.Drawing.Size(769, 319);
+            this.gbx1.TabIndex = 56;
+            this.gbx1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ibGuardar);
+            this.panel3.Controls.Add(this.ibCancelar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(611, 16);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(155, 300);
+            this.panel3.TabIndex = 56;
+            // 
+            // ibGuardar
+            // 
+            this.ibGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibGuardar.ForeColor = System.Drawing.Color.White;
+            this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.ibGuardar.IconColor = System.Drawing.Color.White;
+            this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibGuardar.IconSize = 30;
+            this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibGuardar.Location = new System.Drawing.Point(30, 24);
+            this.ibGuardar.Name = "ibGuardar";
+            this.ibGuardar.Size = new System.Drawing.Size(78, 55);
+            this.ibGuardar.TabIndex = 53;
+            this.ibGuardar.Text = "Guardar";
+            this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibGuardar.UseVisualStyleBackColor = true;
+            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
+            // 
+            // ibCancelar
+            // 
+            this.ibCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibCancelar.ForeColor = System.Drawing.Color.White;
+            this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
+            this.ibCancelar.IconColor = System.Drawing.Color.White;
+            this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibCancelar.IconSize = 30;
+            this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ibCancelar.Location = new System.Drawing.Point(30, 97);
+            this.ibCancelar.Name = "ibCancelar";
+            this.ibCancelar.Size = new System.Drawing.Size(78, 50);
+            this.ibCancelar.TabIndex = 54;
+            this.ibCancelar.Text = "Cancelar";
+            this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ibCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lblNomProduct
+            // 
+            this.lblNomProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNomProduct.AutoSize = true;
+            this.lblNomProduct.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNomProduct.Location = new System.Drawing.Point(85, 29);
+            this.lblNomProduct.Name = "lblNomProduct";
+            this.lblNomProduct.Size = new System.Drawing.Size(146, 20);
+            this.lblNomProduct.TabIndex = 47;
+            this.lblNomProduct.Text = "Nombre Empleado";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -80,31 +166,31 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
             this.NombreE,
             this.NombreProveedor,
             this.TotalPagar});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(136, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(89, 170);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(457, 143);
             this.dataGridView1.TabIndex = 55;
@@ -133,48 +219,43 @@ namespace GUI
             this.TotalPagar.HeaderText = "Total a Pagar";
             this.TotalPagar.Name = "TotalPagar";
             // 
-            // ibCancelar
+            // txtNombre
             // 
-            this.ibCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibCancelar.ForeColor = System.Drawing.Color.White;
-            this.ibCancelar.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            this.ibCancelar.IconColor = System.Drawing.Color.White;
-            this.ibCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibCancelar.IconSize = 30;
-            this.ibCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibCancelar.Location = new System.Drawing.Point(30, 97);
-            this.ibCancelar.Name = "ibCancelar";
-            this.ibCancelar.Size = new System.Drawing.Size(78, 50);
-            this.ibCancelar.TabIndex = 54;
-            this.ibCancelar.Text = "Cancelar";
-            this.ibCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibCancelar.UseVisualStyleBackColor = true;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(249, 31);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(158, 20);
+            this.txtNombre.TabIndex = 46;
             // 
-            // ibGuardar
+            // txtProveedor
             // 
-            this.ibGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ibGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibGuardar.ForeColor = System.Drawing.Color.White;
-            this.ibGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.ibGuardar.IconColor = System.Drawing.Color.White;
-            this.ibGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibGuardar.IconSize = 30;
-            this.ibGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ibGuardar.Location = new System.Drawing.Point(30, 24);
-            this.ibGuardar.Name = "ibGuardar";
-            this.ibGuardar.Size = new System.Drawing.Size(78, 55);
-            this.ibGuardar.TabIndex = 53;
-            this.ibGuardar.Text = "Guardar";
-            this.ibGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ibGuardar.UseVisualStyleBackColor = true;
-            this.ibGuardar.Click += new System.EventHandler(this.ibGuardar_Click);
+            this.txtProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtProveedor.ForeColor = System.Drawing.Color.White;
+            this.txtProveedor.Location = new System.Drawing.Point(249, 77);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Size = new System.Drawing.Size(158, 20);
+            this.txtProveedor.TabIndex = 49;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(85, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 20);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Nombre Proveedor";
             // 
             // label3
             // 
@@ -202,32 +283,6 @@ namespace GUI
             this.txtTotal.Size = new System.Drawing.Size(158, 20);
             this.txtTotal.TabIndex = 51;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(85, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 20);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Nombre Proveedor";
-            // 
-            // txtProveedor
-            // 
-            this.txtProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtProveedor.ForeColor = System.Drawing.Color.White;
-            this.txtProveedor.Location = new System.Drawing.Point(249, 77);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(158, 20);
-            this.txtProveedor.TabIndex = 49;
-            // 
             // dtpCompra
             // 
             this.dtpCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -244,32 +299,6 @@ namespace GUI
             this.dtpCompra.Size = new System.Drawing.Size(0, 26);
             this.dtpCompra.TabIndex = 48;
             this.dtpCompra.Value = new System.DateTime(2021, 4, 13, 16, 34, 46, 0);
-            // 
-            // lblNomProduct
-            // 
-            this.lblNomProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNomProduct.AutoSize = true;
-            this.lblNomProduct.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNomProduct.Location = new System.Drawing.Point(85, 29);
-            this.lblNomProduct.Name = "lblNomProduct";
-            this.lblNomProduct.Size = new System.Drawing.Size(146, 20);
-            this.lblNomProduct.TabIndex = 47;
-            this.lblNomProduct.Text = "Nombre Empleado";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(249, 31);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(158, 20);
-            this.txtNombre.TabIndex = 46;
             // 
             // panel2
             // 
@@ -305,35 +334,6 @@ namespace GUI
             this.label1.TabIndex = 41;
             this.label1.Text = "Compra de Productos ";
             // 
-            // gbx1
-            // 
-            this.gbx1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbx1.Controls.Add(this.panel3);
-            this.gbx1.Controls.Add(this.lblNomProduct);
-            this.gbx1.Controls.Add(this.dataGridView1);
-            this.gbx1.Controls.Add(this.txtNombre);
-            this.gbx1.Controls.Add(this.txtProveedor);
-            this.gbx1.Controls.Add(this.label2);
-            this.gbx1.Controls.Add(this.label3);
-            this.gbx1.Controls.Add(this.txtTotal);
-            this.gbx1.Location = new System.Drawing.Point(21, 125);
-            this.gbx1.Name = "gbx1";
-            this.gbx1.Size = new System.Drawing.Size(769, 319);
-            this.gbx1.TabIndex = 56;
-            this.gbx1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ibGuardar);
-            this.panel3.Controls.Add(this.ibCancelar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(611, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(155, 300);
-            this.panel3.TabIndex = 56;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -349,13 +349,13 @@ namespace GUI
             this.Name = "FRMComprasRegistrar";
             this.Text = "FRMComprasRegistrar";
             this.panel1.ResumeLayout(false);
+            this.gbx1.ResumeLayout(false);
+            this.gbx1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ibtnInicio)).EndInit();
-            this.gbx1.ResumeLayout(false);
-            this.gbx1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 

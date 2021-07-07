@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void MasVendido1_InitReport(object sender, EventArgs e)
+        {
+
+        }
     }
 }

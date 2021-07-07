@@ -30,7 +30,7 @@ namespace GUI
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.MaVendido1 = new GUI.MasVendido();
+            this.MaVendido1 = new GUI.ReporteMasVendido();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +74,7 @@ namespace GUI
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private MasVendido MaVendido1;
+        private ReporteMasVendido MaVendido1;
         private System.Windows.Forms.Panel panel1;
     }
 }

@@ -87,12 +87,6 @@
     <Compile Include="FRMProveedor.Designer.cs">
       <DependentUpon>FRMProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRMReportecompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMReportecompra.Designer.cs">
-      <DependentUpon>FRMReportecompra.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRMReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +117,6 @@
     <Compile Include="FRMPantallaInicio.Designer.cs">
       <DependentUpon>FRMPantallaInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="MasVendido.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MasVendido.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reporte.cs">
@@ -136,6 +124,12 @@
     </Compile>
     <Compile Include="Reporte.Designer.cs">
       <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMasVendido.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteMasVendido.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="reporteVenta.cs">
       <AutoGen>True</AutoGen>
@@ -158,9 +152,6 @@
     <EmbeddedResource Include="FRMProveedor.resx">
       <DependentUpon>FRMProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRMReportecompra.resx">
-      <DependentUpon>FRMReportecompra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRMReporteVentas.resx">
       <DependentUpon>FRMReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,10 +167,6 @@
     <EmbeddedResource Include="FRMPantallaInicio.resx">
       <DependentUpon>FRMPantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MasVendido.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>MasVendido.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -191,6 +178,10 @@
     </Compile>
     <EmbeddedResource Include="Reporte.resx">
       <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMasVendido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteMasVendido.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reporteVenta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

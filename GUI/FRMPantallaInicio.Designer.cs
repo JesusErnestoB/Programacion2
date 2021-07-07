@@ -42,7 +42,6 @@ namespace GUI
             this.ibProveedores = new FontAwesome.Sharp.IconButton();
             this.pnlReporte = new System.Windows.Forms.Panel();
             this.ibtnReporteMasVendido = new FontAwesome.Sharp.IconButton();
-            this.ibtnReporteCompra = new FontAwesome.Sharp.IconButton();
             this.ibtnReporteVenta = new FontAwesome.Sharp.IconButton();
             this.ibReporte = new FontAwesome.Sharp.IconButton();
             this.pnlEmpleados = new System.Windows.Forms.Panel();
@@ -239,7 +238,6 @@ namespace GUI
             // 
             this.pnlReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.pnlReporte.Controls.Add(this.ibtnReporteMasVendido);
-            this.pnlReporte.Controls.Add(this.ibtnReporteCompra);
             this.pnlReporte.Controls.Add(this.ibtnReporteVenta);
             this.pnlReporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReporte.Location = new System.Drawing.Point(0, 446);
@@ -261,34 +259,13 @@ namespace GUI
             this.ibtnReporteMasVendido.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnReporteMasVendido.IconSize = 25;
             this.ibtnReporteMasVendido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnReporteMasVendido.Location = new System.Drawing.Point(0, 60);
+            this.ibtnReporteMasVendido.Location = new System.Drawing.Point(0, 30);
             this.ibtnReporteMasVendido.Name = "ibtnReporteMasVendido";
             this.ibtnReporteMasVendido.Size = new System.Drawing.Size(220, 30);
             this.ibtnReporteMasVendido.TabIndex = 28;
             this.ibtnReporteMasVendido.Text = "Producto mas vendido";
             this.ibtnReporteMasVendido.UseVisualStyleBackColor = false;
             this.ibtnReporteMasVendido.Click += new System.EventHandler(this.ibtnReporteMasVendido_Click);
-            // 
-            // ibtnReporteCompra
-            // 
-            this.ibtnReporteCompra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnReporteCompra.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibtnReporteCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibtnReporteCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnReporteCompra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnReporteCompra.ForeColor = System.Drawing.Color.Transparent;
-            this.ibtnReporteCompra.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ibtnReporteCompra.IconColor = System.Drawing.Color.White;
-            this.ibtnReporteCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnReporteCompra.IconSize = 25;
-            this.ibtnReporteCompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnReporteCompra.Location = new System.Drawing.Point(0, 30);
-            this.ibtnReporteCompra.Name = "ibtnReporteCompra";
-            this.ibtnReporteCompra.Size = new System.Drawing.Size(220, 30);
-            this.ibtnReporteCompra.TabIndex = 27;
-            this.ibtnReporteCompra.Text = "Reporte de compra ";
-            this.ibtnReporteCompra.UseVisualStyleBackColor = true;
-            this.ibtnReporteCompra.Click += new System.EventHandler(this.ibtnReporteCompra_Click);
             // 
             // ibtnReporteVenta
             // 
@@ -645,7 +622,6 @@ namespace GUI
         private FontAwesome.Sharp.IconButton ibProveedores;
         private System.Windows.Forms.Panel pnlReporte;
         private FontAwesome.Sharp.IconButton ibtnReporteMasVendido;
-        private FontAwesome.Sharp.IconButton ibtnReporteCompra;
         private FontAwesome.Sharp.IconButton ibtnReporteVenta;
         private FontAwesome.Sharp.IconButton ibReporte;
         private System.Windows.Forms.Panel pnlEmpleados;
