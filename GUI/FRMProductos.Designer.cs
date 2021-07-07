@@ -39,6 +39,7 @@ namespace GUI
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.idProducto = new System.Windows.Forms.Label();
             this.lblPrecioVentP = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.lblPrecioCompP = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@ namespace GUI
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(696, 267);
             this.panel4.TabIndex = 69;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // ibMostrar
             // 
@@ -131,6 +133,7 @@ namespace GUI
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Cursor = System.Windows.Forms.Cursors.IBeam;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,6 +148,7 @@ namespace GUI
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.Size = new System.Drawing.Size(693, 151);
             this.dgvProductos.TabIndex = 36;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
             // textBox1
             // 
@@ -169,6 +173,7 @@ namespace GUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.idProducto);
             this.groupBox1.Controls.Add(this.lblPrecioVentP);
             this.groupBox1.Controls.Add(this.txtPrecioVenta);
             this.groupBox1.Controls.Add(this.lblPrecioCompP);
@@ -192,6 +197,15 @@ namespace GUI
             this.groupBox1.TabIndex = 68;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // idProducto
+            // 
+            this.idProducto.AutoSize = true;
+            this.idProducto.Location = new System.Drawing.Point(648, 29);
+            this.idProducto.Name = "idProducto";
+            this.idProducto.Size = new System.Drawing.Size(0, 13);
+            this.idProducto.TabIndex = 60;
+            this.idProducto.Visible = false;
             // 
             // lblPrecioVentP
             // 
@@ -415,6 +429,7 @@ namespace GUI
             this.ibEditar.Text = "Editar";
             this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ibEditar.UseVisualStyleBackColor = true;
+            this.ibEditar.Click += new System.EventHandler(this.ibEditar_Click);
             // 
             // ibCancelar
             // 
@@ -465,6 +480,7 @@ namespace GUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(831, 69);
             this.panel2.TabIndex = 66;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // ibtnInicio
             // 
@@ -552,5 +568,6 @@ namespace GUI
         private System.Windows.Forms.DataGridView dgvProductos;
         private FontAwesome.Sharp.IconButton ibEditar;
         private FontAwesome.Sharp.IconButton ibMostrar;
+        private System.Windows.Forms.Label idProducto;
     }
 }

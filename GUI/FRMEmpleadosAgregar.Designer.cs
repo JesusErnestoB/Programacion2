@@ -34,11 +34,14 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Busqueda = new System.Windows.Forms.GroupBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.ibMostrar = new FontAwesome.Sharp.IconButton();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.pnldatos = new System.Windows.Forms.Panel();
+            this.lblidDomicilio = new System.Windows.Forms.Label();
+            this.lblidempleados = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtColoniaE = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,6 +72,7 @@ namespace GUI
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.Busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.pnldatos.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -91,15 +95,37 @@ namespace GUI
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.ibMostrar);
-            this.panel4.Controls.Add(this.dgvEmpleados);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.Busqueda);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 325);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(820, 277);
+            this.panel4.Size = new System.Drawing.Size(803, 277);
             this.panel4.TabIndex = 100;
+            // 
+            // Busqueda
+            // 
+            this.Busqueda.Controls.Add(this.txtBuscar);
+            this.Busqueda.Controls.Add(this.ibMostrar);
+            this.Busqueda.Controls.Add(this.label11);
+            this.Busqueda.Controls.Add(this.dgvEmpleados);
+            this.Busqueda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Busqueda.ForeColor = System.Drawing.Color.White;
+            this.Busqueda.Location = new System.Drawing.Point(0, 0);
+            this.Busqueda.Name = "Busqueda";
+            this.Busqueda.Size = new System.Drawing.Size(803, 277);
+            this.Busqueda.TabIndex = 68;
+            this.Busqueda.TabStop = false;
+            this.Busqueda.Text = "Busacar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.txtBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtBuscar.Location = new System.Drawing.Point(171, 28);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(206, 20);
+            this.txtBuscar.TabIndex = 59;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ibMostrar
             // 
@@ -109,13 +135,24 @@ namespace GUI
             this.ibMostrar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ibMostrar.IconColor = System.Drawing.Color.Black;
             this.ibMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibMostrar.Location = new System.Drawing.Point(447, 23);
+            this.ibMostrar.Location = new System.Drawing.Point(444, 30);
             this.ibMostrar.Name = "ibMostrar";
             this.ibMostrar.Size = new System.Drawing.Size(133, 23);
             this.ibMostrar.TabIndex = 67;
             this.ibMostrar.Text = "Mostrar Todo";
             this.ibMostrar.UseVisualStyleBackColor = false;
             this.ibMostrar.Click += new System.EventHandler(this.ibMostrar_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(91, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 20);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Nombre ";
             // 
             // dgvEmpleados
             // 
@@ -136,40 +173,23 @@ namespace GUI
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpleados.EnableHeadersVisualStyles = false;
             this.dgvEmpleados.GridColor = System.Drawing.Color.White;
-            this.dgvEmpleados.Location = new System.Drawing.Point(43, 73);
+            this.dgvEmpleados.Location = new System.Drawing.Point(12, 59);
             this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(946, 233);
+            this.dgvEmpleados.Size = new System.Drawing.Size(785, 180);
             this.dgvEmpleados.TabIndex = 62;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(94, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 20);
-            this.label11.TabIndex = 60;
-            this.label11.Text = "Nombre ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(174, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 59;
+            this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
             // 
             // pnldatos
             // 
+            this.pnldatos.Controls.Add(this.lblidDomicilio);
+            this.pnldatos.Controls.Add(this.lblidempleados);
             this.pnldatos.Controls.Add(this.label7);
             this.pnldatos.Controls.Add(this.txtColoniaE);
             this.pnldatos.Controls.Add(this.label6);
@@ -193,8 +213,29 @@ namespace GUI
             this.pnldatos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnldatos.Location = new System.Drawing.Point(0, 100);
             this.pnldatos.Name = "pnldatos";
-            this.pnldatos.Size = new System.Drawing.Size(820, 225);
+            this.pnldatos.Size = new System.Drawing.Size(803, 225);
             this.pnldatos.TabIndex = 99;
+            // 
+            // lblidDomicilio
+            // 
+            this.lblidDomicilio.AutoSize = true;
+            this.lblidDomicilio.Location = new System.Drawing.Point(756, 65);
+            this.lblidDomicilio.Name = "lblidDomicilio";
+            this.lblidDomicilio.Size = new System.Drawing.Size(41, 13);
+            this.lblidDomicilio.TabIndex = 99;
+            this.lblidDomicilio.Text = "label13";
+            this.lblidDomicilio.Visible = false;
+            // 
+            // lblidempleados
+            // 
+            this.lblidempleados.AutoSize = true;
+            this.lblidempleados.Location = new System.Drawing.Point(753, 26);
+            this.lblidempleados.Name = "lblidempleados";
+            this.lblidempleados.Size = new System.Drawing.Size(41, 13);
+            this.lblidempleados.TabIndex = 98;
+            this.lblidempleados.Text = "label12";
+            this.lblidempleados.Visible = false;
+            this.lblidempleados.Click += new System.EventHandler(this.lblidempleados_Click);
             // 
             // label7
             // 
@@ -442,9 +483,9 @@ namespace GUI
             this.panel3.Controls.Add(this.ibCancelar);
             this.panel3.Controls.Add(this.ibGuardar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(820, 100);
+            this.panel3.Location = new System.Drawing.Point(803, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(123, 514);
+            this.panel3.Size = new System.Drawing.Size(140, 514);
             this.panel3.TabIndex = 73;
             // 
             // ibEditar
@@ -466,6 +507,7 @@ namespace GUI
             this.ibEditar.Text = "Editar";
             this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ibEditar.UseVisualStyleBackColor = true;
+            this.ibEditar.Click += new System.EventHandler(this.ibEditar_Click);
             // 
             // ibCancelar
             // 
@@ -556,7 +598,8 @@ namespace GUI
             this.Text = "FRMEmpleadosAgregar";
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.Busqueda.ResumeLayout(false);
+            this.Busqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.pnldatos.ResumeLayout(false);
             this.pnldatos.PerformLayout();
@@ -603,8 +646,11 @@ namespace GUI
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private FontAwesome.Sharp.IconButton ibEditar;
         private FontAwesome.Sharp.IconButton ibMostrar;
+        private System.Windows.Forms.Label lblidempleados;
+        private System.Windows.Forms.Label lblidDomicilio;
+        private System.Windows.Forms.GroupBox Busqueda;
     }
 }

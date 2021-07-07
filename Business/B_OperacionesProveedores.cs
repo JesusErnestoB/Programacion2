@@ -22,7 +22,6 @@ namespace Business
                 dProveedor.Telefono = telefono;
                 dProveedor.fk_Direccion = direccion;
 
-                dProveedor.Insertar();
                 if (dProveedor.Insertar())
                 {
                     return "El proveedor ha sido registrado correctamente";

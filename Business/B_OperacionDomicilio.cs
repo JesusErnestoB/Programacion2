@@ -15,18 +15,23 @@ namespace Business
         {
             try
             {
-               
+
                 dDomicilio.Calle = Calle;
                 dDomicilio.Colonia = Colonia;
                 dDomicilio.Localidad = Localidad;
                 dDomicilio.Municipio = Municipio;
                 dDomicilio.Estado = Estado;
 
-                dDomicilio.Insertar();
+                if (dDomicilio.Insertar())
+                {
 
-       
-                return "Registrado";
-                
+                    return dDomicilio.idDomicilio;
+                }
+                else
+                {
+                    return "El domicilio no ha sido registrado";
+                }
+
             }
             catch (Exception)
             {
@@ -35,6 +40,35 @@ namespace Business
             }
 
         }
+        public String ActualizarDomicilio(string idDomicilio, string Calle, string Colonia, string Localidad, string Municipio, string Estado)
+        {
+            try
+            {
+                dDomicilio.idDomicilio = idDomicilio;
+                dDomicilio.Calle = Calle;
+                dDomicilio.Colonia = Colonia;
+                dDomicilio.Localidad = Localidad;
+                dDomicilio.Municipio = Municipio;
+                dDomicilio.Estado = Estado;
 
+                if (dDomicilio.Actualizar())
+                {
+
+                    return dDomicilio.idDomicilio;
+                }
+                else
+                {
+                    return "El domicilio no ha sido registrado";
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
     }
 }

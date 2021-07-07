@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class FRMEmpleadosBuscaryEditar : Form
+    public partial class Reporte : Form
     {
-        public FRMEmpleadosBuscaryEditar()
+        public Reporte()
         {
             InitializeComponent();
-        }
-        FRMPantallaInicio pdto = new FRMPantallaInicio();
-
-        private void ibEditar_Click(object sender, EventArgs e)
-        {
-            
-
         }
     }
 }

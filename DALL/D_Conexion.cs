@@ -10,8 +10,6 @@ namespace DALL
 {
     class D_Conexion
     {
-        
-
         //Cadena de Conexion
         private readonly string cadena = "data source = LAPTOP-OEBH68R2; initial catalog = DBPapeleria_Memo; integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
 
@@ -22,6 +20,7 @@ namespace DALL
         {
             Conectar.ConnectionString = cadena;
         }
+            
 
         //Metodo para abrir la conexion
         public void abrir()

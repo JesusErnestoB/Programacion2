@@ -17,12 +17,14 @@ namespace GUI
         B_OperacionesClientes b_OperacionesClientes = new B_OperacionesClientes();
         B_OperacionDomicilio objDomiclio = new B_OperacionDomicilio();
 
-        string nombreC, Telefono, Calle, colonia, localodad, municipio, estado;
-        int direccion,idDom;
+        string nombreC, Telefono, Calle, colonia, localodad, municipio, estado, id_Domicilio;
+        int idcliente;
+
 
         public FRMClientesAgregar()
         {
             InitializeComponent();
+            id_Domicilio = "";
         }
 
         private void ibMostrar_Click(object sender, EventArgs e)
@@ -33,31 +35,59 @@ namespace GUI
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtNombreC.Text = dgvClientes.CurrentRow.Cells[0].ToString();
-            txtTelefonoC.Text = dgvClientes.CurrentRow.Cells[1].ToString();
-            txtCalleC.Text = dgvClientes.CurrentRow.Cells[2].ToString();
-            txtColoniaC.Text = dgvClientes.CurrentRow.Cells[3].ToString();
-            txtLocalidadC.Text = dgvClientes.CurrentRow.Cells[4].ToString();
-            txtMuniciopioC.Text = dgvClientes.CurrentRow.Cells[5].ToString();
-            txtEstadoC.Text = dgvClientes.CurrentRow.Cells[6].ToString();
+            txtNombreC.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+            txtTelefonoC.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+            txtCalleC.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+            txtColoniaC.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+            txtLocalidadC.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+            txtMuniciopioC.Text = dgvClientes.CurrentRow.Cells[5].Value.ToString();
+            txtEstadoC.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
+            lblidDomicilio.Text = dgvClientes.CurrentRow.Cells[7].Value.ToString();
+            lblIdClientes.Text = dgvClientes.CurrentRow.Cells[8].Value.ToString();
         }
 
-       
+
 
         private void ibtnInicio_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void ibEditar_Click(object sender, EventArgs e)
+        {
+            BorrarError();
+            if (Validar())
+            {
+                conversionActualizar();
+                Vaciar();
+            }
+        }
+
+        private void pnlClientes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        public void buscsrclienteespecifico()
+        {
+            var lista=b_OperacionesClientes.Buscar_Clientes_especifico(txtbuscarEspecificos.Text);
+            dgvClientes.DataSource = lista;
+        }
+
+        private void txtbuscarEspecificos_TextChanged(object sender, EventArgs e)
+        {
+            buscsrclienteespecifico();
+        }
+
         private void ibGuardarClientes_Click(object sender, EventArgs e)
         {
-            Validar();
-            Conversiones();
+            BorrarError();
+            if (Validar())
+            {
+                conversionDomicilio();
+             
+                Vaciar();
+            }
 
-            objDomiclio.InsertarDomicilio(Calle, colonia, localodad, municipio, estado);
-            MessageBox.Show(b_OperacionesClientes.InsertarClientes(nombreC, Telefono, direccion));
-
-            Vaciar();
         }
 
         public void Vaciar()
@@ -76,51 +106,59 @@ namespace GUI
         {
             Vaciar();
         }
-     
-        private void Validar()
+
+        private bool Validar()
         {
+            bool ok = true;
             if (txtNombreC.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtNombreC, "Ingrese el nombre");
-                return;
             }
-            errorProvider1.SetError(txtNombreC, "");
+
 
             string numero = @"\d{10}";
             Regex expresion = new Regex(numero);
             MatchCollection Match = expresion.Matches(txtTelefonoC.Text);
             if (Match.Count > 0)
             {
+
             }
             else
             {
+                ok = false;
                 errorProvider1.SetError(txtTelefonoC, "Digite 10 números");
-                return;
             }
+            
 
             if (txtCalleC.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtCalleC, "Ingresae  la calle");
-                return;
+
             }
-            errorProvider1.SetError(txtCalleC, "");
+            
 
             if (txtColoniaC.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtColoniaC, "Ingrese la colonia");
-                return;
+
             }
-            errorProvider1.SetError(txtColoniaC, "");
+           
 
             if (txtMuniciopioC.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtMuniciopioC, "Ingrese el municipio");
-                return;
-            }
-            errorProvider1.SetError(txtMuniciopioC, "");        
-        }
 
-        public void Conversiones()
+            }
+            
+            return ok;
+        } 
+
+      
+        public void conversionDomicilio()
         {
             nombreC = txtCalleC.Text.ToUpper();
             Telefono = txtTelefonoC.Text.ToUpper();
@@ -129,6 +167,43 @@ namespace GUI
             localodad = txtLocalidadC.Text.ToUpper();
             municipio = txtMuniciopioC.Text.ToUpper();
             estado = txtEstadoC.Text.ToUpper();
+
+            string id_Domicilio = objDomiclio.InsertarDomicilio(Calle, colonia, localodad, municipio, estado);
+
+            if (id_Domicilio =="error")
+            {
+                MessageBox.Show("Ocurrio un error"); return;
+            }
+
+            b_OperacionesClientes.InsertarClientes(nombreC, Telefono, id_Domicilio);
+        }
+        public void BorrarError()
+        {
+            errorProvider1.SetError(txtNombreC, "");
+            errorProvider1.SetError(txtTelefonoC, "");
+            errorProvider1.SetError(txtCalleC, "");
+
+            errorProvider1.SetError(txtColoniaC, "");
+            errorProvider1.SetError(txtLocalidadC, "");
+            errorProvider1.SetError(txtMuniciopioC, "");
+            errorProvider1.SetError(txtEstadoC, "");
+        }
+        public void conversionActualizar()
+        {
+            idcliente= int.Parse(lblIdClientes.Text);
+            nombreC = txtNombreC.Text.ToUpper();
+            Telefono = txtTelefonoC.Text.ToUpper();
+            Calle = txtCalleC.Text.ToUpper();
+            colonia = txtColoniaC.Text.ToUpper();
+            localodad = txtLocalidadC.Text.ToUpper();
+            municipio = txtMuniciopioC.Text.ToUpper();
+            estado = txtEstadoC.Text.ToUpper();
+                 b_OperacionesClientes.ActualizarClientes(idcliente,nombreC, Telefono);
+            objDomiclio.ActualizarDomicilio(lblidDomicilio.Text, Calle, colonia, localodad, municipio, estado);
+                   
+
+            
         }
     }
+    
 }

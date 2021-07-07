@@ -16,7 +16,7 @@ namespace GUI
         private B_OperacionProductos b_OperacionesProductos = new B_OperacionProductos();
 
         string Nombre, codigo, marca, color, descripcion;
-        int cantidad;
+        int cantidad, id;
         float precioComp, PrecioVen;
         public FRMProductos()
         {
@@ -30,12 +30,14 @@ namespace GUI
 
         private void ibGuardar_Click(object sender, EventArgs e)
         {
-            convrsiones();
-            Validacion();
-
-            MessageBox.Show(b_OperacionesProductos.InsertarProductos(Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion));
-
-            LimpiarControles();
+            BorrarError(); 
+            if (Validacion())
+            {
+                convrsiones();
+                MessageBox.Show("se registro correctamente");
+             LimpiarControles();
+            }
+        
 
         }
 
@@ -44,17 +46,47 @@ namespace GUI
             Nombre = txtNombre.Text.ToUpper();
             codigo = txtCodigo.Text.ToUpper();
             marca = txtMarca.Text.ToUpper();
-            cantidad = Convert.ToInt32(nudCantidad);
+            cantidad = Convert.ToInt32(nudCantidad.Value);
             color = txtColor.Text.ToUpper();
             precioComp = float.Parse(txtPrecioComp.Text);
             PrecioVen = float.Parse(txtPrecioVenta.Text);
             descripcion = txtDescripcion.Text.ToUpper();
+            
+            b_OperacionesProductos.InsertarProductos(Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion);
         }
 
         private void ibMostrar_Click(object sender, EventArgs e)
         {
             var lista = b_OperacionesProductos.Buscar_Productos();
             dgvProductos.DataSource = lista;
+        }
+
+        private void ibEditar_Click(object sender, EventArgs e)
+        {
+            BorrarError();
+            if (Validacion())
+            {
+                ConversionActualizar();
+            }
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txtNombre.Text = dgvProductos.CurrentRow.Cells[0].Value.ToString();
+            txtCodigo.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
+            txtColor.Text = dgvProductos.CurrentRow.Cells[2].Value.ToString();
+            txtMarca.Text = dgvProductos.CurrentRow.Cells[3].Value.ToString();
+            nudCantidad.Text = dgvProductos.CurrentRow.Cells[4].Value.ToString();
+            txtPrecioComp.Text = dgvProductos.CurrentRow.Cells[5].Value.ToString();
+            txtPrecioVenta.Text =  dgvProductos.CurrentRow.Cells[6].Value.ToString();
+            txtDescripcion.Text = dgvProductos.CurrentRow.Cells[7].Value.ToString();
+            idProducto.Text = dgvProductos.CurrentRow.Cells[8].Value.ToString();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         public void LimpiarControles()
@@ -73,52 +105,76 @@ namespace GUI
 
         }
 
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void ibCancelar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
         }
 
-        private void Validacion()
+        private bool Validacion()
         {
+            bool ok= true;
+
             if (txtNombre.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtNombre, "ingresa el nombre del producto");
-                return;
             }
-            errorProvider1.SetError(txtNombre, "");
+            return ok;
 
             if (txtCodigo.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtCodigo, "Ingresa el codigo");
             }
-            errorProvider1.SetError(txtCodigo, "");
+            return ok;
 
             if (txtColor.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtColor, "Ingresa el color");
             }
-            errorProvider1.SetError(txtColor, "");
+            return ok;
 
             if (txtMarca.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtMarca, "Ingresa la marca");
             }
-            errorProvider1.SetError(txtMarca, "");
+            return ok;
 
 
             if (txtPrecioComp.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtPrecioComp, "Ingresa el precio de compra");
             }
-            errorProvider1.SetError(txtPrecioComp, "");
+            return ok;
 
 
             if (txtPrecioVenta.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtPrecioVenta, "Ingresa el codigo");
             }
-            errorProvider1.SetError(txtPrecioVenta, "");
+            return ok;
 
+
+        }
+       public void BorrarError()
+        {
+            errorProvider1.SetError(txtNombre, "");
+            errorProvider1.SetError(txtCodigo, "");
+            errorProvider1.SetError(txtMarca, "");
+            errorProvider1.SetError(nudCantidad, "");
+            errorProvider1.SetError(txtPrecioComp, "");
+            errorProvider1.SetError(txtColor, "");
+            errorProvider1.SetError(txtPrecioVenta, "");
+            errorProvider1.SetError(txtDescripcion, "");
 
         }
 
@@ -130,6 +186,20 @@ namespace GUI
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+        public void ConversionActualizar()
+        {
+            Nombre = txtNombre.Text.ToUpper();
+            codigo = txtCodigo.Text.ToUpper();
+            marca = txtMarca.Text.ToUpper();
+            cantidad = Convert.ToInt32(nudCantidad.Value);
+            color = txtColor.Text.ToUpper();
+            precioComp = float.Parse(txtPrecioComp.Text);
+            PrecioVen = float.Parse(txtPrecioVenta.Text);
+            descripcion = txtDescripcion.Text.ToUpper();
+            id = int.Parse(idProducto.Text);
+
+            b_OperacionesProductos.ActualizarProductos(id, Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion);
         }
     }
 }

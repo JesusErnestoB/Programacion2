@@ -13,15 +13,15 @@ namespace Business
     {
         public D_Cliente dCiente = new D_Cliente();
 
-        public string InsertarClientes(string NombreC, string Tetefono, int direccion)
+        public string InsertarClientes(string NombreC, string Tetefono, string fk_direccion)
         {
             try
             {
                 dCiente.NombreC = NombreC;
                 dCiente.telefono = Tetefono;
-                dCiente.Direccion = direccion;
+                dCiente.Direccion = fk_direccion;
 
-                dCiente.Insertar();
+                
                 if (dCiente.Insertar())
                 {
                     return "El cliente ha sido registrado correctamente";
@@ -39,18 +39,16 @@ namespace Business
             }
         }
 
-        public string InsertarClientes(int id, string nombreC, string telefono, int direccion)
+        public string  ActualizarClientes(int id, string nombreC, string telefono)
         {
-            dCiente.IdCliente = id;
             try
             {
                 dCiente.IdCliente = id;
                 dCiente.NombreC = nombreC;
                 dCiente.telefono = telefono;
-                dCiente.Direccion = direccion;
+                
 
-                dCiente.Insertar();
-                if (dCiente.Insertar())
+                if (dCiente.Actualizar())
                 {
                     return "El cliente ha sido actualizado correctamente";
                 }
@@ -72,6 +70,19 @@ namespace Business
             try
             {
                 return dCiente.BuscarCliente();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        public DataTable Buscar_Clientes_especifico(string nombre)
+        {
+            try
+            {
+                return dCiente.BuscarClienteespecifico( nombre);
             }
             catch (Exception)
             {

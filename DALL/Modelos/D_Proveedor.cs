@@ -25,7 +25,7 @@ namespace DALL.Modelos
             try
             {
                 conexion.abrir();
-                string sql = "INSERT INTO Proveedor VALUES ('" + Nombre + "','"+ CorreoE + "','" + Telefono + "'," + fk_Direccion.ToString() + ")";
+                string sql = "INSERT INTO Proveedor VALUES ('" + Nombre.ToString() + "','"+ CorreoE.ToString() + "','" + Telefono.ToString() + "'," + fk_Direccion.ToString() + ")";
 
                 var cmd = new SqlCommand(sql, conexion.Conectar);
                 var resultado = cmd.ExecuteNonQuery();

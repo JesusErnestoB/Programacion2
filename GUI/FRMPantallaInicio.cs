@@ -207,9 +207,9 @@ namespace GUI
 
         }
 
-        private void ibBusacarEm_Click(object sender, EventArgs e)
+/*private void ibBusacarEm_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMEmpleadosBuscaryEditar());
+            AbrirFormHija( ());
             ocultarMostrarSubmenu(pnlEmpleados);
         }
 
@@ -217,7 +217,7 @@ namespace GUI
         {
             AbrirFormHija(new FRMEmpleadosBuscaryEditar());
             ocultarMostrarSubmenu(pnlEmpleados);
-        }
+        }*/
 
         #endregion
 
@@ -248,7 +248,7 @@ namespace GUI
 
         private void ibtnReporteVenta_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMReporteVentas());
+            AbrirFormHija(new FRMReprteMasVendido());
             ocultarMostrarSubmenu(pnlReporte);
         }
         
@@ -260,7 +260,7 @@ namespace GUI
         
         private void ibtnReporteMasVendido_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FRMReprteMasVendido());
+            AbrirFormHija(new Reporte());
             ocultarMostrarSubmenu(pnlReporte);
         }
 
@@ -295,6 +295,16 @@ namespace GUI
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlCompras_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlProveedor_Paint(object sender, PaintEventArgs e)
         {
 
         }

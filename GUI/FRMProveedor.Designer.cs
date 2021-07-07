@@ -30,11 +30,12 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.id_dOMICILIO = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEstadoProv = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@ namespace GUI
             this.lblNomProduct = new System.Windows.Forms.Label();
             this.txtNombreProv = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ibEditar = new FontAwesome.Sharp.IconButton();
             this.ibCancelar = new FontAwesome.Sharp.IconButton();
             this.ibGuardar = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,7 +65,6 @@ namespace GUI
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombreP = new System.Windows.Forms.TextBox();
-            this.ibEditar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,6 +89,7 @@ namespace GUI
             // panel5
             // 
             this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel5.Controls.Add(this.id_dOMICILIO);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.txtEstadoProv);
             this.panel5.Controls.Add(this.label7);
@@ -108,7 +110,17 @@ namespace GUI
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(799, 249);
             this.panel5.TabIndex = 119;
-            
+            // 
+            // id_dOMICILIO
+            // 
+            this.id_dOMICILIO.AutoSize = true;
+            this.id_dOMICILIO.Location = new System.Drawing.Point(762, 86);
+            this.id_dOMICILIO.Name = "id_dOMICILIO";
+            this.id_dOMICILIO.Size = new System.Drawing.Size(41, 13);
+            this.id_dOMICILIO.TabIndex = 119;
+            this.id_dOMICILIO.Text = "label11";
+            this.id_dOMICILIO.Visible = false;
+            this.id_dOMICILIO.Click += new System.EventHandler(this.label11_Click);
             // 
             // label6
             // 
@@ -328,6 +340,26 @@ namespace GUI
             this.panel3.Size = new System.Drawing.Size(200, 249);
             this.panel3.TabIndex = 102;
             // 
+            // ibEditar
+            // 
+            this.ibEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.ibEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.ibEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibEditar.ForeColor = System.Drawing.Color.Transparent;
+            this.ibEditar.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.ibEditar.IconColor = System.Drawing.Color.White;
+            this.ibEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibEditar.IconSize = 25;
+            this.ibEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibEditar.Location = new System.Drawing.Point(63, 164);
+            this.ibEditar.Name = "ibEditar";
+            this.ibEditar.Size = new System.Drawing.Size(88, 30);
+            this.ibEditar.TabIndex = 45;
+            this.ibEditar.Text = "Editar";
+            this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibEditar.UseVisualStyleBackColor = true;
+            // 
             // ibCancelar
             // 
             this.ibCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
@@ -438,35 +470,35 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProveedores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
             this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProveedores.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProveedores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProveedores.EnableHeadersVisualStyles = false;
             this.dgvProveedores.GridColor = System.Drawing.Color.White;
             this.dgvProveedores.Location = new System.Drawing.Point(0, 51);
             this.dgvProveedores.Name = "dgvProveedores";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProveedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProveedores.Size = new System.Drawing.Size(991, 248);
             this.dgvProveedores.TabIndex = 64;
             this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
@@ -490,26 +522,6 @@ namespace GUI
             this.txtNombreP.Name = "txtNombreP";
             this.txtNombreP.Size = new System.Drawing.Size(206, 20);
             this.txtNombreP.TabIndex = 62;
-            // 
-            // ibEditar
-            // 
-            this.ibEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ibEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibEditar.ForeColor = System.Drawing.Color.Transparent;
-            this.ibEditar.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.ibEditar.IconColor = System.Drawing.Color.White;
-            this.ibEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibEditar.IconSize = 25;
-            this.ibEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEditar.Location = new System.Drawing.Point(63, 164);
-            this.ibEditar.Name = "ibEditar";
-            this.ibEditar.Size = new System.Drawing.Size(88, 30);
-            this.ibEditar.TabIndex = 45;
-            this.ibEditar.Text = "Editar";
-            this.ibEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ibEditar.UseVisualStyleBackColor = true;
             // 
             // FRMProveedor
             // 
@@ -570,5 +582,6 @@ namespace GUI
         private System.Windows.Forms.TextBox txtNombreP;
         private FontAwesome.Sharp.IconButton ibMostrar;
         private FontAwesome.Sharp.IconButton ibEditar;
+        private System.Windows.Forms.Label id_dOMICILIO;
     }
 }

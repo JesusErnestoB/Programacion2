@@ -46,6 +46,8 @@
     <Compile Include="B_OperacionesClientes.cs" />
     <Compile Include="B_OperacionesProveedores.cs" />
     <Compile Include="B_OperacionProductos.cs" />
+    <Compile Include="B_OperacionVenta.cs" />
+    <Compile Include="B_Venta_producto.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

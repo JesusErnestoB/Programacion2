@@ -30,7 +30,7 @@ namespace DALL.Modelos
                 conexion.abrir();
                 string sql = "INSERT INTO Producto VALUES ('" + NombreP + "','";
                 sql += Codigo + "','" + Marca + "'," + Cantidad.ToString() + ",'" + Color + "',";
-                sql += PrecioComp.ToString() + "," + PrecioVent.ToString() + ",'" + Descripcion + "'";
+                sql += PrecioComp.ToString() + "," + PrecioVent.ToString() + ",'" + Descripcion + "')";
 
                 var cmd = new SqlCommand(sql, conexion.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
@@ -57,7 +57,7 @@ namespace DALL.Modelos
             {
                 conexion.abrir();
 
-                string sql = "UPDATE Producto SET nombre = '" + NombreP.ToString() + "',Codigo ='" + Codigo.ToString() + "', = Marca'" + Marca.ToString();
+                string sql = "UPDATE Producto SET nombre = '" + NombreP.ToString() + "',Codigo ='" + Codigo.ToString() + "', Marca='" + Marca.ToString();
                 sql += "',cantidad=" + Cantidad + ", Color ='" + Color.ToString() + "', PrecioCom = " + PrecioComp + ", PrecioVen= " + PrecioVent;
                 sql += ", Descripcion= '" + Descripcion.ToString() + "' WHERE id_producto = " + ID;
 
@@ -85,7 +85,7 @@ namespace DALL.Modelos
             {
                 conexion.abrir();
 
-                string sql = "SELECT Codigo,nombre, Marca,cantidad,PrecioVen,Descripcion From Producto ";
+                string sql = "SELECT nombre,Codigo,Color, Marca,cantidad,PrecioCom,PrecioVen,Descripcion, id_producto From Producto ";
 
                 var cmd = new SqlCommand(sql, conexion.Conectar);
                 var reader = cmd.ExecuteReader();

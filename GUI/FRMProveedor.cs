@@ -25,6 +25,11 @@ namespace GUI
             LimpiarControles();
         }
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ibMostrar_Click_1(object sender, EventArgs e)
         {
             var lista = b_OperacionProveedores.Buscar_Proveedores();
@@ -33,19 +38,20 @@ namespace GUI
 
         private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtNombreProv.Text = dgvProveedores.CurrentRow.Cells[0].ToString();
-            txtEmail.Text = dgvProveedores.CurrentRow.Cells[1].ToString();
-            txtTelefono.Text = dgvProveedores.CurrentRow.Cells[2].ToString();
-            txtCalleProv.Text = dgvProveedores.CurrentRow.Cells[3].ToString();
-            txtColoniaProv.Text = dgvProveedores.CurrentRow.Cells[4].ToString();
-            txtLocalidadProv.Text = dgvProveedores.CurrentRow.Cells[5].ToString();
-            txtMuniciopioProv.Text = dgvProveedores.CurrentRow.Cells[6].ToString();
-            txtEstadoProv.Text = dgvProveedores.CurrentRow.Cells[7].ToString();
+            txtNombreProv.Text = dgvProveedores.CurrentRow.Cells[0].Value.ToString();
+            txtEmail.Text = dgvProveedores.CurrentRow.Cells[1].Value.ToString();
+            txtTelefono.Text = dgvProveedores.CurrentRow.Cells[2].Value.ToString();
+            txtCalleProv.Text = dgvProveedores.CurrentRow.Cells[3].Value.ToString();
+            txtColoniaProv.Text = dgvProveedores.CurrentRow.Cells[4].Value.ToString();
+            txtLocalidadProv.Text = dgvProveedores.CurrentRow.Cells[5].Value.ToString();
+            txtMuniciopioProv.Text = dgvProveedores.CurrentRow.Cells[6].Value.ToString();
+            txtEstadoProv.Text = dgvProveedores.CurrentRow.Cells[7].Value.ToString();
+            id_dOMICILIO.Text = dgvProveedores.CurrentRow.Cells[8].Value.ToString();
         }
 
-       
 
-       
+
+
         public FRMProveedor()
         {
             InitializeComponent();
@@ -53,12 +59,12 @@ namespace GUI
 
         private void ibGuardar_Click(object sender, EventArgs e)
         {
-            Validar();
-            Conversiones();
-            MessageBox.Show( b_OperacionDomicilio.InsertarDomicilio(calle, colonia, localidad, municipio, estado));
-            MessageBox.Show(b_OperacionProveedores.InsertarProveedores(nombre, correo, telefono, domicilio));
-
-            LimpiarControles();
+            BorrarError();
+            if (Validar())
+            {
+                Conversiones();
+                LimpiarControles();
+            }
         }
 
         public void LimpiarControles()
@@ -75,19 +81,21 @@ namespace GUI
             txtNombreProv.Focus();
         }
 
-        private void Validar()
+        private bool Validar()
         {
+            bool ok = true;
             if (txtNombreProv.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtNombreProv, "Ingresa el nombre");
             }
-            errorProvider1.SetError(txtNombreProv, "");
 
             if (txtEmail.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtEmail, "Ingresa el correo electronico");
             }
-            errorProvider1.SetError(txtEmail, "");
+            
 
             string numero = @"\d{10}";
             Regex expresion = new Regex(numero);
@@ -97,31 +105,34 @@ namespace GUI
             }
             else
             {
+                ok = false;
                 errorProvider1.SetError(txtTelefono, "requiere de 10 caracteres numericos");
             }
 
             if (txtCalleProv.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtCalleProv, "Ingrese  la calle");
-                return;
+                
             }
-            errorProvider1.SetError(txtCalleProv, "");
-
+         
             if (txtColoniaProv.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtColoniaProv, "Ingrese la colonia");
-                return;
+                
             }
-            errorProvider1.SetError(txtColoniaProv, "");
+            
 
             if (txtMuniciopioProv.Text == "")
             {
+                ok = false;
                 errorProvider1.SetError(txtMuniciopioProv, "Ingrese el municipio");
-                return;
+                
             }
-            errorProvider1.SetError(txtMuniciopioProv, "");
+            return ok;
         }
-     
+
 
         public void Conversiones()
         {
@@ -134,8 +145,32 @@ namespace GUI
             municipio = txtMuniciopioProv.Text.ToUpper();
             estado = txtEstadoProv.Text.ToUpper();
 
+            string id_Domicilio = b_OperacionDomicilio.InsertarDomicilio(calle, colonia, localidad, municipio, estado);
+
+            if (id_Domicilio == "error")
+            {
+                MessageBox.Show("Ocurrio un error"); return;
+            }
+
+            b_OperacionProveedores.InsertarProveedores(nombre, correo, telefono, domicilio);
+
+
+
+        }
+        public void BorrarError()
+        {
+            errorProvider1.SetError(txtNombreP, "");
+            errorProvider1.SetError(txtEmail, "");
+            errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(txtCalleProv, "");
+            errorProvider1.SetError(txtColoniaProv, "");
+            errorProvider1.SetError(txtLocalidadProv, "");
+            errorProvider1.SetError(txtMuniciopioProv, "");
+            errorProvider1.SetError(txtEstadoProv, "");
+
+
         }
 
-       
+
     }
 }

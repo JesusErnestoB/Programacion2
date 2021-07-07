@@ -12,7 +12,7 @@ namespace Business
     {
         public D_Empleados dEmpleados = new D_Empleados();
 
-        public String InsertarEmpleados(string NombreE, string ApellidoPE, string ApellidoME, string Sexo, int edad, int Domicilio)
+        public String InsertarEmpleados(string NombreE, string ApellidoPE, string ApellidoME, string Sexo, int edad, string Domicilio)
         {
             try
             {
@@ -23,7 +23,7 @@ namespace Business
                 dEmpleados.Edad = edad;
                 dEmpleados.Direccion = Domicilio;
 
-                dEmpleados.Insertar();
+
                 if (dEmpleados.Insertar())
                 {
                     return "El Empleado ha sido registrado correctamente";
@@ -40,7 +40,7 @@ namespace Business
             }
         }
 
-        public String ActualizarEmpleados(int ID, string NombreE, string ApellidoPE, string ApellidoME, string Sexo, int edad, int Domicilio)
+        public String ActualizarEmpleados(string ID, string NombreE, string ApellidoPE, string ApellidoME, string Sexo, int edad)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Business
                 dEmpleados.ApellidoME = ApellidoME;
                 dEmpleados.Sexo = Sexo;
                 dEmpleados.Edad = edad;
-                dEmpleados.Direccion = Domicilio;
+               
 
                 if (dEmpleados.Actualizar(ID))
                 {
@@ -79,6 +79,20 @@ namespace Business
 
                 throw;
             }
+        }
+
+        public DataTable Buscar_empleados_especifico(string nombre)
+        {
+            try
+            {
+                return dEmpleados.BuscarEmpleadoEspecifico(nombre);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
     }
 }

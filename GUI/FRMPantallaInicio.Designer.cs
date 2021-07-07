@@ -38,7 +38,6 @@ namespace GUI
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlProveedor = new System.Windows.Forms.Panel();
-            this.ibtnBuscarProv = new FontAwesome.Sharp.IconButton();
             this.ibtnAgregar = new FontAwesome.Sharp.IconButton();
             this.ibProveedores = new FontAwesome.Sharp.IconButton();
             this.pnlReporte = new System.Windows.Forms.Panel();
@@ -47,22 +46,16 @@ namespace GUI
             this.ibtnReporteVenta = new FontAwesome.Sharp.IconButton();
             this.ibReporte = new FontAwesome.Sharp.IconButton();
             this.pnlEmpleados = new System.Windows.Forms.Panel();
-            this.ibBusacarEm = new FontAwesome.Sharp.IconButton();
-            this.ibEditarEm = new FontAwesome.Sharp.IconButton();
             this.ibAgregarEm = new FontAwesome.Sharp.IconButton();
             this.ibEmpleados = new FontAwesome.Sharp.IconButton();
             this.pnlCompras = new System.Windows.Forms.Panel();
             this.ibRegistrar = new FontAwesome.Sharp.IconButton();
             this.ibCompras = new FontAwesome.Sharp.IconButton();
             this.pnlClientes = new System.Windows.Forms.Panel();
-            this.ibBuscarC = new FontAwesome.Sharp.IconButton();
-            this.ibEditarC = new FontAwesome.Sharp.IconButton();
             this.ibAgrarC = new FontAwesome.Sharp.IconButton();
             this.ibClientes = new FontAwesome.Sharp.IconButton();
             this.ibVentas = new FontAwesome.Sharp.IconButton();
             this.pnlProductos = new System.Windows.Forms.Panel();
-            this.ibBuscarProd = new FontAwesome.Sharp.IconButton();
-            this.ibEditarProd = new FontAwesome.Sharp.IconButton();
             this.ibAgreagarProducto = new FontAwesome.Sharp.IconButton();
             this.ibProductos = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -186,40 +179,19 @@ namespace GUI
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 37);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 470);
+            this.pnlMenu.Size = new System.Drawing.Size(220, 627);
             this.pnlMenu.TabIndex = 4;
             // 
             // pnlProveedor
             // 
             this.pnlProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnlProveedor.Controls.Add(this.ibtnBuscarProv);
             this.pnlProveedor.Controls.Add(this.ibtnAgregar);
             this.pnlProveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProveedor.Location = new System.Drawing.Point(0, 719);
+            this.pnlProveedor.Location = new System.Drawing.Point(0, 571);
             this.pnlProveedor.Name = "pnlProveedor";
-            this.pnlProveedor.Size = new System.Drawing.Size(220, 80);
+            this.pnlProveedor.Size = new System.Drawing.Size(220, 51);
             this.pnlProveedor.TabIndex = 7;
-            // 
-            // ibtnBuscarProv
-            // 
-            this.ibtnBuscarProv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnBuscarProv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibtnBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibtnBuscarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnBuscarProv.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnBuscarProv.ForeColor = System.Drawing.Color.Transparent;
-            this.ibtnBuscarProv.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.ibtnBuscarProv.IconColor = System.Drawing.Color.White;
-            this.ibtnBuscarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnBuscarProv.IconSize = 25;
-            this.ibtnBuscarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnBuscarProv.Location = new System.Drawing.Point(0, 32);
-            this.ibtnBuscarProv.Name = "ibtnBuscarProv";
-            this.ibtnBuscarProv.Size = new System.Drawing.Size(220, 37);
-            this.ibtnBuscarProv.TabIndex = 29;
-            this.ibtnBuscarProv.Text = "Buscar";
-            this.ibtnBuscarProv.UseVisualStyleBackColor = true;
-            this.ibtnBuscarProv.Click += new System.EventHandler(this.ibtnBuscarProv_Click);
+            this.pnlProveedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlProveedor_Paint);
             // 
             // ibtnAgregar
             // 
@@ -255,7 +227,7 @@ namespace GUI
             this.ibProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibProveedores.IconSize = 30;
             this.ibProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibProveedores.Location = new System.Drawing.Point(0, 689);
+            this.ibProveedores.Location = new System.Drawing.Point(0, 541);
             this.ibProveedores.Name = "ibProveedores";
             this.ibProveedores.Size = new System.Drawing.Size(220, 30);
             this.ibProveedores.TabIndex = 36;
@@ -270,7 +242,7 @@ namespace GUI
             this.pnlReporte.Controls.Add(this.ibtnReporteCompra);
             this.pnlReporte.Controls.Add(this.ibtnReporteVenta);
             this.pnlReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlReporte.Location = new System.Drawing.Point(0, 594);
+            this.pnlReporte.Location = new System.Drawing.Point(0, 446);
             this.pnlReporte.Name = "pnlReporte";
             this.pnlReporte.Size = new System.Drawing.Size(220, 95);
             this.pnlReporte.TabIndex = 35;
@@ -352,7 +324,7 @@ namespace GUI
             this.ibReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibReporte.IconSize = 30;
             this.ibReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibReporte.Location = new System.Drawing.Point(0, 564);
+            this.ibReporte.Location = new System.Drawing.Point(0, 416);
             this.ibReporte.Name = "ibReporte";
             this.ibReporte.Size = new System.Drawing.Size(220, 30);
             this.ibReporte.TabIndex = 34;
@@ -363,56 +335,12 @@ namespace GUI
             // pnlEmpleados
             // 
             this.pnlEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnlEmpleados.Controls.Add(this.ibBusacarEm);
-            this.pnlEmpleados.Controls.Add(this.ibEditarEm);
             this.pnlEmpleados.Controls.Add(this.ibAgregarEm);
             this.pnlEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpleados.Location = new System.Drawing.Point(0, 463);
+            this.pnlEmpleados.Location = new System.Drawing.Point(0, 365);
             this.pnlEmpleados.Name = "pnlEmpleados";
-            this.pnlEmpleados.Size = new System.Drawing.Size(220, 101);
+            this.pnlEmpleados.Size = new System.Drawing.Size(220, 51);
             this.pnlEmpleados.TabIndex = 33;
-            // 
-            // ibBusacarEm
-            // 
-            this.ibBusacarEm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibBusacarEm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibBusacarEm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibBusacarEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibBusacarEm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibBusacarEm.ForeColor = System.Drawing.Color.Transparent;
-            this.ibBusacarEm.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.ibBusacarEm.IconColor = System.Drawing.Color.White;
-            this.ibBusacarEm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibBusacarEm.IconSize = 25;
-            this.ibBusacarEm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibBusacarEm.Location = new System.Drawing.Point(0, 60);
-            this.ibBusacarEm.Name = "ibBusacarEm";
-            this.ibBusacarEm.Size = new System.Drawing.Size(220, 30);
-            this.ibBusacarEm.TabIndex = 28;
-            this.ibBusacarEm.Text = "Buscar";
-            this.ibBusacarEm.UseVisualStyleBackColor = true;
-            this.ibBusacarEm.Click += new System.EventHandler(this.ibBusacarEm_Click);
-            // 
-            // ibEditarEm
-            // 
-            this.ibEditarEm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibEditarEm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibEditarEm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibEditarEm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibEditarEm.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibEditarEm.ForeColor = System.Drawing.Color.Transparent;
-            this.ibEditarEm.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            this.ibEditarEm.IconColor = System.Drawing.Color.White;
-            this.ibEditarEm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibEditarEm.IconSize = 25;
-            this.ibEditarEm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEditarEm.Location = new System.Drawing.Point(0, 30);
-            this.ibEditarEm.Name = "ibEditarEm";
-            this.ibEditarEm.Size = new System.Drawing.Size(220, 30);
-            this.ibEditarEm.TabIndex = 27;
-            this.ibEditarEm.Text = "Editar";
-            this.ibEditarEm.UseVisualStyleBackColor = true;
-            this.ibEditarEm.Click += new System.EventHandler(this.ibEditarEm_Click);
             // 
             // ibAgregarEm
             // 
@@ -448,7 +376,7 @@ namespace GUI
             this.ibEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibEmpleados.IconSize = 30;
             this.ibEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEmpleados.Location = new System.Drawing.Point(0, 433);
+            this.ibEmpleados.Location = new System.Drawing.Point(0, 335);
             this.ibEmpleados.Name = "ibEmpleados";
             this.ibEmpleados.Size = new System.Drawing.Size(220, 30);
             this.ibEmpleados.TabIndex = 32;
@@ -461,10 +389,11 @@ namespace GUI
             this.pnlCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.pnlCompras.Controls.Add(this.ibRegistrar);
             this.pnlCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCompras.Location = new System.Drawing.Point(0, 394);
+            this.pnlCompras.Location = new System.Drawing.Point(0, 296);
             this.pnlCompras.Name = "pnlCompras";
             this.pnlCompras.Size = new System.Drawing.Size(220, 39);
             this.pnlCompras.TabIndex = 31;
+            this.pnlCompras.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCompras_Paint);
             // 
             // ibRegistrar
             // 
@@ -500,7 +429,7 @@ namespace GUI
             this.ibCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibCompras.IconSize = 30;
             this.ibCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibCompras.Location = new System.Drawing.Point(0, 364);
+            this.ibCompras.Location = new System.Drawing.Point(0, 266);
             this.ibCompras.Name = "ibCompras";
             this.ibCompras.Size = new System.Drawing.Size(220, 30);
             this.ibCompras.TabIndex = 30;
@@ -511,56 +440,12 @@ namespace GUI
             // pnlClientes
             // 
             this.pnlClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnlClientes.Controls.Add(this.ibBuscarC);
-            this.pnlClientes.Controls.Add(this.ibEditarC);
             this.pnlClientes.Controls.Add(this.ibAgrarC);
             this.pnlClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlClientes.Location = new System.Drawing.Point(0, 266);
+            this.pnlClientes.Location = new System.Drawing.Point(0, 211);
             this.pnlClientes.Name = "pnlClientes";
-            this.pnlClientes.Size = new System.Drawing.Size(220, 98);
+            this.pnlClientes.Size = new System.Drawing.Size(220, 55);
             this.pnlClientes.TabIndex = 29;
-            // 
-            // ibBuscarC
-            // 
-            this.ibBuscarC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibBuscarC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibBuscarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibBuscarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibBuscarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibBuscarC.ForeColor = System.Drawing.Color.Transparent;
-            this.ibBuscarC.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.ibBuscarC.IconColor = System.Drawing.Color.White;
-            this.ibBuscarC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibBuscarC.IconSize = 25;
-            this.ibBuscarC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibBuscarC.Location = new System.Drawing.Point(0, 60);
-            this.ibBuscarC.Name = "ibBuscarC";
-            this.ibBuscarC.Size = new System.Drawing.Size(220, 30);
-            this.ibBuscarC.TabIndex = 28;
-            this.ibBuscarC.Text = "Buscar";
-            this.ibBuscarC.UseVisualStyleBackColor = true;
-            this.ibBuscarC.Click += new System.EventHandler(this.ibBuscarC_Click);
-            // 
-            // ibEditarC
-            // 
-            this.ibEditarC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibEditarC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibEditarC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibEditarC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibEditarC.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibEditarC.ForeColor = System.Drawing.Color.Transparent;
-            this.ibEditarC.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.ibEditarC.IconColor = System.Drawing.Color.White;
-            this.ibEditarC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibEditarC.IconSize = 25;
-            this.ibEditarC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEditarC.Location = new System.Drawing.Point(0, 30);
-            this.ibEditarC.Name = "ibEditarC";
-            this.ibEditarC.Size = new System.Drawing.Size(220, 30);
-            this.ibEditarC.TabIndex = 27;
-            this.ibEditarC.Text = "Editar";
-            this.ibEditarC.UseVisualStyleBackColor = true;
-            this.ibEditarC.Click += new System.EventHandler(this.ibEditarC_Click);
             // 
             // ibAgrarC
             // 
@@ -596,7 +481,7 @@ namespace GUI
             this.ibClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibClientes.IconSize = 30;
             this.ibClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibClientes.Location = new System.Drawing.Point(0, 236);
+            this.ibClientes.Location = new System.Drawing.Point(0, 181);
             this.ibClientes.Name = "ibClientes";
             this.ibClientes.Size = new System.Drawing.Size(220, 30);
             this.ibClientes.TabIndex = 28;
@@ -617,7 +502,7 @@ namespace GUI
             this.ibVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibVentas.IconSize = 30;
             this.ibVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibVentas.Location = new System.Drawing.Point(0, 206);
+            this.ibVentas.Location = new System.Drawing.Point(0, 151);
             this.ibVentas.Name = "ibVentas";
             this.ibVentas.Size = new System.Drawing.Size(220, 30);
             this.ibVentas.TabIndex = 27;
@@ -628,56 +513,12 @@ namespace GUI
             // pnlProductos
             // 
             this.pnlProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.pnlProductos.Controls.Add(this.ibBuscarProd);
-            this.pnlProductos.Controls.Add(this.ibEditarProd);
             this.pnlProductos.Controls.Add(this.ibAgreagarProducto);
             this.pnlProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlProductos.Location = new System.Drawing.Point(0, 108);
             this.pnlProductos.Name = "pnlProductos";
-            this.pnlProductos.Size = new System.Drawing.Size(220, 98);
+            this.pnlProductos.Size = new System.Drawing.Size(220, 43);
             this.pnlProductos.TabIndex = 26;
-            // 
-            // ibBuscarProd
-            // 
-            this.ibBuscarProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibBuscarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibBuscarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibBuscarProd.ForeColor = System.Drawing.Color.Transparent;
-            this.ibBuscarProd.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.ibBuscarProd.IconColor = System.Drawing.Color.White;
-            this.ibBuscarProd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibBuscarProd.IconSize = 25;
-            this.ibBuscarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibBuscarProd.Location = new System.Drawing.Point(0, 60);
-            this.ibBuscarProd.Name = "ibBuscarProd";
-            this.ibBuscarProd.Size = new System.Drawing.Size(220, 30);
-            this.ibBuscarProd.TabIndex = 28;
-            this.ibBuscarProd.Text = "Buscar";
-            this.ibBuscarProd.UseVisualStyleBackColor = true;
-            this.ibBuscarProd.Click += new System.EventHandler(this.ibBuscarProd_Click);
-            // 
-            // ibEditarProd
-            // 
-            this.ibEditarProd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibEditarProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.ibEditarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.ibEditarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibEditarProd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibEditarProd.ForeColor = System.Drawing.Color.Transparent;
-            this.ibEditarProd.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.ibEditarProd.IconColor = System.Drawing.Color.White;
-            this.ibEditarProd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibEditarProd.IconSize = 25;
-            this.ibEditarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibEditarProd.Location = new System.Drawing.Point(0, 30);
-            this.ibEditarProd.Name = "ibEditarProd";
-            this.ibEditarProd.Size = new System.Drawing.Size(220, 30);
-            this.ibEditarProd.TabIndex = 27;
-            this.ibEditarProd.Text = "Editar";
-            this.ibEditarProd.UseVisualStyleBackColor = true;
-            this.ibEditarProd.Click += new System.EventHandler(this.ibEditarProd_Click);
             // 
             // ibAgreagarProducto
             // 
@@ -756,7 +597,7 @@ namespace GUI
             this.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInicio.Location = new System.Drawing.Point(220, 37);
             this.pnlInicio.Name = "pnlInicio";
-            this.pnlInicio.Size = new System.Drawing.Size(915, 470);
+            this.pnlInicio.Size = new System.Drawing.Size(915, 627);
             this.pnlInicio.TabIndex = 6;
             this.pnlInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
@@ -765,7 +606,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(86)))));
-            this.ClientSize = new System.Drawing.Size(1135, 507);
+            this.ClientSize = new System.Drawing.Size(1135, 664);
             this.Controls.Add(this.pnlInicio);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.Barra_Titulo);
@@ -808,22 +649,16 @@ namespace GUI
         private FontAwesome.Sharp.IconButton ibtnReporteVenta;
         private FontAwesome.Sharp.IconButton ibReporte;
         private System.Windows.Forms.Panel pnlEmpleados;
-        private FontAwesome.Sharp.IconButton ibBusacarEm;
-        private FontAwesome.Sharp.IconButton ibEditarEm;
         private FontAwesome.Sharp.IconButton ibAgregarEm;
         private FontAwesome.Sharp.IconButton ibEmpleados;
         private System.Windows.Forms.Panel pnlCompras;
         private FontAwesome.Sharp.IconButton ibRegistrar;
         private FontAwesome.Sharp.IconButton ibCompras;
         private System.Windows.Forms.Panel pnlClientes;
-        private FontAwesome.Sharp.IconButton ibBuscarC;
-        private FontAwesome.Sharp.IconButton ibEditarC;
         private FontAwesome.Sharp.IconButton ibAgrarC;
         private FontAwesome.Sharp.IconButton ibClientes;
         private FontAwesome.Sharp.IconButton ibVentas;
         private System.Windows.Forms.Panel pnlProductos;
-        private FontAwesome.Sharp.IconButton ibBuscarProd;
-        private FontAwesome.Sharp.IconButton ibEditarProd;
         private FontAwesome.Sharp.IconButton ibAgreagarProducto;
         private FontAwesome.Sharp.IconButton ibProductos;
         private System.Windows.Forms.Panel panel3;
@@ -831,7 +666,6 @@ namespace GUI
         private System.Windows.Forms.Panel pnlInicio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlProveedor;
-        private FontAwesome.Sharp.IconButton ibtnBuscarProv;
         private FontAwesome.Sharp.IconButton ibtnAgregar;
     }
 }

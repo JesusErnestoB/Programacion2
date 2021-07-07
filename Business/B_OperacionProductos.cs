@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +26,6 @@ namespace Business
                 dProductos.PrecioVent = precioVent;
                 dProductos.Descripcion = Descripccion;
 
-                dProductos.Insertar();
                 if (dProductos.Insertar())
                 {
                     return "El producto ha sido registrado correctamente";
@@ -43,9 +42,10 @@ namespace Business
             }
         }
 
-        public String ActualizarProductos(int ID, string Codigo, string Marca, int cantidad, string Color, float PrecioCom, float precioVent, string Descripccion)
+        public String ActualizarProductos(int ID, string Nombre, string Codigo, string Marca, int cantidad, string Color, float PrecioCom, float precioVent, string Descripccion)
         {
             dProductos.idProducto = ID;
+            dProductos.NombreP = Nombre;
             dProductos.Codigo = Codigo;
             dProductos.Marca = Marca;
             dProductos.Cantidad = cantidad;
@@ -54,7 +54,6 @@ namespace Business
             dProductos.PrecioVent = precioVent;
             dProductos.Descripcion = Descripccion;
 
-            dProductos.Actualizar(ID);
             if (dProductos.Actualizar(ID))
             {
                 return "El producto ha sido actualizado correctamente";
