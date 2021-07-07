@@ -83,7 +83,7 @@ namespace GUI
         {
             int cantidad;
             cantidad =Convert.ToInt32( Microsoft.VisualBasic.Interaction.InputBox("cantidad a vender ","Cantidad a vender", "1" ,100, 10));
-            lblCantidad.Text = cantidad.ToString();
+            
         }
 
         private void ibCancelar_Click(object sender, EventArgs e)
@@ -158,8 +158,7 @@ namespace GUI
             lblSubtotal.Text = "Subtotal: " + this.subtotal.ToString();
             //lblTotal.Text = this.total.ToString();
             txtTotal.Text = this.total.ToString();
-            lblidproducto.Text = idprod.ToString();
-            lblCantidad.Text = cantidad.ToString();
+                        
         }
         public void venta()
         {
@@ -171,7 +170,7 @@ namespace GUI
                 MessageBox.Show("Ocurrio un error"); return;
             }
 
-            lblidVenta.Text = id_venta;
+            
         }
 
         private void icbQuitar_Click(object sender, EventArgs e)
