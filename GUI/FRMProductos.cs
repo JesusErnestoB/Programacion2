@@ -115,6 +115,11 @@ namespace GUI
             LimpiarControles();
         }
 
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            buscarEspecifico();
+        }
+
         private bool Validacion()
         {
             bool ok= true;
@@ -201,5 +206,11 @@ namespace GUI
 
             b_OperacionesProductos.ActualizarProductos(id, Nombre, codigo, marca, cantidad, color, precioComp, PrecioVen, descripcion);
         }
+        public void buscarEspecifico()
+        {
+            var lista = b_OperacionesProductos.Buscar_Productos_especifico(txtBusqueda.Text);
+            dgvProductos.DataSource = lista;
+        }
+
     }
 }

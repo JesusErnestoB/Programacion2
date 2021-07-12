@@ -1,4 +1,4 @@
-﻿    using System;
+﻿        using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,7 +41,7 @@ namespace Business
                 throw;
             }
         }
-
+            
         public String ActualizarProductos(int ID, string Nombre, string Codigo, string Marca, int cantidad, string Color, float PrecioCom, float precioVent, string Descripccion)
         {
             dProductos.idProducto = ID;
@@ -70,6 +70,20 @@ namespace Business
             try
             {
                 return dProductos.BuscarProductos();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public DataTable Buscar_Productos_especifico(string nombre)
+        {
+            try
+            {
+                return dProductos.BuscarEspecifico(nombre);
             }
             catch (Exception)
             {

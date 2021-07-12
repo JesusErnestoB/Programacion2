@@ -13,7 +13,7 @@ namespace Business
     {
         public D_Proveedor dProveedor = new D_Proveedor();
 
-        public String InsertarProveedores(string Nombre, string correoE, string telefono, int direccion)
+        public String InsertarProveedores(string Nombre, string correoE, string telefono, string direccion)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Business
             }
         }
 
-        public String ActualizarProveedores(int Id, string Nombre, string correoE, string telefono, int fk_direccion)
+        public String ActualizarProveedores(string Id, string Nombre, string correoE, string telefono)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Business
                 dProveedor.Nombre = Nombre;
                 dProveedor.CorreoE = correoE;
                 dProveedor.Telefono = telefono;
-                dProveedor.fk_Direccion = fk_direccion;
+                //dProveedor.fk_Direccion = fk_direccion;
 
                 if (dProveedor.Actualizar(Id))
                 {

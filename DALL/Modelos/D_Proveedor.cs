@@ -12,11 +12,11 @@ namespace DALL.Modelos
     {
         private D_Conexion conexion = new D_Conexion();
 
-        public int id_Proveedor { get; set; }
+        public string id_Proveedor { get; set; }
         public string Nombre { get; set; }
         public string CorreoE { get; set; }
         public string Telefono { get; set; }
-        public int fk_Direccion { get; set; }
+        public string fk_Direccion { get; set; }
 
         public bool Insertar()
         {
@@ -25,7 +25,7 @@ namespace DALL.Modelos
             try
             {
                 conexion.abrir();
-                string sql = "INSERT INTO Proveedor VALUES ('" + Nombre.ToString() + "','"+ CorreoE.ToString() + "','" + Telefono.ToString() + "'," + fk_Direccion.ToString() + ")";
+                string sql = "INSERT INTO Proveedor VALUES ('" + Nombre.ToString() + "','"+ CorreoE.ToString() + "','" + Telefono.ToString() + "','" + fk_Direccion.ToString() + "')";
 
                 var cmd = new SqlCommand(sql, conexion.Conectar);
                 var resultado = cmd.ExecuteNonQuery();
@@ -42,7 +42,7 @@ namespace DALL.Modelos
             }
             return success;
         }
-        public bool Actualizar(int id)
+        public bool Actualizar(string id)
         {
             bool Success = false;
             id = id_Proveedor;
@@ -77,7 +77,7 @@ namespace DALL.Modelos
             {
                 conexion.abrir();
 
-                string sql = "SELECT Proveedor.nombre,correoE,telefono,Domicilio.calle,Colonia,Localidad,Municipio,Estado" ;
+                string sql = "SELECT Proveedor.nombre,correoE,telefono,Domicilio.calle,Colonia,Localidad,Municipio,Estado,id, Proveedor.id_Proveedor" ;
                        sql += " from Proveedor inner join Domicilio on Proveedor.id_Direccion =Domicilio.id ";
                        
                 var cmd = new SqlCommand(sql, conexion.Conectar);

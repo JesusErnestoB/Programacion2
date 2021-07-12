@@ -30,10 +30,34 @@ namespace GUI
 
         }
 
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtNombreP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ibEditar_Click(object sender, EventArgs e)
+        {
+            if (Validar())
+            {
+                ConversionActualizar();
+                LimpiarControles();
+            }
+        }
+
         private void ibMostrar_Click_1(object sender, EventArgs e)
         {
             var lista = b_OperacionProveedores.Buscar_Proveedores();
             dgvProveedores.DataSource = lista;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,6 +71,7 @@ namespace GUI
             txtMuniciopioProv.Text = dgvProveedores.CurrentRow.Cells[6].Value.ToString();
             txtEstadoProv.Text = dgvProveedores.CurrentRow.Cells[7].Value.ToString();
             id_dOMICILIO.Text = dgvProveedores.CurrentRow.Cells[8].Value.ToString();
+            lblid_Proveedor.Text = dgvProveedores.CurrentRow.Cells[9].Value.ToString();
         }
 
 
@@ -152,7 +177,7 @@ namespace GUI
                 MessageBox.Show("Ocurrio un error"); return;
             }
 
-            b_OperacionProveedores.InsertarProveedores(nombre, correo, telefono, domicilio);
+            b_OperacionProveedores.InsertarProveedores(nombre, correo, telefono, id_Domicilio);
 
 
 
@@ -170,7 +195,22 @@ namespace GUI
 
 
         }
+         public void ConversionActualizar()
+        {
+            nombre = txtNombreProv.Text.ToUpper();
+            correo = txtEmail.Text.ToUpper();
+            telefono = txtTelefono.Text.ToUpper();
+            calle = txtCalleProv.Text.ToUpper();
+            colonia = txtColoniaProv.Text.ToUpper();
+            localidad = txtLocalidadProv.Text.ToUpper();
+            municipio = txtMuniciopioProv.Text.ToUpper();
+            estado = txtEstadoProv.Text.ToUpper();
 
+             b_OperacionDomicilio.ActualizarDomicilio(id_dOMICILIO.Text,calle, colonia, localidad, municipio, estado);
+
+            b_OperacionProveedores.ActualizarProveedores(lblid_Proveedor.Text, nombre, correo, telefono);
+
+        }
 
     }
 }

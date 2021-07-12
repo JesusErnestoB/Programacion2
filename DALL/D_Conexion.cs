@@ -14,6 +14,7 @@ namespace DALL
         private readonly string cadena = "data source = LAPTOP-OEBH68R2; initial catalog = DBPapeleria_Memo; integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
 
         public SqlConnection Conectar = new SqlConnection();
+        
 
         //Constructor
         public D_Conexion()

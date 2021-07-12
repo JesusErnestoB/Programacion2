@@ -110,5 +110,33 @@ namespace DALL.Modelos
             return TablaProductos;
 
         }
+
+        public DataTable BuscarEspecifico(string nombre)
+        {
+            DataTable TablaProduc = new DataTable();
+            try
+            {
+                conexion.abrir();
+                string sql = " SELECT nombre,Codigo,Color, Marca,cantidad,PrecioCom,PrecioVen,Descripcion, id_producto From  Producto where nombre like" + "'%" + nombre + "%'";
+                var cmd = new SqlCommand(sql, conexion.Conectar);
+                var reader = cmd.ExecuteReader();
+
+                if (reader.HasRows == false)
+                {
+                    return null;
+                }
+
+                TablaProduc.Load(reader);
+
+                conexion.cerrar();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return TablaProduc;
+        }
     }
 }
